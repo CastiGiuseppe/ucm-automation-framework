@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test PLC3">
+
+	<test name="Test PLC3">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.plc.PLC3Test"/>
+		</classes>
+	</test>
+	
+</suite>

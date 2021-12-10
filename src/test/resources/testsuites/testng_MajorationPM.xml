@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Majoration PM">
+
+	<test name="MajorationPMTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.enrolement.pm.MajorationPMTest"/>
+		</classes>
+	</test>
+	
+</suite>

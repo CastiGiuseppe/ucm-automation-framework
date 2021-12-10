@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="NASCA - SOAP_XML - PM - LM" resourceRoot="" soapui-version="5.2.1" id="2bc39b68-5896-4ebb-8712-3272648d27d3" activeEnvironment="Default" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SifCompanyAcquittalServiceServiceSoapBinding" type="wsdl" bindingName="{http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1}SifCompanyAcquittalServiceServiceSoapBinding" soapVersion="1_2" anonymous="optional" definition="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAcquittal?wsdl" id="a582d549-ac87-4494-a4d8-11cea559118b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAcquittal?wsdl"><con:part><con:url>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAcquittal?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SifCompanyAcquittalServiceService" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Faults/V1/schema">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.w3.org/2005/05/xmlmime" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.w3.org/2005/05/xmlmime">
+      <xs:complexType name="base64Binary">
+        <xs:simpleContent>
+          <xs:extension base="xs:base64Binary">
+            <xs:attribute ref="tns:contentType"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:complexType name="hexBinary">
+        <xs:simpleContent>
+          <xs:extension base="xs:string">
+            <xs:attribute ref="tns:contentType"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:attribute name="contentType" type="xs:string"/>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/schema" xmlns:ns2="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema"/>
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema"/>
+      <xs:element name="ArrayOfDecision" type="tns:ArrayOfDecision"/>
+      <xs:element name="Decision" type="tns:Decision"/>
+      <xs:element name="DecisionType" type="tns:DecisionType"/>
+      <xs:element name="DemandMotivationIn" type="tns:DemandMotivationIn"/>
+      <xs:element name="DemandMotivationOut" type="tns:DemandMotivationOut"/>
+      <xs:element name="HandleDecisionIn" type="tns:HandleDecisionIn"/>
+      <xs:element name="HandleDecisionOut" type="tns:HandleDecisionOut"/>
+      <xs:complexType name="DemandMotivationIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="AcquittalYears" nillable="true" type="ns1:ArrayOfInteger"/>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element name="MotivationDocuments" nillable="true" type="ns1:ArrayOfDocument"/>
+              <xs:element name="RequestType" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="DemandMotivationOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="HandleDecisionIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element name="Decisions" nillable="true" type="tns:ArrayOfDecision"/>
+              <xs:element minOccurs="0" name="MotivationDocuments" nillable="true" type="ns1:ArrayOfDocument"/>
+              <xs:element name="RequestType" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfDecision">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Decision" nillable="true" type="tns:Decision"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Decision">
+        <xs:sequence>
+          <xs:element name="AcquittalAmount" type="xs:decimal"/>
+          <xs:element name="AcquittalDecision" type="xs:string"/>
+          <xs:element name="AcquittalYear" type="xs:int"/>
+          <xs:element name="DecisionDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="RefusalReasons" nillable="true" type="ns1:ArrayOfSystemValue"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HandleDecisionOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:simpleType name="DecisionType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Accepted"/>
+          <xs:enumeration value="Refused"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/schema">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/schema"/>
+      <xs:element name="DemandMotivation" type="tns:DemandMotivationType"/>
+      <xs:element name="DemandMotivationResponse" type="tns:DemandMotivationResponseType"/>
+      <xs:element name="HandleDecision" type="tns:HandleDecisionType"/>
+      <xs:element name="HandleDecisionResponse" type="tns:HandleDecisionResponseType"/>
+      <xs:element name="IsAlive">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IsAliveResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="IsAliveResult" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="DemandMotivationType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" nillable="true" type="ns1:DemandMotivationIn"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DemandMotivationResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DemandMotivationResult" nillable="true" type="ns1:DemandMotivationOut"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HandleDecisionType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" nillable="true" type="ns1:HandleDecisionIn"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HandleDecisionResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HandleDecisionResult" nillable="true" type="ns1:HandleDecisionOut"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Nisse/Acquittal/V1/NisseCompanyAcquittalService/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Nisse/Acquittal/V1/NisseCompanyAcquittalService/schema" xmlns:ns2="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema"/>
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema"/>
+      <xs:element name="AcquittalYear" type="tns:AcquittalYear"/>
+      <xs:element name="AddMotivationIn" type="tns:AddMotivationIn"/>
+      <xs:element name="AddMotivationOut" type="tns:AddMotivationOut"/>
+      <xs:element name="ArrayOfAcquittalYear" type="tns:ArrayOfAcquittalYear"/>
+      <xs:element name="RequestAcquittalIn" type="tns:RequestAcquittalIn"/>
+      <xs:element name="RequestAcquittalOut" type="tns:RequestAcquittalOut"/>
+      <xs:complexType name="AddMotivationIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="AcquittalYears" nillable="true" type="ns1:ArrayOfInteger"/>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element name="MotivationDocuments" nillable="true" type="ns1:ArrayOfDocument"/>
+              <xs:element name="RequestType" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RequestAcquittalIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="AcquittalYears" nillable="true" type="tns:ArrayOfAcquittalYear"/>
+              <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string"/>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="MotivationDocuments" nillable="true" type="ns1:ArrayOfDocument"/>
+              <xs:element name="RequestType" type="xs:string"/>
+              <xs:element name="RequesterLanguage" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfAcquittalYear">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="AcquittalYear" nillable="true" type="tns:AcquittalYear"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AcquittalYear">
+        <xs:sequence>
+          <xs:element name="AcquittalAmount" type="xs:decimal"/>
+          <xs:element name="ContributionAmountPaid" type="xs:decimal"/>
+          <xs:element name="ContributionPaymentDate" type="xs:dateTime"/>
+          <xs:element name="Year" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AddMotivationOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RequestAcquittalOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema">
+      <xs:element name="ArrayOfContactDataOut" type="tns:ArrayOfContactDataOut"/>
+      <xs:element name="ArrayOfDecimal" type="tns:ArrayOfDecimal"/>
+      <xs:element name="ArrayOfDocument" type="tns:ArrayOfDocument"/>
+      <xs:element name="ArrayOfInteger" type="tns:ArrayOfInteger"/>
+      <xs:element name="ArrayOfString" type="tns:ArrayOfString"/>
+      <xs:element name="ArrayOfSystemValue" type="tns:ArrayOfSystemValue"/>
+      <xs:element name="ArrayOfTranslatedLocation" type="tns:ArrayOfTranslatedLocation"/>
+      <xs:element name="BaseIn" type="tns:BaseIn"/>
+      <xs:element name="BaseOut" type="tns:BaseOut"/>
+      <xs:element name="ContactDataOut" type="tns:ContactDataOut"/>
+      <xs:element name="Language" type="tns:Language"/>
+      <xs:element name="SystemValue" type="tns:SystemValue"/>
+      <xs:element name="TranslatedLocation" type="tns:TranslatedLocation"/>
+      <xs:complexType name="BaseIn">
+        <xs:sequence>
+          <xs:element name="DestinationID" nillable="true" type="xs:string"/>
+          <xs:element name="FluxID" type="xs:string"/>
+          <xs:element name="MessageID" type="xs:string"/>
+          <xs:element name="OriginID" nillable="true" type="xs:string"/>
+          <xs:element name="Timestamp" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfInteger">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="int" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfDocument">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="base64Binary" nillable="true" ns1:expectedContentTypes="application/pdf" type="xs:base64Binary" xmlns:ns1="http://www.w3.org/2005/05/xmlmime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="BaseOut">
+        <xs:sequence>
+          <xs:element name="FluxID" type="xs:string"/>
+          <xs:element name="MessageID" type="xs:string"/>
+          <xs:element name="Timestamp" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfSystemValue">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="SystemValue" nillable="true" type="tns:SystemValue"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SystemValue">
+        <xs:sequence>
+          <xs:element name="Key" nillable="true" type="xs:string"/>
+          <xs:element name="ValueFR" nillable="true" type="xs:string"/>
+          <xs:element name="ValueNL" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfContactDataOut">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="ContactDataOut" nillable="true" type="tns:ContactDataOut"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ContactDataOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Box" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CityNis" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CityTranslations" nillable="true" type="tns:ArrayOfTranslatedLocation"/>
+          <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="HouseNr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="StreetCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="StreetTranslations" nillable="true" type="tns:ArrayOfTranslatedLocation"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTranslatedLocation">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="TranslatedLocation" nillable="true" type="tns:TranslatedLocation"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TranslatedLocation">
+        <xs:sequence>
+          <xs:element name="Language" nillable="true" type="tns:SystemValue"/>
+          <xs:element name="Name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfDecimal">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="decimal" nillable="true" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfString">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="Language">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Fr"/>
+          <xs:enumeration value="Nl"/>
+          <xs:enumeration value="De"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Faults/V1/schema" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Faults/V1/schema">
+      <xs:element name="ArrayOfReason" type="tns:ArrayOfReason"/>
+      <xs:element name="AuthorizationFault" type="tns:AuthorizationFault"/>
+      <xs:element name="Reason" type="tns:Reason"/>
+      <xs:element name="ServiceFault" type="tns:ServiceFault"/>
+      <xs:complexType name="ServiceFault">
+        <xs:sequence>
+          <xs:element name="FluxID" type="xs:string"/>
+          <xs:element name="MessageID" type="xs:string"/>
+          <xs:element name="Reasons" nillable="true" type="tns:ArrayOfReason"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfReason">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Reason" nillable="true" type="tns:Reason"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Reason">
+        <xs:sequence>
+          <xs:element name="FaultCode" nillable="true" type="xs:string"/>
+          <xs:element name="MessageFR" nillable="true" type="xs:string"/>
+          <xs:element name="MessageNL" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AuthorizationFault">
+        <xs:sequence>
+          <xs:element name="MessageID" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema">
+      <xs:element name="AcquittalType" type="tns:AcquittalType"/>
+      <xs:element name="ActivityType" type="tns:ActivityType"/>
+      <xs:element name="AffiliationHistoryType" type="tns:AffiliationHistoryType"/>
+      <xs:element name="AffiliationStatus" type="tns:AffiliationStatus"/>
+      <xs:element name="CompanyStatus" type="tns:CompanyStatus"/>
+      <xs:element name="EstablishmentType" type="tns:EstablishmentType"/>
+      <xs:element name="EventType" type="tns:EventType"/>
+      <xs:simpleType name="AcquittalType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Summons"/>
+          <xs:enumeration value="Assignment"/>
+          <xs:enumeration value="Normal"/>
+          <xs:enumeration value="Judgement"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="EstablishmentType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="RegisteredOffice"/>
+          <xs:enumeration value="CountryOffice"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CompanyStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Active"/>
+          <xs:enumeration value="Closed"/>
+          <xs:enumeration value="Cancelled"/>
+          <xs:enumeration value="Announced"/>
+          <xs:enumeration value="JuridicalCreated"/>
+          <xs:enumeration value="Stopped"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="EventType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NotApplicable"/>
+          <xs:enumeration value="WithdrawalBankruptcy"/>
+          <xs:enumeration value="Rehabilitation"/>
+          <xs:enumeration value="Dischargement"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ActivityType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SideActivity"/>
+          <xs:enumeration value="MainActivity"/>
+          <xs:enumeration value="SupportActivity"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="AffiliationHistoryType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="FirstAffiliation"/>
+          <xs:enumeration value="InExamination"/>
+          <xs:enumeration value="Refused"/>
+          <xs:enumeration value="OfficiallyAffiliated"/>
+          <xs:enumeration value="TransferRequested"/>
+          <xs:enumeration value="TransferAccepted"/>
+          <xs:enumeration value="TransferRefused"/>
+          <xs:enumeration value="OfficialAffiliationStrikedOut"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="AffiliationStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Unaffiliated"/>
+          <xs:enumeration value="AffiliatedAtOtherSif"/>
+          <xs:enumeration value="NormalAffiliation"/>
+          <xs:enumeration value="OfficiallyAffiliation"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="QName" type="xs:QName"/>
+      <xs:element name="anyType" type="xs:anyType"/>
+      <xs:element name="anyURI" type="xs:string"/>
+      <xs:element name="base64Binary" type="xs:base64Binary"/>
+      <xs:element name="boolean" type="xs:boolean"/>
+      <xs:element name="byte" type="xs:byte"/>
+      <xs:element name="char" type="xs:int"/>
+      <xs:element name="dateTime" type="xs:anySimpleType"/>
+      <xs:element name="decimal" type="xs:decimal"/>
+      <xs:element name="double" type="xs:double"/>
+      <xs:element name="duration" type="xs:duration"/>
+      <xs:element name="float" type="xs:float"/>
+      <xs:element name="guid" type="xs:string"/>
+      <xs:element name="int" type="xs:int"/>
+      <xs:element name="long" type="xs:long"/>
+      <xs:element name="short" type="xs:short"/>
+      <xs:element name="string" type="xs:string"/>
+      <xs:element name="unsignedByte" type="xs:short"/>
+      <xs:element name="unsignedInt" type="xs:long"/>
+      <xs:element name="unsignedLong" type="xs:integer"/>
+      <xs:element name="unsignedShort" type="xs:int"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="DemandMotivationResponse">
+    <wsdl:part element="tns:DemandMotivationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IsAliveResponse">
+    <wsdl:part element="tns:IsAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAcquittalServiceHandleDecisionServiceFaultFaultFaultMessage">
+    <wsdl:part element="ns1:ServiceFault" name="SifCompanyAcquittalServiceHandleDecisionServiceFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DemandMotivation">
+    <wsdl:part element="tns:DemandMotivation" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAcquittalServiceHandleDecisionAuthorizationFaultFaultFaultMessage">
+    <wsdl:part element="ns1:AuthorizationFault" name="SifCompanyAcquittalServiceHandleDecisionAuthorizationFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="HandleDecisionResponse">
+    <wsdl:part element="tns:HandleDecisionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAcquittalServiceDemandMotivationServiceFaultFaultFaultMessage">
+    <wsdl:part element="ns1:ServiceFault" name="SifCompanyAcquittalServiceDemandMotivationServiceFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IsAlive">
+    <wsdl:part element="tns:IsAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAcquittalServiceDemandMotivationAuthorizationFaultFaultFaultMessage">
+    <wsdl:part element="ns1:AuthorizationFault" name="SifCompanyAcquittalServiceDemandMotivationAuthorizationFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="HandleDecision">
+    <wsdl:part element="tns:HandleDecision" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SifCompanyAcquittalService">
+    <wsdl:operation name="IsAlive">
+      <wsdl:input message="tns:IsAlive" name="IsAlive" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/IsAlive" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/IsAlive"></wsdl:input>
+      <wsdl:output message="tns:IsAliveResponse" name="IsAliveResponse" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/IsAliveResponse" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/IsAliveResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandMotivation">
+      <wsdl:input message="tns:DemandMotivation" name="DemandMotivation" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivation" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivation"></wsdl:input>
+      <wsdl:output message="tns:DemandMotivationResponse" name="DemandMotivationResponse" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivationResponse" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivationResponse"></wsdl:output>
+      <wsdl:fault message="tns:SifCompanyAcquittalServiceDemandMotivationAuthorizationFaultFaultFaultMessage" name="SifCompanyAcquittalServiceDemandMotivationAuthorizationFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivationAuthorizationFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivationAuthorizationFaultFault"></wsdl:fault>
+      <wsdl:fault message="tns:SifCompanyAcquittalServiceDemandMotivationServiceFaultFaultFaultMessage" name="SifCompanyAcquittalServiceDemandMotivationServiceFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivationServiceFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivationServiceFaultFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HandleDecision">
+      <wsdl:input message="tns:HandleDecision" name="HandleDecision" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecision" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecision"></wsdl:input>
+      <wsdl:output message="tns:HandleDecisionResponse" name="HandleDecisionResponse" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecisionResponse" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecisionResponse"></wsdl:output>
+      <wsdl:fault message="tns:SifCompanyAcquittalServiceHandleDecisionServiceFaultFaultFaultMessage" name="SifCompanyAcquittalServiceHandleDecisionServiceFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecisionServiceFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecisionServiceFaultFault"></wsdl:fault>
+      <wsdl:fault message="tns:SifCompanyAcquittalServiceHandleDecisionAuthorizationFaultFaultFaultMessage" name="SifCompanyAcquittalServiceHandleDecisionAuthorizationFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecisionAuthorizationFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecisionAuthorizationFaultFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SifCompanyAcquittalServiceServiceSoapBinding" type="tns:SifCompanyAcquittalService">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="IsAlive">
+      <soap12:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/IsAlive" style="document"/>
+      <wsdl:input name="IsAlive">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="IsAliveResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandMotivation">
+      <soap12:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivation" style="document"/>
+      <wsdl:input name="DemandMotivation">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DemandMotivationResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SifCompanyAcquittalServiceDemandMotivationAuthorizationFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAcquittalServiceDemandMotivationAuthorizationFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SifCompanyAcquittalServiceDemandMotivationServiceFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAcquittalServiceDemandMotivationServiceFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HandleDecision">
+      <soap12:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecision" style="document"/>
+      <wsdl:input name="HandleDecision">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="HandleDecisionResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SifCompanyAcquittalServiceHandleDecisionServiceFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAcquittalServiceHandleDecisionServiceFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SifCompanyAcquittalServiceHandleDecisionAuthorizationFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAcquittalServiceHandleDecisionAuthorizationFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SifCompanyAcquittalServiceService">
+    <wsdl:port binding="tns:SifCompanyAcquittalServiceServiceSoapBinding" name="SifCompanyAcquittalServicePort">
+      <soap12:address location="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAcquittal"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAcquittal</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/DemandMotivation" name="DemandMotivation" bindingOperationName="DemandMotivation" type="Request-Response" outputName="DemandMotivationResponse" inputName="DemandMotivation" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="7a53c5b7-0447-4aca-a059-1974cfbdb822"><con:settings/></con:operation><con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecision" name="HandleDecision" bindingOperationName="HandleDecision" type="Request-Response" outputName="HandleDecisionResponse" inputName="HandleDecision" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="57d52d32-a51a-4680-aa8c-19b882047aff"><con:settings/></con:operation><con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/IsAlive" name="IsAlive" bindingOperationName="IsAlive" type="Request-Response" outputName="IsAliveResponse" inputName="IsAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="33d8f092-3b95-480e-86e8-258425697ecd"><con:settings/></con:operation></con:interface><con:testSuite name="TestSuite" id="0ac9a194-1851-46c5-abaf-18a886a85db1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - DecisionAccepted" searchProperties="true" id="af4d7483-dea8-4194-827b-cb6fb33c8e8f"><con:settings/><con:testStep type="request" name="HandleDecision - DecisionAccepted" id="88eba739-8d04-4a87-b9ee-477c9514d327"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifCompanyAcquittalServiceServiceSoapBinding</con:interface><con:operation>HandleDecision</con:operation><con:request name="HandleDecision - DecisionAccepted" outgoingWss="" incomingWss="" timeout="" wssPasswordType="" id="debdc181-fd48-4ee2-a2cf-498b9e064aa0"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAcquittal</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:HandleDecision>
+         <v1:request>
+            <sch:DestinationID>019</sch:DestinationID>
+            <sch:FluxID>123</sch:FluxID>
+            <sch:MessageID>123</sch:MessageID>
+            <sch:OriginID>000</sch:OriginID>
+            <sch:Timestamp>2016-04-14T00:00:00.000+01:00</sch:Timestamp>
+            <sch1:CompanyID>BCE_VALEUR</sch1:CompanyID>
+            <sch1:Decisions>
+               <sch1:Decision>
+                  <sch1:AcquittalAmount>MONTANT_VALEUR</sch1:AcquittalAmount>
+                  <sch1:AcquittalDecision>Accepted</sch1:AcquittalDecision>
+                  <sch1:AcquittalYear>ANNEE_VALEUR</sch1:AcquittalYear>
+                  <sch1:DecisionDate>DATE_DECISION_VALEUR</sch1:DecisionDate>
+               </sch1:Decision>
+            </sch1:Decisions>
+            <sch1:RequestType>TYPE_VALEUR</sch1:RequestType>
+         </v1:request>
+      </v1:HandleDecision>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="dceef0ec-7131-4a22-9892-0ab0a12d8f61"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecision"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - DecisionRefused" searchProperties="true" id="1068ccb2-3858-489f-9b98-00e3dc7c1e61"><con:settings/><con:testStep type="request" name="HandleDecision - DecisionRefused" id="2f613263-1a14-4216-b702-0bcf05ea051e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifCompanyAcquittalServiceServiceSoapBinding</con:interface><con:operation>HandleDecision</con:operation><con:request name="HandleDecision - DecisionRefused" outgoingWss="" incomingWss="" timeout="" wssPasswordType="" id="be8c076d-3a56-4d7a-a504-aa02dd2f37d8"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAcquittal</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:HandleDecision>
+         <v1:request>
+            <sch:DestinationID>019</sch:DestinationID>
+            <sch:FluxID>123</sch:FluxID>
+            <sch:MessageID>123</sch:MessageID>
+            <sch:OriginID>000</sch:OriginID>
+            <sch:Timestamp>2016-04-14T00:00:00.000+01:00</sch:Timestamp>
+            <sch1:CompanyID>BCE_VALEUR</sch1:CompanyID>
+            <sch1:Decisions>
+               <sch1:Decision>
+                  <sch1:AcquittalAmount>MONTANT_VALEUR</sch1:AcquittalAmount>
+                  <sch1:AcquittalDecision>Refused</sch1:AcquittalDecision>
+                  <sch1:AcquittalYear>ANNEE_VALEUR</sch1:AcquittalYear>
+                  <sch1:DecisionDate>DATE_DECISION_VALEUR</sch1:DecisionDate>
+                  <sch1:RefusalReasons>
+                     <sch:SystemValue>
+                        <sch:Key>04007</sch:Key>
+                        <sch:ValueFR>Une deuxième demande de renonciation à majoration pour la même année et pour le même type de demande est impossible tant qu'il y a encore des demandes en cours pour cette année.</sch:ValueFR>
+                        <sch:ValueNL>Een tweede aanvraag kwijtschelding voor hetzelfde jaar en hetzelfde type aanvraag is niet mogelijk  zolang er nog aanvragen in onderzoek bestaan voor dat jaar.</sch:ValueNL>
+                     </sch:SystemValue>
+                  </sch1:RefusalReasons>
+               </sch1:Decision>
+            </sch1:Decisions>
+            <sch1:RequestType>TYPE_VALEUR</sch1:RequestType>
+         </v1:request>
+      </v1:HandleDecision>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e77ed60f-d86f-4c86-b42c-63f0a7858740"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Acquittal/V1/SifCompanyAcquittalService/HandleDecision"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

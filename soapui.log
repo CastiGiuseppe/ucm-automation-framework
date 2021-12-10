@@ -1,0 +1,6 @@
+2017-09-14 13:13:42,114 WARN  [SoapUI] Missing folder [C:\@Data\SeleniumGit\selenium\ext] for external libraries
+2017-09-14 13:13:42,193 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\giuseppe.castiglione\soapui-settings.xml]
+2017-09-14 13:13:44,925 INFO  [WsdlProject] Loaded project from [file:/C:/temp/NASCA%20-%20SOAP_XML%20-%20PM%20-%20AFFILIATION.xml]
+2017-09-14 13:16:52,491 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-09-14 13:16:52,585 INFO  [SQLErrorCodesFactory] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-09-14 13:17:44,651 INFO  [WsdlProject] Loaded project from [file:/C:/temp/NASCA%20-%20SOAP_XML%20-%20PM%20-%20AFFILIATION.xml]

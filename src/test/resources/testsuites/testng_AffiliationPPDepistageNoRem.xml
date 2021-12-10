@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Affiliation PP Depistage">
+	<test name="AffiliationPpDepistage">
+		<classes>
+			<class name="be.ucm.cas.nasca.web.test.affiliation.pp.AffiliationPpDepistage" />
+		</classes>
+	</test>
+</suite>

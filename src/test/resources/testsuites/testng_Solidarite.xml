@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Solidarité">
+
+	<test name="SolidariteTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.solidarite.SolidariteTest"/>
+		</classes>
+	</test>
+	
+</suite>

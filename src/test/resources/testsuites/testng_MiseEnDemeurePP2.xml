@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Mise en Demeure PP2">
+
+	<test name="MiseEnDemeurePP2Test">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.miseendemeure.MiseEnDemeurePP2Test"/>
+		</classes>
+	</test>
+	
+</suite>

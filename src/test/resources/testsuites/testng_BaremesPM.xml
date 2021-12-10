@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Barèmes PM">
+
+	<test name="BaremesPMTest">
+		<classes>
+			<class name="be.ucm.cas.nasca.web.test.baremes.pm.BaremesPMTest" />
+		</classes>
+	</test>
+	
+</suite>

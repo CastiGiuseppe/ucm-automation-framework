@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Succession">
+
+	<test name="SuccessionTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.cloturedossier.nonassujettissement.NonAssujettissementTest"/>
+		</classes>
+	</test>
+
+</suite>

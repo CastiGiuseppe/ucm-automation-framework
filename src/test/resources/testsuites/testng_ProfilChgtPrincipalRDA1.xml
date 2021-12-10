@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test profil principal RDA1">
+
+	<test name="Profil-Principal Changement de nature RDA1">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.profil.change.ProfilChangePrincipalRDA1Test"/>
+		</classes>
+	</test>	
+</suite>

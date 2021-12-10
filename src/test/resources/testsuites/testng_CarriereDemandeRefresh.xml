@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test DemandeRefresh">
+
+	<test name="DemandeRefreshTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.carriere.refresh.DemandeRefreshTest"/>
+		</classes>
+	</test>
+	
+</suite>

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Activité">
+
+	<test name="ActiviteTest">
+		<classes>
+			<class name="be.ucm.cas.nasca.web.test.activite.ActiviteTest"/>
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Fill Xls Rapport">
+
+	<test name="FillXlsRapport">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.rapport.FillXlsRapport"/>
+		</classes>
+	</test>
+	
+</suite>

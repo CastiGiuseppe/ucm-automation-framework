@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Rappels PM2">
+
+	<test name="RappelsPM2Test">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.rappels.RappelsPM2Test"/>
+		</classes>
+	</test>
+	
+</suite>

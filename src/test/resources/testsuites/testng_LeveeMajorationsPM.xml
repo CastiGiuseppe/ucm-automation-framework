@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Levée Majorations PM">
+
+	<test name="LeveeMajorationsPMTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.leveemajorations.LeveeMajorationsPMTest"/>
+		</classes>
+	</test>
+	
+</suite>

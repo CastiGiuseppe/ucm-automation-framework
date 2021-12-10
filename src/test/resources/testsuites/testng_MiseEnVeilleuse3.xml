@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Mise En Veilleuse3">
+
+	<test name="MiseEnVeilleuseTest3">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.miseenveilleuse.MiseEnVeilleuse3Test"/>
+		</classes>
+	</test>
+	
+</suite>

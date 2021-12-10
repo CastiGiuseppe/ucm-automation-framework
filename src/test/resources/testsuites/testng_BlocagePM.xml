@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Blocage PM">
+
+	<test name="BlocageDossierPMTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.blocage.BlocageDossierPMTest"/>
+		</classes>
+	</test>
+	
+</suite>

@@ -1,0 +1,3798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="NASCA - SOAP_XML - PP - AFFILIATION" resourceRoot="" soapui-version="4.5.1" abortOnError="false" runType="SEQUENTIAL" id="74d4a244-cc76-4299-80da-8e9a8bcd4bca" defaultScriptLanguage="Groovy" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="TestSuite"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="TestCase - Accept - 54110717253"/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation"/>
+  <con:entry key="Select Report Type" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SifAffiliationSOAPBinding" type="wsdl" bindingName="{http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3}SifAffiliationSOAPBinding" soapVersion="1_1" anonymous="optional" definition="http://svl055/Nasca-Affiliation/services/SifAffiliation?wsdl" id="bfa7f6f0-b00c-4303-b67b-8a65912d90c6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://svl055/Nasca-Affiliation/services/SifAffiliation?wsdl"><con:part><con:url>http://svl055/Nasca-Affiliation/services/SifAffiliation?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Affiliation_V3" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>Baseline: R1.1.0</wsdl:documentation>
+  <wsdl:import location="http://svl055/Nasca-Affiliation/services/SifAffiliation?wsdl=Affiliation_V3.wsdl" namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3"></wsdl:import>
+  <wsdl:binding name="SifAffiliationSOAPBinding" type="tns:SifAffiliation">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Accept">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Accept"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SystemError">
+        <soap:fault name="SystemError" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Refuse">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Refuse"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SystemError">
+        <soap:fault name="SystemError" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Suspend">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Suspend"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SystemError">
+        <soap:fault name="SystemError" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CorrectInvestigationInput">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/CorrectInvestigationInput"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SystemError">
+        <soap:fault name="SystemError" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SifAffiliationService">
+    <wsdl:port binding="tns:SifAffiliationSOAPBinding" name="SifAffiliationPort">
+      <soap:address location="http://svl055/Nasca-Affiliation/services/SifAffiliation"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://svl055/Nasca-Affiliation/services/SifAffiliation?wsdl=Affiliation_V3.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Affiliation_V3" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:hlp="http://www.rsvz-inasti.fgov.be/schemas/WS/Helper/V1" xmlns:aff="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+  <wsdl:documentation>Baseline: R1.1.0</wsdl:documentation>
+  <wsdl:import location="http://svl055/Nasca-Affiliation/services/SifAffiliation?wsdl=../Helper_V1.wsdl" namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Helper/V1"></wsdl:import>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" version="1.0">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" schemaLocation="http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=../schema/Affiliation/Affiliation_V3.xsd"/>
+      <xs:element name="InvestigateNewIndependant" type="aff:InvestigateNewIndependantStruct"/>
+      <xs:element name="InvestigateNewAssistingPartner" type="aff:InvestigateNewAssistingPartnerStruct"/>
+      <xs:element name="CancelInvestigation" type="aff:CancelInvestigationStruct"/>
+      <xs:element name="Suspend" type="aff:AffiliationResultBaseType"/>
+      <xs:element name="Refuse" type="aff:RefuseStruct"/>
+      <xs:element name="CorrectInvestigationInput" type="aff:RefuseStruct"/>
+      <xs:element name="Accept" type="aff:AcceptStruct"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="InvestigateNewAssistingPartnerMsg">
+    <wsdl:part element="tns:InvestigateNewAssistingPartner" name="p"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RefuseMsg">
+    <wsdl:part element="tns:Refuse" name="p"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AcceptMsg">
+    <wsdl:part element="tns:Accept" name="p"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CorrectInvestigationInputMsg">
+    <wsdl:part element="tns:CorrectInvestigationInput" name="p"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvestigateNewIndependantMsg">
+    <wsdl:part element="tns:InvestigateNewIndependant" name="p"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SuspendMsg">
+    <wsdl:part element="tns:Suspend" name="p"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelInvestigationMsg">
+    <wsdl:part element="tns:CancelInvestigation" name="p"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="NisseAffiliation">
+    <wsdl:operation name="InvestigateNewIndependant">
+      <wsdl:input message="tns:InvestigateNewIndependantMsg"></wsdl:input>
+      <wsdl:output message="hlp:TransferResultMsg"></wsdl:output>
+      <wsdl:fault message="hlp:SystemErrorMsg" name="SystemError"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InvestigateNewAssistingPartner">
+      <wsdl:input message="tns:InvestigateNewAssistingPartnerMsg"></wsdl:input>
+      <wsdl:output message="hlp:TransferResultMsg"></wsdl:output>
+      <wsdl:fault message="hlp:SystemErrorMsg" name="SystemError"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelInvestigation">
+      <wsdl:input message="tns:CancelInvestigationMsg"></wsdl:input>
+      <wsdl:output message="hlp:TransferResultMsg"></wsdl:output>
+      <wsdl:fault message="hlp:SystemErrorMsg" name="SystemError"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SifAffiliation">
+    <wsdl:operation name="Accept">
+      <wsdl:input message="tns:AcceptMsg"></wsdl:input>
+      <wsdl:output message="hlp:TransferResultMsg"></wsdl:output>
+      <wsdl:fault message="hlp:SystemErrorMsg" name="SystemError"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Refuse">
+      <wsdl:input message="tns:RefuseMsg"></wsdl:input>
+      <wsdl:output message="hlp:TransferResultMsg"></wsdl:output>
+      <wsdl:fault message="hlp:SystemErrorMsg" name="SystemError"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Suspend">
+      <wsdl:input message="tns:SuspendMsg"></wsdl:input>
+      <wsdl:output message="hlp:TransferResultMsg"></wsdl:output>
+      <wsdl:fault message="hlp:SystemErrorMsg" name="SystemError"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CorrectInvestigationInput">
+      <wsdl:input message="tns:CorrectInvestigationInputMsg"></wsdl:input>
+      <wsdl:output message="hlp:TransferResultMsg"></wsdl:output>
+      <wsdl:fault message="hlp:SystemErrorMsg" name="SystemError"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://svl055/Nasca-Affiliation/services/SifAffiliation?wsdl=../Helper_V1.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Helper_V1" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Helper/V1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/WS/Helper/V1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:meta="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4">
+  <wsdl:documentation>Baseline: 1.0.0</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Helper/V1" version="1.0">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" schemaLocation="http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=./schema/MetaInfo/MetaInfo_V4.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="TransferResultMsg">
+    <wsdl:part element="meta:TransferResult" name="result"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SystemErrorMsg">
+    <wsdl:part element="meta:Error" name="systemError"></wsdl:part>
+  </wsdl:message>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=./schema/MetaInfo/MetaInfo_V4.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4">
+  <xs:annotation>
+    <xs:documentation>Baseline: 1.0.0</xs:documentation>
+  </xs:annotation>
+  <xs:element name="Error">
+    <xs:annotation>
+      <xs:documentation>General Error, may be a System Error, or coded Business
+				Error.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Type">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Business">
+                <xs:annotation>
+                  <xs:documentation>The error is a Business Error,
+										meaning that user of application
+										may take appropriate action to
+										solve the problem.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="System">
+                <xs:annotation>
+                  <xs:documentation>The error is a System Error,
+										meaning that the problem must be
+										solved by technical personnel,
+										often via Helpdesk.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="Unspecified">
+                <xs:annotation>
+                  <xs:documentation>It is unknown or not clear
+										whether this is a Business or
+										System Error.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Application">
+          <xs:annotation>
+            <xs:documentation>Unique ID of application that reports the
+							error.</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[A-Z0-9]{1,20}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Code">
+          <xs:annotation>
+            <xs:documentation>Code identifying the error. This code is
+							unique within a given Application only.</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[A-Z0-9]{6}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" name="CodeDesc" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Human readable description of the code.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MessageIDcausingError" type="UniqueIdType">
+          <xs:annotation>
+            <xs:documentation>{ApplHeader}MessageID of the message
+							(operation) that caused directly or
+							indirectly the error.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="Timestamp" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>Timestamp when this message is created.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:choice minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Sometims this error is the consequence of
+							another error. In such cases this other
+							error is wrapped here.</xs:documentation>
+          </xs:annotation>
+          <xs:element minOccurs="0" name="Detail" type="xs:anyType">
+            <xs:annotation>
+              <xs:documentation>Any non-X001 error.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="DetailX001" type="X001Struct">
+            <xs:annotation>
+              <xs:documentation>A X001 error.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferResult">
+    <xs:annotation>
+      <xs:documentation>Delivery ack in a pseudo one-way operation.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TransferOk">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Timestamp" type="xs:dateTime">
+                <xs:annotation>
+                  <xs:documentation>Timestamp when the service
+										provider (the callee) has
+										received the one-way message.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplHeader">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Bericht meta-informatie.</xs:documentation>
+      <xs:documentation xml:lang="fr">Meta-info message.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TimestampSent" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>Timestamp when this operation is called by
+							caller (i.e. sent by sender).</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Origin" type="PartyType">
+          <xs:annotation>
+            <xs:documentation xml:lang="nl">Identificatie van de afzender.</xs:documentation>
+            <xs:documentation xml:lang="fr">Numéro de l'expéditeur.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Destination" type="PartyType">
+          <xs:annotation>
+            <xs:documentation xml:lang="nl">Identificatie van de bestemmeling.</xs:documentation>
+            <xs:documentation xml:lang="fr">Identification destinataire.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MessageID" type="UniqueIdType">
+          <xs:annotation>
+            <xs:documentation xml:lang="nl">Uniek identificatie nummer van het bericht.
+							Verschilt van bericht tot bericht en is
+							gegenereerd door de afzender.</xs:documentation>
+            <xs:documentation xml:lang="fr">Unique numéro de l'identification numéro de
+							annoncé. Diffère annoncé à annoncé et il a
+							été généré par l'expéditeur.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="UserID" type="UserIDtype">
+          <xs:annotation>
+            <xs:documentation xml:lang="nl">User ID van effectieve gebruiker, indien van
+							toepassing en noodzakelijk.</xs:documentation>
+            <xs:documentation xml:lang="fr">User ID de l'utilisateur effectif, si
+							d'application et nécessaire.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="RequestInitiatorID" type="ApplicationIdType">
+          <xs:annotation>
+            <xs:documentation xml:lang="nl">Vast nummer toegekend door RSVZ om toegang
+							te krijgen tot een applicatie binnen RSVZ.</xs:documentation>
+            <xs:documentation xml:lang="fr">Numéro fixe accordé par RSVZ.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element maxOccurs="1" minOccurs="0" name="FluxDescriptor" type="FluxDescriptorType">
+          <xs:annotation>
+            <xs:documentation xml:lang="nl">Wordt gebruikt voor correlatie met een flux
+							van berichten. Dient gegenereerd te worden
+							door de eerste afzender, dit is de initiator
+							van de flux, en vervolgens gekopieerd door
+							alle deelnemers aan de flux.</xs:documentation>
+            <xs:documentation xml:lang="fr">Il est utilisé pour corréler avec un flux de
+							messages. Doit etre générer par le premier
+							expéditeur, ceci c' est le initiator du
+							flux, et ensuite copié par tous participants
+							au flux.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FluxDescriptorType">
+    <xs:sequence>
+      <xs:element name="Initiator" type="PartyType">
+        <xs:annotation>
+          <xs:documentation>Party that started the flux.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FluxId" type="UniqueIdType">
+        <xs:annotation>
+          <xs:documentation>ID that uniquely defines a running flux
+						instance. Must be unique within the combination
+						(InitiatorOrganization, InitiatorApplication).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FluxDefinition" type="FluxDefinitionType"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FluxDefinitionType">
+    <xs:sequence>
+      <xs:element name="UniqueName" type="UniqueIdType"></xs:element>
+      <xs:element name="Version" type="UniqueIdType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="UniqueIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9]{1,15}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UserIDtype">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Userid van de afzender, rijksregisternummer.</xs:documentation>
+      <xs:documentation xml:lang="fr">Userid de l'expéditeur, no registre national.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="11"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PartyType">
+    <xs:sequence>
+      <xs:element name="Organization" type="OrganizationIdType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Identifies NISSE or a SIF, or another
+						organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Application" type="ApplicationIdType">
+        <xs:annotation>
+          <xs:documentation>Identification of the Application, unique within
+						and defined by the Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="OrganizationIdType">
+    <xs:annotation>
+      <xs:documentation>Identification of an Organization.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9]{3,3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ApplicationIdType">
+    <xs:annotation>
+      <xs:documentation>Identification of an Application.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="11"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="X001" type="X001Struct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Returncode</xs:documentation>
+      <xs:documentation xml:lang="fr">Code retour</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="X001Struct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Returncode</xs:documentation>
+      <xs:documentation xml:lang="fr">Code retour</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Result">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Resultaat</xs:documentation>
+          <xs:documentation xml:lang="fr">Résultat</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ReturnCode">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Code resultaat</xs:documentation>
+                <xs:documentation xml:lang="fr">Code résultat</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:length value="6"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="ReturnDesc">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Omschrijving resultaat</xs:documentation>
+                <xs:documentation xml:lang="fr">Description résultat</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="256"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="CodeList">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Codelijst</xs:documentation>
+                <xs:documentation xml:lang="fr">Liste de codes</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:length value="3"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=../schema/Affiliation/Affiliation_V3.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:meta="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:leg="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4" xmlns:base="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+  <xs:annotation>
+    <xs:documentation>Baseline: R1.1.0</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" schemaLocation="http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=../Base/Base_V3.xsd"/>
+  <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" schemaLocation="http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=./schema/MetaInfo/MetaInfo_V4.xsd"/>
+  <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4" schemaLocation="http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=../LegalInfo/LegalInfo_V4.xsd"/>
+  <xs:complexType name="InvestigateNewIndependantStruct">
+    <xs:sequence>
+      <xs:element ref="meta:ApplHeader"/>
+      <xs:element name="SifCode" type="base:SIFcodeType"/>
+      <xs:element name="SignatureDate" type="xs:date"/>
+      <xs:element name="IndependantInfo" type="IndependantInfoStruct"></xs:element>
+      <xs:element minOccurs="0" name="AssistingPartner" type="AssistingPartnerStruct"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CancelInvestigationStruct">
+    <xs:sequence>
+      <xs:element ref="meta:ApplHeader"/>
+      <xs:element name="AffiliationNbr" type="AffiliationNbrType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InvestigateNewAssistingPartnerStruct">
+    <xs:sequence>
+      <xs:element ref="meta:ApplHeader"/>
+      <xs:element name="SifCode" type="base:SIFcodeType"></xs:element>
+      <xs:element name="SignatureDate" type="xs:date"></xs:element>
+      <xs:element name="InssNumber" type="base:INSSType">
+        <xs:annotation>
+          <xs:documentation>INSZ nummer van de aan te sluiten persoon.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LanguageCode" type="base:LanguageCodeType"></xs:element>
+      <xs:element name="BeginDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Datum waarop deze loopbaanwijziging van start
+						gaat.</xs:documentation>
+          <xs:documentation xml:lang="fr">La date sur laquelle cette modification de
+						carrière démarrera.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="EndDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Optioneel, indien einddatum aansluiting reeds
+						gekend, b.v. bij ingave afgelopen aansluiting in
+						verleden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ContributionCode" type="base:ContributionCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Code bijdrage.</xs:documentation>
+          <xs:documentation xml:lang="fr">Code catégorie cotisation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NisseProfession" type="base:NisseProfessionStruct"/>
+      <xs:element minOccurs="0" name="CorporateForm" type="base:CorporateFormStruct">
+        <xs:annotation>
+          <xs:documentation>Toegevoegd op vraag dienst statistiek d.d.
+						31/3/2003.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IndependantInfoStruct">
+    <xs:sequence>
+      <xs:element name="InssNumber" type="base:INSSType">
+        <xs:annotation>
+          <xs:documentation>INSZ nummer van de aan te sluiten persoon.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LanguageCode" type="base:LanguageCodeType"></xs:element>
+      <xs:element name="BeginDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Datum waarop deze loopbaanwijziging van start
+						gaat.</xs:documentation>
+          <xs:documentation xml:lang="fr">La date sur laquelle cette modification de
+						carrière démarrera.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="EndDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Optioneel, indien einddatum aansluiting reeds
+						gekend, b.v. bij ingave afgelopen aansluiting in
+						verleden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ContributionCode" type="base:ContributionCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Code bijdrage.</xs:documentation>
+          <xs:documentation xml:lang="fr">Code catégorie cotisation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NisseQualityCode" type="base:NisseQualityCodeType"/>
+      <xs:element name="NisseProfession" type="base:NisseProfessionStruct"/>
+      <xs:element default="false" name="UnpayedMandate" type="xs:boolean"></xs:element>
+      <xs:element minOccurs="0" name="CorporateForm" type="base:CorporateFormStruct">
+        <xs:annotation>
+          <xs:documentation>Toegevoegd op vraag dienst statistiek d.d.
+						31/3/2003.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AssistingPartnerStruct">
+    <xs:choice>
+      <xs:element name="DoNotAffiliate">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Reason" type="ReasonPartnerNotAffiliatedType"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DoAffiliate">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InssNumber" type="base:INSSType">
+              <xs:annotation>
+                <xs:documentation>INSZ nummer van de aan te sluiten
+									persoon.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="BeginDate" type="xs:date">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Datum waarop deze loopbaanwijziging
+									van start gaat.</xs:documentation>
+                <xs:documentation xml:lang="fr">La date sur laquelle cette
+									modification de carrière démarrera.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="EndDate" type="xs:date">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Optioneel, indien einddatum
+									aansluiting reeds gekend, b.v. bij
+									ingave afgelopen aansluiting in
+									verleden.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="ContributionCode" type="base:ContributionCodeType">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Code bijdrage.</xs:documentation>
+                <xs:documentation xml:lang="fr">Code catégorie cotisation.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="InvestigateRequestInfoStruct">
+    <xs:sequence>
+      <xs:element name="LanguageCode" type="base:LanguageCodeType"/>
+      <xs:element name="SignatureDate" type="xs:date"/>
+      <xs:element name="SifCode" type="base:SIFcodeType"/>
+      <xs:element name="BeginDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Datum waarop deze loopbaanwijziging van start
+						gaat.</xs:documentation>
+          <xs:documentation xml:lang="fr">La date sur laquelle cette modification de
+						carrière démarrera.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="EndDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Optioneel, indien einddatum aansluiting reeds
+						gekend, b.v. bij ingave afgelopen aansluiting in
+						verleden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ContributionCode" type="base:ContributionCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Code bijdrage.</xs:documentation>
+          <xs:documentation xml:lang="fr">Code catégorie cotisation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NisseProfession" type="base:NisseProfessionStruct"/>
+      <xs:element name="ActivityCode" type="base:ActivityCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Activiteitscode.</xs:documentation>
+          <xs:documentation xml:lang="fr">Code d'activité.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AffiliationResultBaseType">
+    <xs:annotation>
+      <xs:documentation>Common parameters of the response to a New Affiliation
+				or Affiliation Transfer request.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="meta:ApplHeader"/>
+      <xs:element name="INSS" type="base:INSSType"/>
+      <xs:element name="AffiliationNbr" type="AffiliationNbrType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RefuseStruct">
+    <xs:complexContent>
+      <xs:extension base="AffiliationResultBaseType">
+        <xs:sequence>
+          <xs:element name="ReasonRefuse" type="ReasonRefuseType"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AcceptStruct">
+    <xs:complexContent>
+      <xs:extension base="AffiliationResultBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompanyID" type="base:CompanyStruct"/>
+          <xs:element name="LegalInfo" type="leg:PersonLegalInfoStruct"/>
+          <xs:element minOccurs="0" name="LegalCohabitationInfo" type="leg:CohabitationBeginStruct"/>
+          <xs:element name="InvestigateRequestInfo" type="InvestigateRequestInfoStruct"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Income" type="base:IncomeStruct"></xs:element>
+          <xs:element name="DirectDebitBonusAlreadyReceived" type="xs:boolean"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ReasonPartnerNotAffiliatedType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Reden van schrapping meewerkende echtegeno(o)t(e)</xs:documentation>
+      <xs:documentation xml:lang="fr">Raison de la suppression du conjoint aidant</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Staat zijn/haar echtgeno(o)t(e) niet bij -
+						verklaring op eer</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Echtgeno(o)t(e) van een bedrijfsleider</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Heeft zelf een beroepsactiviteit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AffiliationDecisionType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Beslissing aansluiting</xs:documentation>
+      <xs:documentation xml:lang="fr">Décision d'affilaition</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:length value="1"/>
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Aansluiting geweigerd (beslissing RSVZ/REP)</xs:documentation>
+          <xs:documentation xml:lang="fr">Affiliation refusée (décision INASTI/REP)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="A">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Aansluiting geschrapt door SVF</xs:documentation>
+          <xs:documentation xml:lang="fr">Affiliation radiée par la CAS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="E">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Aansluiting geweigerd wegens onvolledigheid van
+						de gegevens</xs:documentation>
+          <xs:documentation xml:lang="fr">Affiliation refusée pour cause de données
+						manquantes</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReasonRefuseType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Nieuw lid reden weigering</xs:documentation>
+      <xs:documentation xml:lang="fr">Raison de rejet du nouvel affilié</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AffiliationNbrType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Aansluiting inschrijvingsnummer. Dit inschrijvingsnummer
+				is als volgt samenge¬steld : pos.1 : 'A' pos.2-6 : jaar
+				en dag van versturen (nde dag van het kalender¬jaar)
+				pos.7-13: tijdstip van registratie : uur, minuut,
+				seconde, tiende van een seconde</xs:documentation>
+      <xs:documentation xml:lang="fr">Numéro du message d'affiliation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:length value="13"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=../Base/Base_V3.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3">
+  <xs:annotation>
+    <xs:documentation>Baseline: 1.0.0</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="CompanyStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Onderneming</xs:documentation>
+      <xs:documentation xml:lang="fr">Entreprise</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CompanyID" type="CompanyIDtype">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Identificatie van de onderneming</xs:documentation>
+          <xs:documentation xml:lang="fr">Identification de l' entreprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CompanyName" type="CompanyNameType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Naam van de onderneming</xs:documentation>
+          <xs:documentation xml:lang="fr">Nom de l' entreprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CompanyIDtype">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Ondernemingsnummer</xs:documentation>
+      <xs:documentation xml:lang="fr">Numéro d'entreprise</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CompanyNameType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Naam onderneming</xs:documentation>
+      <xs:documentation xml:lang="fr">Nom de l'entreprise</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="160"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CorporateFormStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Type rechtsvorm. OUD : zat in ProfessionType</xs:documentation>
+      <xs:documentation xml:lang="fr">Profession</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CorporateFormCode">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Code rechtsvorm</xs:documentation>
+          <xs:documentation xml:lang="fr">Code forme juridique</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CorporateFormDesc">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Omschrijving rechtsvorm</xs:documentation>
+          <xs:documentation xml:lang="fr">Description forme juridique</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CityNisCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">1) NIScode range [10000-99990[ : Gemeente nummer, enkel
+				in Belgie // 2) 00nnn : Landcode, indien gekend, waarbij
+				nnn de rsvz landcode is. // 3) Andere: zie codes bij
+				KSZ.</xs:documentation>
+      <xs:documentation xml:lang="fr">TODO</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CityNameType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DomesticCityNameType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Gemeentenaam in Belgie.</xs:documentation>
+      <xs:documentation xml:lang="fr">Nom de commune en Belgique.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="CityNameType">
+        <xs:attribute name="LanguageCode" type="LanguageCodeType" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="TimeAndPlaceStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Datum en Plaats van een gebeurtenis.</xs:documentation>
+      <xs:documentation xml:lang="fr">Date et Lieu d'un évènement.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="DateType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">datum</xs:documentation>
+          <xs:documentation xml:lang="fr">date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Place" type="PlaceStruct">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Informatie over verblijfplaats. TODO moet
+						herwerkt naar belgische residentie, anders leeg?
+						Bijvoorbeeld vervangen door CityNisCode?</xs:documentation>
+          <xs:documentation xml:lang="fr">résidence</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DomesticPlaceStruct">
+    <xs:sequence>
+      <xs:element maxOccurs="2" name="CityName" type="DomesticCityNameType"/>
+      <xs:element name="CityNisCode" type="CityNisCodeType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ForeignPlaceStruct">
+    <xs:sequence>
+      <xs:element maxOccurs="2" name="CityName" type="CityNameType"/>
+      <xs:element name="CountryCode" type="CountryCodeType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PlaceStruct">
+    <xs:choice>
+      <xs:element name="Foreign" type="ForeignPlaceStruct"/>
+      <xs:element name="Domestic" type="DomesticPlaceStruct"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="CivilStateStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Burgerlijke staat. Noot: omvat NIET de wettelijk
+				samenwonenden.</xs:documentation>
+      <xs:documentation xml:lang="fr">Etat civil</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">begindatum</xs:documentation>
+          <xs:documentation xml:lang="fr">date de commencement</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CivilStateCode" type="CivilStateCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">burgerlijke staat</xs:documentation>
+          <xs:documentation xml:lang="fr">état civil</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CertificatePublicationPlace" type="CityNisCodeType"/>
+      <xs:element minOccurs="0" name="Partner">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Echtgeno(o)t(e)</xs:documentation>
+          <xs:documentation xml:lang="fr">Conjoint</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSS" type="INSSType">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">INSS echtgeno(o)t(e)</xs:documentation>
+                <xs:documentation xml:lang="fr">INSS du conjoint</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Name" type="LongNameStruct">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Naam echtgeno(o)t(e)</xs:documentation>
+                <xs:documentation xml:lang="fr">Nom du conjoint</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CivilStateCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Code burgerlijke staat.</xs:documentation>
+      <xs:documentation xml:lang="fr">Code état civil</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:documentation>ongehuwd</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="20">
+        <xs:annotation>
+          <xs:documentation>gehuwd</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="25">
+        <xs:annotation>
+          <xs:documentation>nietigverklaring huwelijk</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="26">
+        <xs:annotation>
+          <xs:documentation>putatief huwelijk</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="30">
+        <xs:annotation>
+          <xs:documentation>weduwnaar (weduwe)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="40">
+        <xs:annotation>
+          <xs:documentation>echtgescheiden (oude wetgeving)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="41">
+        <xs:annotation>
+          <xs:documentation>echtgescheiden (wet van 30 juni 1994)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="50">
+        <xs:annotation>
+          <xs:documentation>gescheiden van tafel en bed (oude wetgeving)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="51">
+        <xs:annotation>
+          <xs:documentation>gescheiden van tafel en bed (wet van 30 juni
+						1994)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="60">
+        <xs:annotation>
+          <xs:documentation>verstoting</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="90">
+        <xs:annotation>
+          <xs:documentation>onbepaald</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NationalityStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Nationaliteit</xs:documentation>
+      <xs:documentation xml:lang="fr">Nationalité</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="NationalityCode">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Nationaliteitscode</xs:documentation>
+          <xs:documentation xml:lang="fr">Code nationalité</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="NationalityDesc">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Omschrijving nationaliteit</xs:documentation>
+          <xs:documentation xml:lang="fr">Description nationalité</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="BeginDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Begin datum</xs:documentation>
+          <xs:documentation xml:lang="fr">date de commencement</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PostCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">postcode</xs:documentation>
+      <xs:documentation xml:lang="fr">code postal</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HouseNbrType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">huisnummer</xs:documentation>
+      <xs:documentation xml:lang="fr">numéro de maison</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HouseBoxNbrType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Busnummer in adres.</xs:documentation>
+      <xs:documentation xml:lang="fr">Boîte</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StreetCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Straatcode</xs:documentation>
+      <xs:documentation xml:lang="fr">Code rue</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:length value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StreetNameType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DomesticStreetNameType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Straatnaam</xs:documentation>
+      <xs:documentation xml:lang="fr">Nom de rue</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="StreetNameType">
+        <xs:attribute name="LanguageCode" type="LanguageCodeType" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DomesticStreetStruct">
+    <xs:sequence>
+      <xs:element maxOccurs="2" name="StreetName" type="DomesticStreetNameType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">straatnaam</xs:documentation>
+          <xs:documentation xml:lang="fr">nom de rue</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StreetCode" type="StreetCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">straatcode</xs:documentation>
+          <xs:documentation xml:lang="fr">code de rue</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressStruct">
+    <xs:choice>
+      <xs:element name="Domestic" type="DomesticAddressStruct"/>
+      <xs:element name="ForeignStructured" type="ForeignAddressStructuredStruct"/>
+      <xs:element name="ForeignUnStructured" type="ForeignAddressUnStructuredStruct"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="DomesticAddressStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Adres voor binnenland, bron kan RijksRegister of
+				BisRegister zijn.</xs:documentation>
+      <xs:documentation xml:lang="fr">TODO</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Street" type="DomesticStreetStruct"/>
+      <xs:element minOccurs="0" name="HouseNbr" type="HouseNbrType"/>
+      <xs:element minOccurs="0" name="BoxNbr" type="HouseBoxNbrType"/>
+      <xs:element minOccurs="0" name="PostCode" type="PostCodeType"/>
+      <xs:element maxOccurs="2" name="CityName" type="DomesticCityNameType"/>
+      <xs:element name="CityNisCode" type="CityNisCodeType"/>
+      <xs:element minOccurs="0" name="MunicipalityRegistrationDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Datum inschrijving in gemeente.</xs:documentation>
+          <xs:documentation xml:lang="fr">Date de commencement.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ForeignAddressStructuredStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Adres voor buitenland, bron is BisRegister.</xs:documentation>
+      <xs:documentation xml:lang="fr">TODO</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="StreetName" type="StreetNameType"/>
+      <xs:element minOccurs="0" name="HouseNbr" type="HouseNbrType"/>
+      <xs:element minOccurs="0" name="BoxNbr" type="HouseBoxNbrType"/>
+      <xs:element minOccurs="0" name="PostCode" type="PostCodeType"/>
+      <xs:element maxOccurs="2" minOccurs="1" name="CityName" type="CityNameType"/>
+      <xs:element name="CountryCode" type="CountryCodeType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ForeignAddressUnStructuredStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Adres buitenland van RijksRegister.</xs:documentation>
+      <xs:documentation xml:lang="fr">Adresse étrangère du TODO.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Address">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CountryCode" type="CountryCodeType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CountryCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">RSVZ country code. Niet de iso country code!</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:length value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GenderType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Geslacht</xs:documentation>
+      <xs:documentation xml:lang="fr">Sexe</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="male">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">man (OUD: 1)</xs:documentation>
+          <xs:documentation xml:lang="fr">masculin</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="female">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">vrouw (OUD: 2)</xs:documentation>
+          <xs:documentation xml:lang="fr">féminin</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DateType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Datatype voor een datum, formaat EEJJ-MM-DD.</xs:documentation>
+      <xs:documentation xml:lang="fr">Format d'un date, format SSAA-MM-JJ.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-2][0-9]{3}\-[0-1][0-9]\-[0-3][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="LongNameStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Type voor namen.</xs:documentation>
+      <xs:documentation xml:lang="fr">Le type pour les noms.</xs:documentation>
+      <xs:documentation xml:lang="fr">Type Nom.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LastName">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Familienaam</xs:documentation>
+          <xs:documentation xml:lang="fr">Nom de famille</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="48"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="2" minOccurs="0" name="FirstName">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Eerste en tweede voornaam. Zie ook
+						FirstNameIndicator.</xs:documentation>
+          <xs:documentation xml:lang="fr">Premier et second prénoms.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="24"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="FirstNameIndicator">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Indicatie of het om twee verschillende voornamen
+						gaat, of om één opgespliste voornaam.</xs:documentation>
+          <xs:documentation xml:lang="fr">Indication s'il s'agit de 2 prénoms différents
+						ou d'un prénom composé.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="fr">Il n'y a qu'un seul prénom ou il en
+									a deux dont un est incomplet</xs:documentation>
+                <xs:documentation xml:lang="nl">Er is maar één voornaam of er zijn
+									er twee waarvan één onvolledig is.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="1">
+              <xs:annotation>
+                <xs:documentation xml:lang="fr">deux prénoms complets</xs:documentation>
+                <xs:documentation xml:lang="nl">twee volledige voornamen</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="Title">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Titel van adeldom.</xs:documentation>
+          <xs:documentation xml:lang="fr">Titre de noblesse.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ActivityCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Activiteitscode.</xs:documentation>
+      <xs:documentation xml:lang="fr">Code activité</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="14">
+        <xs:annotation>
+          <xs:documentation>verandering aard aktiviteit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="18">
+        <xs:annotation>
+          <xs:documentation>stopzetting activiteit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="19">
+        <xs:annotation>
+          <xs:documentation>definitieve verandering van SVF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="20">
+        <xs:annotation>
+          <xs:documentation>voorlopige verandering van SVF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="21">
+        <xs:annotation>
+          <xs:documentation>overlijden</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3A">
+        <xs:annotation>
+          <xs:documentation>begin gelijkstelling meewerkende echtgen.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3B">
+        <xs:annotation>
+          <xs:documentation>einde gelijkstelling meewerkende echtgen.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="30">
+        <xs:annotation>
+          <xs:documentation>begin gelijkstelling wegens ziekte</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="31">
+        <xs:annotation>
+          <xs:documentation>begin gelijkstelling wegens studie</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="32">
+        <xs:annotation>
+          <xs:documentation>begin gelijkstelling wegens militaire dienst</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="33">
+        <xs:annotation>
+          <xs:documentation>begin gelijkstelling wegens voorl. hechtenis</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="34">
+        <xs:annotation>
+          <xs:documentation>begin voortgezette verzekering</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="35">
+        <xs:annotation>
+          <xs:documentation>einde voortgezette verzekering</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="36">
+        <xs:annotation>
+          <xs:documentation>einde gelijkstelling wegens voorl. hechteni</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="37">
+        <xs:annotation>
+          <xs:documentation>einde gelijkstelling wegens militaire dienst</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="38">
+        <xs:annotation>
+          <xs:documentation>einde gelijkstelling wegens studie</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="39">
+        <xs:annotation>
+          <xs:documentation>einde gelijkstelling wegens ziekte</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="40">
+        <xs:annotation>
+          <xs:documentation>begin vrijstelling commissie</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="41">
+        <xs:annotation>
+          <xs:documentation>begin vrijstelling bijdrage (art.40)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="42">
+        <xs:annotation>
+          <xs:documentation>begin verminderde bijdrage (art.40)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="43">
+        <xs:annotation>
+          <xs:documentation>begin onroerend goed kolonist</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="44">
+        <xs:annotation>
+          <xs:documentation>begin minimumbijdrage art. 40</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="45">
+        <xs:annotation>
+          <xs:documentation>einde minimumbijdrage art. 40</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="46">
+        <xs:annotation>
+          <xs:documentation>einde onroerend goed kolonist</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="47">
+        <xs:annotation>
+          <xs:documentation>einde verminderde bijdrage (art. 40)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="48">
+        <xs:annotation>
+          <xs:documentation>einde vrijstelling bijdrage (art. 40)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="49">
+        <xs:annotation>
+          <xs:documentation>einde vrijstelling</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="50">
+        <xs:annotation>
+          <xs:documentation>begin voortgezette verz. faillissement</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="59">
+        <xs:annotation>
+          <xs:documentation>einde voortgezette verz. faillissement</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="60">
+        <xs:annotation>
+          <xs:documentation>begin activiteit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="61">
+        <xs:annotation>
+          <xs:documentation>herneming activiteit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="62">
+        <xs:annotation>
+          <xs:documentation>ambtshalve aansluiting</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="70">
+        <xs:annotation>
+          <xs:documentation>begin DSR-dossier</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="71">
+        <xs:annotation>
+          <xs:documentation>einde DSR-dossier</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="76">
+        <xs:annotation>
+          <xs:documentation>begin onvoorwaardelijk overlevingspensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="77">
+        <xs:annotation>
+          <xs:documentation>einde onvoorwaardelijk overlevingspensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="78">
+        <xs:annotation>
+          <xs:documentation>begin onvoorwaardelijk pensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="79">
+        <xs:annotation>
+          <xs:documentation>einde onvoorwaardelijk pensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="80">
+        <xs:annotation>
+          <xs:documentation>begin overdracht pensioenrechten</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="81">
+        <xs:annotation>
+          <xs:documentation>einde overdracht pensioenrechten</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="82">
+        <xs:annotation>
+          <xs:documentation>begin schorsing pensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="83">
+        <xs:annotation>
+          <xs:documentation>einde schorsing pensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="84">
+        <xs:annotation>
+          <xs:documentation>begin gescheiden echtgenoot</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="85">
+        <xs:annotation>
+          <xs:documentation>einde gescheiden echtgenoot</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="86">
+        <xs:annotation>
+          <xs:documentation>begin wees</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="87">
+        <xs:annotation>
+          <xs:documentation>einde wees</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="88">
+        <xs:annotation>
+          <xs:documentation>vermoedelijke stopzetting (1980)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="90">
+        <xs:annotation>
+          <xs:documentation>begin schorsing pensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="91">
+        <xs:annotation>
+          <xs:documentation>einde schorsing pensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="98">
+        <xs:annotation>
+          <xs:documentation>vermoedelijke stopzetting (1960-70)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="99">
+        <xs:annotation>
+          <xs:documentation>vernietiging aansluiting vanaf begin</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CareerComponentStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Datatype voor het aangeven van het begin, einde, of
+				verandering in een Loopbaan.</xs:documentation>
+      <xs:documentation xml:lang="fr">Le type de date pour l'indication du début, de la fin,
+				ou du changement dans une carrière.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="BeginDate" type="xs:date">
+          <xs:annotation>
+            <xs:documentation xml:lang="nl">Datum waarop deze loopbaanwijziging van
+							start gaat.</xs:documentation>
+            <xs:documentation xml:lang="fr">La date sur laquelle cette modification de
+							carrière démarrera.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="OldBeginDate" type="xs:date">
+          <xs:annotation>
+            <xs:documentation xml:lang="nl">Enkel bij wijziging van de begindatum.</xs:documentation>
+            <xs:documentation xml:lang="fr">Uniquement lors de la modification de la
+							date de commencement.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="ActivityCode" type="ActivityCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Activiteitscode.</xs:documentation>
+          <xs:documentation xml:lang="fr">Code d'activité.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ActivityCodeDesc" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Beschrijving van de activiteit.</xs:documentation>
+          <xs:documentation xml:lang="fr">Description d'activité.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ContributionCode" type="ContributionCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Code bijdrage.</xs:documentation>
+          <xs:documentation xml:lang="fr">Code catégorie cotisation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ContributionCodeDesc" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Beschrijving bijdrage code.</xs:documentation>
+          <xs:documentation xml:lang="fr">Description code catégorie cotisation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="IncomeCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Code inkomsten.</xs:documentation>
+      <xs:documentation xml:lang="fr">Code revenus</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>Inkomen van SVF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>Eerste inkomen van de belastingen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>Tweede inkomen van de belastingen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>Inkomen VOB</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation>Inkomen CSSB</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="?">
+        <xs:annotation>
+          <xs:documentation>inkomen aangevraagd door SVF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="N">
+        <xs:annotation>
+          <xs:documentation>Geen spoor van inkomsten als zelfstandige</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="X">
+        <xs:annotation>
+          <xs:documentation>Het inkomen is nergens meer te vinden</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Y">
+        <xs:annotation>
+          <xs:documentation>Verder onderzoek in dienst VOB</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Z">
+        <xs:annotation>
+          <xs:documentation>Inkomen is in bezwaar</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="P">
+        <xs:annotation>
+          <xs:documentation>Het inkomen is niet belastbaar</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="IncomeStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Inkomen</xs:documentation>
+      <xs:documentation xml:lang="fr">Revenus</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="IncomeYear" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Inkomstenjaar</xs:documentation>
+          <xs:documentation xml:lang="fr">Année du revenu</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IncomeCode" type="IncomeCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Code inkomstenjaar</xs:documentation>
+          <xs:documentation xml:lang="fr">Code année du revenu</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Bedrag</xs:documentation>
+          <xs:documentation xml:lang="fr">Quantité</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AssessmentArticle">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Cohierartikel</xs:documentation>
+          <xs:documentation xml:lang="fr">Article de cohier</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="7"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CommunicationDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Mededelingsdatum door de belastingen</xs:documentation>
+          <xs:documentation xml:lang="fr">La date de communication par les impôts</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FPSFinQualityCode">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Hoedanigheid</xs:documentation>
+          <xs:documentation xml:lang="fr">Qualité</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="SIFDistributionIncomeCode">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Toekenning van inkomsten</xs:documentation>
+          <xs:documentation xml:lang="fr">Octroi des revenus</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="IncomeCommunicationDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Datum waarop de inkomsten door RSVZ verdeeld
+						werden</xs:documentation>
+          <xs:documentation xml:lang="nl">La date sur laquelle les revenus RSVZ a été
+						partagée</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CompanyManagerRemuneration" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Bezoldigingen van bedrijfsleiders</xs:documentation>
+          <xs:documentation xml:lang="fr">Les rémunérations des chefs d'entreprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Benefit" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Winst uit nijverheids-, handels- of
+						landbouwondernemingen</xs:documentation>
+          <xs:documentation xml:lang="fr">Le bénéfice les industries -, les commerces- ou
+						les entreprises d'agriculture</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Profit" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Baten van vrije beroepen, ambten, posten of
+						andere winstgevende bezigheden</xs:documentation>
+          <xs:documentation xml:lang="fr">Les avantages des professions libérales, des
+						fonctions, des postes ou d'autres occupations
+						lucratives</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AssistingPartnerIsRenumerated" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Meewerkende echtgeno(o)t(e)e wordt vergoed. 2A:
+						AssistingSpouseRemuneration</xs:documentation>
+          <xs:documentation xml:lang="fr">Les rémunérations de épouse(conjoint) coopérant</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="HasBenefitOrProfitFromPreviousActivity" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Heeft winsten en baten van een vorige
+						beroepswerkzaamheid.</xs:documentation>
+          <xs:documentation xml:lang="fr">Le bénéfice et les avantages d'une activité
+						professionnelle précédente</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AssistingPartnerAllocation" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Toekenning als meewerkende echtgeno(o)t(e)e
+						afgetrokken. TODO: wat betekent dit? 2A:
+						AssistingSpouseAllocation</xs:documentation>
+          <xs:documentation xml:lang="fr">L'octroi décompté comme épouse(conjount)
+						coopérant</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComplementaryInformation" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">commentaar</xs:documentation>
+          <xs:documentation xml:lang="fr">commentaire</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SIFcodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Ondernemingsnummer van het sociaal verzekeringsfonds.</xs:documentation>
+      <xs:documentation xml:lang="fr">Numéro d'entreprise de la caisse d'assurances sociales</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="000">
+        <xs:annotation>
+          <xs:documentation>A.S.L.K.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="001">
+        <xs:annotation>
+          <xs:documentation>Groep S</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="002">
+        <xs:annotation>
+          <xs:documentation>XERIUS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="003">
+        <xs:annotation>
+          <xs:documentation>S.V.M.B. - C.N.A.S.T.I.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="007">
+        <xs:annotation>
+          <xs:documentation>PARTENA</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="010">
+        <xs:annotation>
+          <xs:documentation>ACERTA Sociaal Verzekeringsfonds</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="011">
+        <xs:annotation>
+          <xs:documentation>Arenberg</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="012">
+        <xs:annotation>
+          <xs:documentation>Securex Integrity</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="013">
+        <xs:annotation>
+          <xs:documentation>Attentia sociaal verzekeringsfonds</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="014">
+        <xs:annotation>
+          <xs:documentation>Intersociale</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="015">
+        <xs:annotation>
+          <xs:documentation>Multipen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="016">
+        <xs:annotation>
+          <xs:documentation>HDP Sociaal Verzekeringsfonds voor Zelfstandigen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="017">
+        <xs:annotation>
+          <xs:documentation>Steunt Elkander</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="019">
+        <xs:annotation>
+          <xs:documentation>Caisse wallonne</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="900">
+        <xs:annotation>
+          <xs:documentation>Nationale Hulpkas</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="901">
+        <xs:annotation>
+          <xs:documentation>CNH/SOV Fr.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="902">
+        <xs:annotation>
+          <xs:documentation>CNH/SOV Nl.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="903">
+        <xs:annotation>
+          <xs:documentation>CNH/SOV D.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="921">
+        <xs:annotation>
+          <xs:documentation>CNH - Centr.Ned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="922">
+        <xs:annotation>
+          <xs:documentation>CNH - Centr.Fr.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="931">
+        <xs:annotation>
+          <xs:documentation>CNH - Brussel-Hoofdstad</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="932">
+        <xs:annotation>
+          <xs:documentation>CNH - Bruxelles-capital</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="951">
+        <xs:annotation>
+          <xs:documentation>CNH - Antwerpen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="952">
+        <xs:annotation>
+          <xs:documentation>CNH - Limburg</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="953">
+        <xs:annotation>
+          <xs:documentation>CNH - Oost-Vlaanderen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="954">
+        <xs:annotation>
+          <xs:documentation>CNH - Vlaams-Brabant</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="955">
+        <xs:annotation>
+          <xs:documentation>CNH - West-Vlaanderen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="971">
+        <xs:annotation>
+          <xs:documentation>CNH - Brabant Wallon</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="972">
+        <xs:annotation>
+          <xs:documentation>CNH - Hainaut</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="973">
+        <xs:annotation>
+          <xs:documentation>CNH - Liège</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="974">
+        <xs:annotation>
+          <xs:documentation>CNH - Luxembourg</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="975">
+        <xs:annotation>
+          <xs:documentation>CNH - Malmedy</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="976">
+        <xs:annotation>
+          <xs:documentation>CNH - Namur</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LanguageCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Taalcode van een Persoon. 2A: LinguisticRoleCodeType</xs:documentation>
+      <xs:documentation xml:lang="fr">TODO</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:length value="1"/>
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">onbekend</xs:documentation>
+          <xs:documentation xml:lang="fr">inconnu</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">franstalig</xs:documentation>
+          <xs:documentation xml:lang="fr">francais</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">nederlandstalig</xs:documentation>
+          <xs:documentation xml:lang="fr">néerlandais</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">duitstalig</xs:documentation>
+          <xs:documentation xml:lang="fr">allemand</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LinguisticRegimeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Taalregime van een gemeente. 2A:
+				LinguisticRoleCodeResidenceType</xs:documentation>
+      <xs:documentation xml:lang="fr">Code rôle linguistique de la résidence</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:length value="2"/>
+      <xs:enumeration value="N0">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">nederlands</xs:documentation>
+          <xs:documentation xml:lang="fr">néerlandais</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="F0">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">franstalig</xs:documentation>
+          <xs:documentation xml:lang="fr">francais</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="D0">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">duitstalig</xs:documentation>
+          <xs:documentation xml:lang="fr">allemand</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="N1">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Nederlands met Franse faciliteiten</xs:documentation>
+          <xs:documentation xml:lang="fr">Néerlandais avec les facilités françaises</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="F1">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Frans met Nederlandse faciliteiten</xs:documentation>
+          <xs:documentation xml:lang="fr">Français avec les facilités néerlandaises</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="F3">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Frans met Duitse faciliteiten</xs:documentation>
+          <xs:documentation xml:lang="fr">Français avec les facilités allemandes</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="F4">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Frans met Nederlands en Duitse faciliteiten</xs:documentation>
+          <xs:documentation xml:lang="fr">Français avec des facilités néerlandais et
+						allemandes</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="B1">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Nederlands en Frans (19 Brusselse gemeenten)</xs:documentation>
+          <xs:documentation xml:lang="fr">Néerlandais et français (19 communes
+						bruxelloises)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="D2">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Duits met Franse faciliteiten</xs:documentation>
+          <xs:documentation xml:lang="fr">Allemand avec les facilités françaises</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="INSSType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Type voor INSZ nummer. Unieke identificatiesleutel per
+				natuurlijk persoon die gebruikt wordt in de gehele
+				sociale zekerheid. Voor de personen opgenomen in het
+				Rijksregister is dit het rijksregisternummer; voor de
+				andere personen is dit het KSZ-nummer(bisnummer).
+				Formaat: Maximaal 11 karakters. JJMMDDxxxYY : jaar maand
+				dag xxx volgnr YY modulus 97.</xs:documentation>
+      <xs:documentation xml:lang="fr">Le type pour INSZ numéro. Le type pour INSZ numéro. 11
+				caractères maximaux. AAMMJJxxxYY : l'an le mois le jour
+				xxx le numéro d'ordre YY modulus 97</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:length value="11"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NisseQualityCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Code hoedanigheid</xs:documentation>
+      <xs:documentation xml:lang="fr">Code qualité</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">zelfstandige</xs:documentation>
+          <xs:documentation xml:lang="fr">Travailleur indépendant</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">help(st)er</xs:documentation>
+          <xs:documentation xml:lang="fr">Aidant ou aidante</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">art. 12</xs:documentation>
+          <xs:documentation xml:lang="fr">Application art. 12</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">meewerkende echtgeno(o)t(e)</xs:documentation>
+          <xs:documentation xml:lang="fr">Conjoint aidant</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NisseProfessionStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Beroep, volgens codes gekend bij RSVZ. OUD : zat in
+				ProfessionType</xs:documentation>
+      <xs:documentation xml:lang="fr">Profession</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="NisseProfessionCode">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Beroepscode. OUD: NACECode.</xs:documentation>
+          <xs:documentation xml:lang="fr">Code profession NACE</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="6"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="NisseProfessionDesc">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Omschrijving beroep OUD: NACEDesc</xs:documentation>
+          <xs:documentation xml:lang="fr">Description profession</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ContributionCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Bijdragecategorie.</xs:documentation>
+      <xs:documentation xml:lang="fr">Catégorie cotisation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A">
+        <xs:annotation>
+          <xs:documentation>Hoofdberoep</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="B">
+        <xs:annotation>
+          <xs:documentation>Aanwenden van levensverzekering</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="C">
+        <xs:annotation>
+          <xs:documentation>Aanwending onroerend goed</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="D">
+        <xs:annotation>
+          <xs:documentation>Bijberoep</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="E">
+        <xs:annotation>
+          <xs:documentation>Bezigheid na pensioenleeftijd</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="F">
+        <xs:annotation>
+          <xs:documentation>Bezigheid met genot van de vervroegde rente</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="G">
+        <xs:annotation>
+          <xs:documentation>Helpster zonder inkomen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="H">
+        <xs:annotation>
+          <xs:documentation>Gehuwde vrouw of weduwe - art.37 1</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="I">
+        <xs:annotation>
+          <xs:documentation>Bijberoep - voorlopige bijdrage</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="J">
+        <xs:annotation>
+          <xs:documentation>Man vervangt vrouw</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="K">
+        <xs:annotation>
+          <xs:documentation>Voortgezette verzekering - faillissement Sociale
+						verzekering in geval van faillissement</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="L">
+        <xs:annotation>
+          <xs:documentation>Meewerkende echtgenoot - maxi statuut</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="M">
+        <xs:annotation>
+          <xs:documentation>Bezigheid na normale pensioenleeftijd</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="N">
+        <xs:annotation>
+          <xs:documentation>Geestelijkheid verbonden aan het rijksonderwijs</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="O">
+        <xs:annotation>
+          <xs:documentation>Overlevingspensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="P">
+        <xs:annotation>
+          <xs:documentation>Leden van een kloostergemeenschap</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Q">
+        <xs:annotation>
+          <xs:documentation>Meewerkende echtgenoot</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="R">
+        <xs:annotation>
+          <xs:documentation>Voortgezette verzekering</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="S">
+        <xs:annotation>
+          <xs:documentation>Voortgezette verzekering</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="T">
+        <xs:annotation>
+          <xs:documentation>Gelijkstelling wegens studie en leerperiode</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="U">
+        <xs:annotation>
+          <xs:documentation>Gelijkstelling wegens ziekte, mil.dienst,
+						voorl.hecht.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="V">
+        <xs:annotation>
+          <xs:documentation>Vervroegd gepensioneerd met verlies van pensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="W">
+        <xs:annotation>
+          <xs:documentation>Aktieven na pensioenleeftijd zonder rustpensioen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="X">
+        <xs:annotation>
+          <xs:documentation>Helper in een familie onderneming</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Y">
+        <xs:annotation>
+          <xs:documentation>Voortgezette aktiviteit na pensioenleeftijd</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=../LegalInfo/LegalInfo_V4.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:meta="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:base="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+  <xs:annotation>
+    <xs:documentation>Baseline: R1.1.0</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" schemaLocation="http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=../Base/Base_V3.xsd"/>
+  <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" schemaLocation="http://svl055/Nasca-Affiliation/services/SifAffiliation?xsd=./schema/MetaInfo/MetaInfo_V4.xsd"/>
+  <xs:element name="RequestForLegalInfo">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Opvraging wettelijke gegevens</xs:documentation>
+      <xs:documentation xml:lang="fr">Demande données légales</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element name="inss" type="base:INSSType"/>
+          <xs:element name="QueryByNameData" type="QueryByNameDataStruct"/>
+        </xs:choice>
+        <xs:choice>
+          <xs:element name="Matches" type="MatchesType"/>
+          <xs:element name="NoMatch" type="NoMatchType"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="QueryByNameDataStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Fonetische opzoeking: Opzoeken op naam, geboortedatum,
+				geslacht en andere optionele parameters.</xs:documentation>
+      <xs:documentation xml:lang="fr">Recherche par nom, date de naissance et sexe et d'autres
+				paramètres optionells.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Name" type="base:LongNameStruct">
+        <xs:annotation>
+          <xs:documentation>Bij het zoeken naar personen met namen
+						(familienaam + voornamen) die overeenkomen met
+						de opgegeven criteria controleert het
+						Rijksregister niet enkel de huidige naam van de
+						persoon, maar ook de historieken. Dit houdt in
+						dat een persoon ook zal teruggegeven worden als
+						hij of zij ooit een naam heeft gehad die
+						fonetisch overeenkomt met de opgegeven naam,
+						zelfs als de huidige naam anders is. Het is dus
+						bijvoorbeeld mogelijk dat een opzoeking naar
+						Janssens een persoon met de naam Peeters
+						teruggeeft.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BirthDate" type="base:DateType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">De geboortedatum kan op 3 mogelijke manieren
+						ingegeven worden: - volledig ingevuld (jaar,
+						maand, dag) - jaar en maand ingevuld, dag op 00
+						- jaar ingevuld, maand en dag beiden op 00</xs:documentation>
+          <xs:documentation xml:lang="fr">Date de naissance</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Gender" type="base:GenderType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateBisNumberStruct">
+    <xs:sequence>
+      <xs:element ref="meta:ApplHeader"/>
+      <xs:element name="Name" type="base:LongNameStruct"/>
+      <xs:element name="LanguageCode" type="base:LanguageCodeType"/>
+      <xs:element name="OfficialAddress">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="Domestic">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StreetName" type="base:DomesticStreetNameType"/>
+                  <xs:element minOccurs="0" name="HouseNbr" type="base:HouseNbrType"/>
+                  <xs:element minOccurs="0" name="BoxNbr" type="base:HouseBoxNbrType"/>
+                  <xs:element name="PostCode" type="base:PostCodeType"/>
+                  <xs:element name="CityName" type="base:DomesticCityNameType"/>
+                  <xs:element name="CityNisCode" type="base:CityNisCodeType"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Foreign">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StreetName" type="base:StreetNameType"/>
+                  <xs:element minOccurs="0" name="HouseNbr" type="base:HouseNbrType"/>
+                  <xs:element minOccurs="0" name="BoxNbr" type="base:HouseBoxNbrType"/>
+                  <xs:element name="PostCode" type="base:PostCodeType"/>
+                  <xs:element name="CityName" type="base:CityNameType"/>
+                  <xs:element name="CountryCode" type="base:CountryCodeType"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Nationality" type="base:NationalityStruct"/>
+      <xs:element minOccurs="0" name="CivilState">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="BeginDate" type="xs:date"/>
+            <xs:element name="CivilStateCode" type="base:CivilStateCodeType">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">burgerlijke staat</xs:documentation>
+                <xs:documentation xml:lang="fr">état civil</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Birth">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Date" type="base:DateType">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">datum</xs:documentation>
+                <xs:documentation xml:lang="fr">date</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="Place" type="BasicPlaceStruct">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Informatie over verblijfplaats</xs:documentation>
+                <xs:documentation xml:lang="fr">résidence</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="Death">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Date" type="base:DateType">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">datum</xs:documentation>
+                <xs:documentation xml:lang="fr">date</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="Place" type="BasicPlaceStruct">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Informatie over verblijfplaats</xs:documentation>
+                <xs:documentation xml:lang="fr">résidence</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Gender" type="base:GenderType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType abstract="true" name="AbstractResult"/>
+  <xs:complexType name="MatchesType">
+    <xs:annotation>
+      <xs:documentation>Het SVF kan maximaal 10 antwoorden ontvangen als
+				antwoord op deze vraag, waaronder maximaal 5 van het
+				Rijksregister en maximaal 5 van het Bisregister. Indien
+				meer dan 5 antwoorden per instantie zal er een
+				foutboodschap gegeven worden. De opvraging dient dan
+				verfijnt te worden. Opgelet: momenteel worden enkel de
+				“maximaal 5 antwoorden van het Rijksregister” verstuurd.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractResult">
+        <xs:sequence>
+          <xs:element maxOccurs="10" name="Match">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="INSS" type="base:INSSType"/>
+                <xs:element name="LegalInfo" type="PersonLegalInfoStruct"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="NoMatchType">
+    <xs:complexContent>
+      <xs:extension base="AbstractResult">
+        <xs:sequence>
+          <xs:element name="Code">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:minLength value="1"/>
+                <xs:maxLength value="6"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element maxOccurs="2" minOccurs="0" name="Description">
+            <xs:complexType>
+              <xs:simpleContent>
+                <xs:extension base="NoMatchDescriptionType">
+                  <xs:attribute name="LanguageCode" type="base:LanguageCodeType"/>
+                </xs:extension>
+              </xs:simpleContent>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PersonLegalInfoStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Wettelijke gegevens van een persoon.</xs:documentation>
+      <xs:documentation xml:lang="fr">Données légales</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Name" type="base:LongNameStruct">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Naam</xs:documentation>
+          <xs:documentation xml:lang="fr">Nom</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LanguageCode" type="base:LanguageCodeType">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Taalcode</xs:documentation>
+          <xs:documentation xml:lang="fr">Language code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OfficialAddress" type="base:AddressStruct">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Officieel adres</xs:documentation>
+          <xs:documentation xml:lang="fr">Adresse officielle</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Nationality" type="base:NationalityStruct">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Nationaliteit</xs:documentation>
+          <xs:documentation xml:lang="fr">Nationalité</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CivilState" type="base:CivilStateStruct">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Burgerlijke stand</xs:documentation>
+          <xs:documentation xml:lang="fr">L'état civil</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Birth" type="base:TimeAndPlaceStruct">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Geboortedatum</xs:documentation>
+          <xs:documentation xml:lang="fr">La date de naissance</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Death" type="base:TimeAndPlaceStruct">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Overlijdingsdatum en plaats.</xs:documentation>
+          <xs:documentation xml:lang="fr">La date de décès</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Gender" type="base:GenderType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CohabitationBeginStruct">
+    <xs:annotation>
+      <xs:documentation xml:lang="nl">Wettelijke samenwoning, het Begin.</xs:documentation>
+      <xs:documentation xml:lang="fr"/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Declaration" type="base:TimeAndPlaceStruct">
+        <xs:annotation>
+          <xs:documentation xml:lang="nl">Datum van de verklaring.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RegistrationDate" type="base:DateType">
+        <xs:annotation>
+          <xs:documentation>TODO Registration date ?</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Notary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Name" type="base:LongNameStruct">
+              <xs:annotation>
+                <xs:documentation>TODO Naam van de notaris?</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="Place">
+              <xs:annotation>
+                <xs:documentation>TODO Wat is de rol van plaats hier?</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="CityName" type="base:CityNameType"/>
+                  <xs:element name="CityNisCode" type="base:CityNisCodeType"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Partner">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="INSS" type="base:INSSType"/>
+            <xs:element minOccurs="0" name="Name" type="base:LongNameStruct">
+              <xs:annotation>
+                <xs:documentation xml:lang="nl">Naam echtgeno(o)t(e)</xs:documentation>
+                <xs:documentation xml:lang="fr">Nom du conjoint</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BasicPlaceStruct">
+    <xs:choice>
+      <xs:element name="Domestic">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CityName" type="base:DomesticCityNameType"/>
+            <xs:element name="CityNisCode" type="base:CityNisCodeType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Foreign">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CityName" type="base:CityNameType"/>
+            <xs:element name="CountryCode" type="base:CountryCodeType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:simpleType name="NoMatchDescriptionType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="80"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://DSK13002:8088/mockSifAffiliationSOAPBinding</con:endpoint><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:endpoint>http://nascatst4.ucm.be/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:endpoint>http://svl055/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:endpoint>http://svl075/Nasca-Fuzion/services/SifAffiliation</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Accept" name="Accept" bindingOperationName="Accept" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="b8decd4c-5bc6-4045-958d-a92dbf22a4f2"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://DSK13002:8088/mockSifAffiliationSOAPBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>?</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>?</v4:Organization>
+               <v4:Application>?</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>?</v4:Organization>
+               <v4:Application>?</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>?</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>?</v4:UserID>
+            <!--Optional:-->
+            <v4:RequestInitiatorID>?</v4:RequestInitiatorID>
+            <!--Optional:-->
+            <v4:FluxDescriptor>
+               <v4:Initiator>
+                  <v4:Organization>?</v4:Organization>
+                  <v4:Application>?</v4:Application>
+               </v4:Initiator>
+               <v4:FluxId>?</v4:FluxId>
+               <v4:FluxDefinition>
+                  <v4:UniqueName>?</v4:UniqueName>
+                  <v4:Version>?</v4:Version>
+               </v4:FluxDefinition>
+            </v4:FluxDescriptor>
+         </v4:ApplHeader>
+         <v31:INSS>?</v31:INSS>
+         <v31:AffiliationNbr>?</v31:AffiliationNbr>
+         <!--Optional:-->
+         <v31:CompanyID>
+            <v32:CompanyID>?</v32:CompanyID>
+            <!--Optional:-->
+            <v32:CompanyName>?</v32:CompanyName>
+         </v31:CompanyID>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>?</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>?</v32:FirstName>
+               <!--Optional:-->
+               <v32:FirstNameIndicator>?</v32:FirstNameIndicator>
+               <!--Optional:-->
+               <v32:Title>?</v32:Title>
+            </v41:Name>
+            <!--Optional:-->
+            <v41:LanguageCode>?</v41:LanguageCode>
+            <!--Optional:-->
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 3 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <!--1 to 2 repetitions:-->
+                     <v32:StreetName LanguageCode="?">?</v32:StreetName>
+                     <!--Optional:-->
+                     <v32:StreetCode>?</v32:StreetCode>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>?</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:BoxNbr>?</v32:BoxNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>?</v32:PostCode>
+                  <!--1 to 2 repetitions:-->
+                  <v32:CityName LanguageCode="?">?</v32:CityName>
+                  <v32:CityNisCode>?</v32:CityNisCode>
+                  <!--Optional:-->
+                  <v32:MunicipalityRegistrationDate>?</v32:MunicipalityRegistrationDate>
+               </v32:Domestic>
+               <v32:ForeignStructured>
+                  <v32:StreetName>?</v32:StreetName>
+                  <!--Optional:-->
+                  <v32:HouseNbr>?</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:BoxNbr>?</v32:BoxNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>?</v32:PostCode>
+                  <!--1 to 2 repetitions:-->
+                  <v32:CityName>?</v32:CityName>
+                  <v32:CountryCode>?</v32:CountryCode>
+               </v32:ForeignStructured>
+               <v32:ForeignUnStructured>
+                  <v32:Address>?</v32:Address>
+                  <!--Optional:-->
+                  <v32:CountryCode>?</v32:CountryCode>
+               </v32:ForeignUnStructured>
+            </v41:OfficialAddress>
+            <!--Optional:-->
+            <v41:Nationality>
+               <v32:NationalityCode>?</v32:NationalityCode>
+               <!--Optional:-->
+               <v32:NationalityDesc>?</v32:NationalityDesc>
+               <!--Optional:-->
+               <v32:BeginDate>?</v32:BeginDate>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <!--Optional:-->
+               <v32:BeginDate>?</v32:BeginDate>
+               <v32:CivilStateCode>?</v32:CivilStateCode>
+               <!--Optional:-->
+               <v32:CertificatePublicationPlace>?</v32:CertificatePublicationPlace>
+               <!--Optional:-->
+               <v32:Partner>
+                  <v32:INSS>?</v32:INSS>
+                  <v32:Name>
+                     <v32:LastName>?</v32:LastName>
+                     <!--0 to 2 repetitions:-->
+                     <v32:FirstName>?</v32:FirstName>
+                     <!--Optional:-->
+                     <v32:FirstNameIndicator>?</v32:FirstNameIndicator>
+                     <!--Optional:-->
+                     <v32:Title>?</v32:Title>
+                  </v32:Name>
+               </v32:Partner>
+            </v41:CivilState>
+            <!--Optional:-->
+            <v41:Birth>
+               <!--Optional:-->
+               <v32:Date>?</v32:Date>
+               <!--Optional:-->
+               <v32:Place>
+                  <!--You have a CHOICE of the next 2 items at this level-->
+                  <v32:Foreign>
+                     <!--1 to 2 repetitions:-->
+                     <v32:CityName>?</v32:CityName>
+                     <v32:CountryCode>?</v32:CountryCode>
+                  </v32:Foreign>
+                  <v32:Domestic>
+                     <!--1 to 2 repetitions:-->
+                     <v32:CityName LanguageCode="?">?</v32:CityName>
+                     <v32:CityNisCode>?</v32:CityNisCode>
+                  </v32:Domestic>
+               </v32:Place>
+            </v41:Birth>
+            <!--Optional:-->
+            <v41:Death>
+               <!--Optional:-->
+               <v32:Date>?</v32:Date>
+               <!--Optional:-->
+               <v32:Place>
+                  <!--You have a CHOICE of the next 2 items at this level-->
+                  <v32:Foreign>
+                     <!--1 to 2 repetitions:-->
+                     <v32:CityName>?</v32:CityName>
+                     <v32:CountryCode>?</v32:CountryCode>
+                  </v32:Foreign>
+                  <v32:Domestic>
+                     <!--1 to 2 repetitions:-->
+                     <v32:CityName LanguageCode="?">?</v32:CityName>
+                     <v32:CityNisCode>?</v32:CityNisCode>
+                  </v32:Domestic>
+               </v32:Place>
+            </v41:Death>
+            <!--Optional:-->
+            <v41:Gender>?</v41:Gender>
+         </v31:LegalInfo>
+         <!--Optional:-->
+         <v31:LegalCohabitationInfo>
+            <v41:Declaration>
+               <!--Optional:-->
+               <v32:Date>?</v32:Date>
+               <!--Optional:-->
+               <v32:Place>
+                  <!--You have a CHOICE of the next 2 items at this level-->
+                  <v32:Foreign>
+                     <!--1 to 2 repetitions:-->
+                     <v32:CityName>?</v32:CityName>
+                     <v32:CountryCode>?</v32:CountryCode>
+                  </v32:Foreign>
+                  <v32:Domestic>
+                     <!--1 to 2 repetitions:-->
+                     <v32:CityName LanguageCode="?">?</v32:CityName>
+                     <v32:CityNisCode>?</v32:CityNisCode>
+                  </v32:Domestic>
+               </v32:Place>
+            </v41:Declaration>
+            <v41:RegistrationDate>?</v41:RegistrationDate>
+            <!--Optional:-->
+            <v41:Notary>
+               <!--Optional:-->
+               <v41:Name>
+                  <v32:LastName>?</v32:LastName>
+                  <!--0 to 2 repetitions:-->
+                  <v32:FirstName>?</v32:FirstName>
+                  <!--Optional:-->
+                  <v32:FirstNameIndicator>?</v32:FirstNameIndicator>
+                  <!--Optional:-->
+                  <v32:Title>?</v32:Title>
+               </v41:Name>
+               <!--Optional:-->
+               <v41:Place>
+                  <!--Optional:-->
+                  <v41:CityName>?</v41:CityName>
+                  <v41:CityNisCode>?</v41:CityNisCode>
+               </v41:Place>
+            </v41:Notary>
+            <v41:Partner>
+               <v41:INSS>?</v41:INSS>
+               <!--Optional:-->
+               <v41:Name>
+                  <v32:LastName>?</v32:LastName>
+                  <!--0 to 2 repetitions:-->
+                  <v32:FirstName>?</v32:FirstName>
+                  <!--Optional:-->
+                  <v32:FirstNameIndicator>?</v32:FirstNameIndicator>
+                  <!--Optional:-->
+                  <v32:Title>?</v32:Title>
+               </v41:Name>
+            </v41:Partner>
+         </v31:LegalCohabitationInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>?</v31:LanguageCode>
+            <v31:SignatureDate>?</v31:SignatureDate>
+            <v31:SifCode>?</v31:SifCode>
+            <v31:BeginDate>?</v31:BeginDate>
+            <!--Optional:-->
+            <v31:EndDate>?</v31:EndDate>
+            <v31:ContributionCode>?</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>?</v32:NisseProfessionCode>
+               <!--Optional:-->
+               <v32:NisseProfessionDesc>?</v32:NisseProfessionDesc>
+            </v31:NisseProfession>
+            <v31:ActivityCode>?</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <!--Zero or more repetitions:-->
+         <v31:Income>
+            <v32:IncomeYear>?</v32:IncomeYear>
+            <v32:IncomeCode>?</v32:IncomeCode>
+            <!--Optional:-->
+            <v32:Amount>?</v32:Amount>
+            <!--Optional:-->
+            <v32:AssessmentArticle>?</v32:AssessmentArticle>
+            <!--Optional:-->
+            <v32:CommunicationDate>?</v32:CommunicationDate>
+            <!--Optional:-->
+            <v32:FPSFinQualityCode>?</v32:FPSFinQualityCode>
+            <!--Optional:-->
+            <v32:SIFDistributionIncomeCode>?</v32:SIFDistributionIncomeCode>
+            <!--Optional:-->
+            <v32:IncomeCommunicationDate>?</v32:IncomeCommunicationDate>
+            <!--Optional:-->
+            <v32:CompanyManagerRemuneration>?</v32:CompanyManagerRemuneration>
+            <!--Optional:-->
+            <v32:Benefit>?</v32:Benefit>
+            <!--Optional:-->
+            <v32:Profit>?</v32:Profit>
+            <!--Optional:-->
+            <v32:AssistingPartnerIsRenumerated>?</v32:AssistingPartnerIsRenumerated>
+            <!--Optional:-->
+            <v32:HasBenefitOrProfitFromPreviousActivity>?</v32:HasBenefitOrProfitFromPreviousActivity>
+            <!--Optional:-->
+            <v32:AssistingPartnerAllocation>?</v32:AssistingPartnerAllocation>
+            <!--Optional:-->
+            <v32:ComplementaryInformation>?</v32:ComplementaryInformation>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>?</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Accept"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/CorrectInvestigationInput" name="CorrectInvestigationInput" bindingOperationName="CorrectInvestigationInput" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="5660e674-ec59-4cde-9215-09020f08162c"><con:settings/></con:operation><con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Refuse" name="Refuse" bindingOperationName="Refuse" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="2c53440b-f14a-40ea-bb84-daa0453b027e"><con:settings/></con:operation><con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Suspend" name="Suspend" bindingOperationName="Suspend" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="63b4c3aa-6e0b-4795-8a4a-5b53eeb59ddf"><con:settings/></con:operation></con:interface><con:testSuite id="3a758024-934a-4d2a-add0-5a4394db986e" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ee1dae25-786b-4fed-8bf1-92aa4f768ec2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 54110717253" searchProperties="true"><con:settings/><con:testStep type="request" name="Accept - 54110717253" id="02422111-afc9-4a6d-b43a-2db91f807e90"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 54110717253" id="42044ed1-0593-4b58-b41b-18b09a5e83cc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>54110717253</v31:INSS>
+         <v31:AffiliationNbr>1954110717253</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f89f337b-cdc7-4efa-b6df-5895d202c17b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="67426b6d-ea47-4770-b9f8-2334d40e5cc0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 77122940538" searchProperties="true"><con:settings/><con:testStep type="request" name="Accept - 77122940538" id="1c7facf9-4360-4e30-b5e8-a93a79f808a8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 77122940538" id="42044ed1-0593-4b58-b41b-18b09a5e83cc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>77122940538</v31:INSS>
+         <v31:AffiliationNbr>1977122940538</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f89f337b-cdc7-4efa-b6df-5895d202c17b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="270c3eef-eefc-4a21-828e-26b77e9d4073" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Refuse - 77122940538" searchProperties="true"><con:settings/><con:testStep type="request" name="Refuse - 77122940538" id="0435d47b-8c3f-4c33-9246-b15f3f5cf9ad"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Refuse</con:operation><con:request name="Refuse - 77122940538" id="44d76705-2db0-4fa0-98b9-bf4fbc2715bb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Refuse>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-04-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+            <!--Optional:-->
+            <v4:RequestInitiatorID>kd</v4:RequestInitiatorID>
+            <!--Optional:-->
+            <v4:FluxDescriptor>
+               <v4:Initiator>
+                  <v4:Organization>ucm</v4:Organization>
+                  <v4:Application>ucm</v4:Application>
+               </v4:Initiator>
+               <v4:FluxId>kd</v4:FluxId>
+               <v4:FluxDefinition>
+                  <v4:UniqueName>Dangiolella</v4:UniqueName>
+                  <v4:Version>1</v4:Version>
+               </v4:FluxDefinition>
+            </v4:FluxDescriptor>
+         </v4:ApplHeader>
+         <v31:INSS>77122940538</v31:INSS>
+         <v31:AffiliationNbr>1977122940538</v31:AffiliationNbr>
+         <v31:ReasonRefuse>none</v31:ReasonRefuse>
+      </v3:Refuse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a17f02f3-1641-489c-965b-4676fa6157e2"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="03fea0a7-befe-45bc-8e40-2bccd248e410" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Suspend - 77122940538" searchProperties="true"><con:settings/><con:testStep type="request" name="Suspend - 77122940538" id="79fa02a7-4f01-41f2-90b8-fdca6c701449"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Suspend</con:operation><con:request name="Suspend - 77122940538" id="c3092a7e-f1e7-4206-966c-bda4b51adf22"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Suspend>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-02-04T10:55:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>43</v4:UserID>
+            <!--Optional:-->
+            <v4:RequestInitiatorID>43</v4:RequestInitiatorID>
+            <!--Optional:-->
+            <v4:FluxDescriptor>
+               <v4:Initiator>
+                  <v4:Organization>019</v4:Organization>
+                  <v4:Application>Inasti</v4:Application>
+               </v4:Initiator>
+               <v4:FluxId>kd</v4:FluxId>
+               <v4:FluxDefinition>
+                  <v4:UniqueName>Dangiolella</v4:UniqueName>
+                  <v4:Version>1</v4:Version>
+               </v4:FluxDefinition>
+            </v4:FluxDescriptor>
+         </v4:ApplHeader>
+         <v31:INSS>77122940538</v31:INSS>
+         <v31:AffiliationNbr>1977122940538</v31:AffiliationNbr>
+      </v3:Suspend>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cf1f44d3-4677-4293-97ec-fc90a6b004b3"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e844482b-7622-4f1b-b1ef-e99d65163117" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 82062240124" searchProperties="true"><con:settings/><con:testStep type="request" name="Accept - 82062240124" id="c0d578e6-4daf-43e3-ac35-50d818af7458"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 82062240124" id="42044ed1-0593-4b58-b41b-18b09a5e83cc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>82062240124</v31:INSS>
+         <v31:AffiliationNbr>1982062240124</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f89f337b-cdc7-4efa-b6df-5895d202c17b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="41242f67-6c35-4774-a99d-1ff2a1a9cbb5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Refuse - 82062240124" searchProperties="true"><con:settings/><con:testStep type="request" name="Refuse - 82062240124" id="dc0ec9ba-df3f-4b0e-a304-f1f3f4808c16"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Refuse</con:operation><con:request name="Refuse - 82062240124" id="44d76705-2db0-4fa0-98b9-bf4fbc2715bb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Refuse>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-04-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+            <!--Optional:-->
+            <v4:RequestInitiatorID>kd</v4:RequestInitiatorID>
+            <!--Optional:-->
+            <v4:FluxDescriptor>
+               <v4:Initiator>
+                  <v4:Organization>ucm</v4:Organization>
+                  <v4:Application>ucm</v4:Application>
+               </v4:Initiator>
+               <v4:FluxId>kd</v4:FluxId>
+               <v4:FluxDefinition>
+                  <v4:UniqueName>Dangiolella</v4:UniqueName>
+                  <v4:Version>1</v4:Version>
+               </v4:FluxDefinition>
+            </v4:FluxDescriptor>
+         </v4:ApplHeader>
+         <v31:INSS>82062240124</v31:INSS>
+         <v31:AffiliationNbr>1982062240124</v31:AffiliationNbr>
+         <v31:ReasonRefuse>none</v31:ReasonRefuse>
+      </v3:Refuse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a17f02f3-1641-489c-965b-4676fa6157e2"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2042ae47-fdd4-4900-bcb8-49037157ab41" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Suspend - 82062240124" searchProperties="true"><con:settings/><con:testStep type="request" name="Suspend - 82062240124" id="1bd7d4bd-5271-4219-9f32-034dddf02845"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Suspend</con:operation><con:request name="Suspend - 82062240124" id="c3092a7e-f1e7-4206-966c-bda4b51adf22"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Suspend>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-02-04T10:55:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>43</v4:UserID>
+            <!--Optional:-->
+            <v4:RequestInitiatorID>43</v4:RequestInitiatorID>
+            <!--Optional:-->
+            <v4:FluxDescriptor>
+               <v4:Initiator>
+                  <v4:Organization>019</v4:Organization>
+                  <v4:Application>Inasti</v4:Application>
+               </v4:Initiator>
+               <v4:FluxId>kd</v4:FluxId>
+               <v4:FluxDefinition>
+                  <v4:UniqueName>Dangiolella</v4:UniqueName>
+                  <v4:Version>1</v4:Version>
+               </v4:FluxDefinition>
+            </v4:FluxDescriptor>
+         </v4:ApplHeader>
+         <v31:INSS>82062240124</v31:INSS>
+         <v31:AffiliationNbr>1982062240124</v31:AffiliationNbr>
+      </v3:Suspend>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cf1f44d3-4677-4293-97ec-fc90a6b004b3"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8f8f903b-4e1a-43de-8d88-1115ca93cc97" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 75111549330" searchProperties="true"><con:settings/><con:testStep type="request" name="Accept - 75111549330" id="b019123d-5af0-45c2-8e3b-0a1f62ae15a0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 75111549330" id="42044ed1-0593-4b58-b41b-18b09a5e83cc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>75111549330</v31:INSS>
+         <v31:AffiliationNbr>1975111549330</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f89f337b-cdc7-4efa-b6df-5895d202c17b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="00298137-c873-4118-90dc-1590ad683ae8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Suspend - 75111549330" searchProperties="true"><con:settings/><con:testStep type="request" name="Suspend - 75111549330" id="01b6e52f-a5eb-49c3-b52b-18371902137c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Suspend</con:operation><con:request name="Suspend - 75111549330" id="c3092a7e-f1e7-4206-966c-bda4b51adf22"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Suspend>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-02-04T10:55:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>43</v4:UserID>
+            <!--Optional:-->
+            <v4:RequestInitiatorID>43</v4:RequestInitiatorID>
+            <!--Optional:-->
+            <v4:FluxDescriptor>
+               <v4:Initiator>
+                  <v4:Organization>019</v4:Organization>
+                  <v4:Application>Inasti</v4:Application>
+               </v4:Initiator>
+               <v4:FluxId>kd</v4:FluxId>
+               <v4:FluxDefinition>
+                  <v4:UniqueName>Dangiolella</v4:UniqueName>
+                  <v4:Version>1</v4:Version>
+               </v4:FluxDefinition>
+            </v4:FluxDescriptor>
+         </v4:ApplHeader>
+         <v31:INSS>75111549330</v31:INSS>
+         <v31:AffiliationNbr>1975111549330</v31:AffiliationNbr>
+      </v3:Suspend>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cf1f44d3-4677-4293-97ec-fc90a6b004b3"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="d0d7cf9a-5694-443b-a2f9-5b9a456ae31e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Refuse - 75111549330" searchProperties="true"><con:settings/><con:testStep type="request" name="Refuse - 75111549330" id="c8a52b69-78bf-4792-bb28-f7124d30de4b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Refuse</con:operation><con:request name="Refuse - 75111549330" id="44d76705-2db0-4fa0-98b9-bf4fbc2715bb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Refuse>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-04-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+            <!--Optional:-->
+            <v4:RequestInitiatorID>kd</v4:RequestInitiatorID>
+            <!--Optional:-->
+            <v4:FluxDescriptor>
+               <v4:Initiator>
+                  <v4:Organization>ucm</v4:Organization>
+                  <v4:Application>ucm</v4:Application>
+               </v4:Initiator>
+               <v4:FluxId>kd</v4:FluxId>
+               <v4:FluxDefinition>
+                  <v4:UniqueName>Dangiolella</v4:UniqueName>
+                  <v4:Version>1</v4:Version>
+               </v4:FluxDefinition>
+            </v4:FluxDescriptor>
+         </v4:ApplHeader>
+         <v31:INSS>75111549330</v31:INSS>
+         <v31:AffiliationNbr>1975111549330</v31:AffiliationNbr>
+         <v31:ReasonRefuse>none</v31:ReasonRefuse>
+      </v3:Refuse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a17f02f3-1641-489c-965b-4676fa6157e2"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4224ab15-991e-4f97-a923-694ee71c098d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 72071944759" searchProperties="true"><con:settings/><con:testStep type="request" name="Accept - 72071944759" id="1314e4f8-465a-4457-b9c1-f782c5187b7c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 72071944759" id="42044ed1-0593-4b58-b41b-18b09a5e83cc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>72071944759</v31:INSS>
+         <v31:AffiliationNbr>1972071944759</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f89f337b-cdc7-4efa-b6df-5895d202c17b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="51357259-5b2e-44d7-ac21-9523519efbce" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 75012233010" searchProperties="true"><con:settings/><con:testStep type="request" name="Accept - 75012233010" id="2e532547-a952-4f77-b40d-bf213f7590fe"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 75012233010" id="42044ed1-0593-4b58-b41b-18b09a5e83cc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>75012233010</v31:INSS>
+         <v31:AffiliationNbr>1975012233010</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f89f337b-cdc7-4efa-b6df-5895d202c17b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6633f955-ad03-42b9-b209-628af02ebb44" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Suspend - 77122940538" searchProperties="true"><con:settings/><con:testStep type="request" name="Suspend - 75111549330" id="37767255-08bf-4e1e-a1f5-bc530e3bfd0f"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Suspend</con:operation><con:request name="Suspend - 75111549330" id="c3092a7e-f1e7-4206-966c-bda4b51adf22"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Suspend>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-02-04T10:55:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>43</v4:UserID>
+            <!--Optional:-->
+            <v4:RequestInitiatorID>43</v4:RequestInitiatorID>
+            <!--Optional:-->
+            <v4:FluxDescriptor>
+               <v4:Initiator>
+                  <v4:Organization>019</v4:Organization>
+                  <v4:Application>Inasti</v4:Application>
+               </v4:Initiator>
+               <v4:FluxId>kd</v4:FluxId>
+               <v4:FluxDefinition>
+                  <v4:UniqueName>Dangiolella</v4:UniqueName>
+                  <v4:Version>1</v4:Version>
+               </v4:FluxDefinition>
+            </v4:FluxDescriptor>
+         </v4:ApplHeader>
+         <v31:INSS>75111549330</v31:INSS>
+         <v31:AffiliationNbr>1975111549330</v31:AffiliationNbr>
+      </v3:Suspend>
+   </soapenv:Body>
+   /www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3"><v31:Foreign><v31:CityName>Marokko</v31:CityName><v31:CityName>Maroc</v31:CityName><v31:CountryCode>354</v31:
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cf1f44d3-4677-4293-97ec-fc90a6b004b3"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="48028e77-d92a-45ae-a336-dda3ff5dffdf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 59120721822" searchProperties="true"><con:settings/><con:testStep type="request" id="8e468abe-5b51-4456-8dd2-8034ffcc5e3d" name="Accept - 59120721822"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 59120721822" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="05895ad7-ca61-49b3-ba2f-d4270fc93159"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+     <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200081</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>59120721822</v31:INSS>
+         <v31:AffiliationNbr>1959120721822</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="fee21db4-5e56-4979-a060-75976f10645e" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Accept"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9463078d-f735-4dbf-812f-144bc9befb16" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 52101705218" searchProperties="true"><con:settings/><con:testStep type="request" id="bb635e1c-85c3-4794-baea-ab1d0ffab885" name="Accept - 52101705218"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 52101705218" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="61652d0e-2419-46bc-8647-e2774851ff1f"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifAffiliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+     <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200081</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>52101705218</v31:INSS>
+         <v31:AffiliationNbr>1959120721822</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6b218d1b-d362-44a4-a83e-2302cedec913" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Accept"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="14103c1f-e8bd-4e91-a4b3-7f6902a9589f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 52101705218" searchProperties="true"><con:settings/><con:testStep type="request" id="a4e6d196-27b7-4303-a96f-fc8523fd168c" name="Accept - 52101705218"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifAffiliationSOAPBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 52101705218" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="656f9416-f34a-4718-8add-de7bbb41ef5d"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://DSK13002:8088/mockSifAffiliationSOAPBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3" xmlns:v4="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V4" xmlns:v31="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Affiliation/V3" xmlns:v32="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Base/V3" xmlns:v41="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/LegalInfo/V4">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v3:Accept>
+         <v4:ApplHeader>
+            <v4:TimestampSent>2014-03-13T10:36:00Z</v4:TimestampSent>
+            <v4:Origin>
+               <v4:Organization>ucm</v4:Organization>
+               <v4:Application>ucm</v4:Application>
+            </v4:Origin>
+            <v4:Destination>
+               <v4:Organization>019</v4:Organization>
+               <v4:Application>Inasti</v4:Application>
+            </v4:Destination>
+            <v4:MessageID>PINF14012200016</v4:MessageID>
+            <!--Optional:-->
+            <v4:UserID>36</v4:UserID>
+         </v4:ApplHeader>
+         <v31:INSS>75111549330</v31:INSS>
+         <v31:AffiliationNbr>1952101705218</v31:AffiliationNbr>
+         <v31:LegalInfo>
+            <v41:Name>
+               <v32:LastName>vandersmissen</v32:LastName>
+               <!--0 to 2 repetitions:-->
+               <v32:FirstName>marc</v32:FirstName>
+               <v32:FirstName>michel</v32:FirstName>
+            </v41:Name>
+            <v41:OfficialAddress>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <v32:Domestic>
+                  <v32:Street>
+                     <v32:StreetName LanguageCode="1">arue de marsannay-la-cote</v32:StreetName>
+                  </v32:Street>
+                  <!--Optional:-->
+                  <v32:HouseNbr>31</v32:HouseNbr>
+                  <!--Optional:-->
+                  <v32:PostCode>5032</v32:PostCode>
+                  <v32:CityName LanguageCode="1">mazy</v32:CityName>
+                  <v32:CityNisCode>1</v32:CityNisCode>
+               </v32:Domestic>
+            </v41:OfficialAddress>
+            <v41:Nationality>
+               <v32:NationalityCode>150</v32:NationalityCode>
+            </v41:Nationality>
+            <!--Optional:-->
+            <v41:CivilState>
+               <v32:BeginDate>2000-01-01</v32:BeginDate>
+               <v32:CivilStateCode>20</v32:CivilStateCode>
+            </v41:CivilState>
+            <v41:Birth>
+               <v32:Date>1971-11-19</v32:Date>
+            </v41:Birth>
+            <v41:Gender>male</v41:Gender>
+         </v31:LegalInfo>
+         <v31:InvestigateRequestInfo>
+            <v31:LanguageCode>1</v31:LanguageCode>
+            <v31:SignatureDate>2012-02-08</v31:SignatureDate>
+            <v31:SifCode>019</v31:SifCode>
+            <v31:BeginDate>2008-10-01</v31:BeginDate>
+            <v31:ContributionCode>A</v31:ContributionCode>
+            <v31:NisseProfession>
+               <v32:NisseProfessionCode>317401</v32:NisseProfessionCode>
+            </v31:NisseProfession>
+            <v31:ActivityCode>61</v31:ActivityCode>
+         </v31:InvestigateRequestInfo>
+         <v31:Income>
+            <v32:IncomeYear>2014</v32:IncomeYear>
+            <v32:IncomeCode>3</v32:IncomeCode>
+            <v32:Amount>0</v32:Amount>
+         </v31:Income>
+         <v31:DirectDebitBonusAlreadyReceived>1</v31:DirectDebitBonusAlreadyReceived>
+      </v3:Accept>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="30767c71-7180-433f-991d-6c2f08d51043" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Affiliation/V3/SifAffiliation/Accept"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

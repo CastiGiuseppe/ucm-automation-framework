@@ -1,0 +1,9 @@
+      <v1:RequestAffiliationResponse xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Nisse/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema">
+         <!--Optional:-->
+         <v1:RequestAffiliationResult>
+            <sch:FluxID>1c106733-0e31-4eeb-a69f-4252f2d16aeb</sch:FluxID>
+            <sch:MessageID>1c106733-0e31-4eeb-a69f-4252f2d16aeb</sch:MessageID>
+            <sch:Timestamp>2014-05-05T14:45:13.291+02:00</sch:Timestamp>
+         </v1:RequestAffiliationResult>
+         
+      </v1:RequestAffiliationResponse>

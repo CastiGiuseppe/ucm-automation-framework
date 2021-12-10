@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test profil maxi-statut exo">
+
+	<test name="Profil-Maxi Statut Ajout exo-reduction">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.profil.article37.ProfilAjoutExoReductionArticle37MaxiStatutTest"/>
+		</classes>
+	</test>
+	
+</suite>

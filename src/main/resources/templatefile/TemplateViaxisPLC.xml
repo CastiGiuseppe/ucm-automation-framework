@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViaxisNewContrat version="0.1">
+	<GrpHdr>
+		<MsgId>2016/001</MsgId>
+		<CreDtTm>2016-10-11T15:50:10</CreDtTm>
+		<NbOfCtrcts>1</NbOfCtrcts>
+	</GrpHdr>
+	<NewCtrct>
+		<Ctrct>
+			<CtrctInfo>
+				<CtrctId>NUMERO_CONTRAT</CtrctId>
+				<CtrctNtrAgrmnt>NATURE</CtrctNtrAgrmnt>
+				<CtrctTpInvst>TYPE_INVESTISSEMENT</CtrctTpInvst>
+				<CtrctDgt>NUMERO_VCS</CtrctDgt>
+				<CtrctDtRcpt>DATE_RECEPTION</CtrctDtRcpt>
+				<CtrctDtEffct></CtrctDtEffct>
+				<CtrctRqstOrgn></CtrctRqstOrgn>
+				<CtrctRqstExpdtr></CtrctRqstExpdtr>
+			</CtrctInfo>
+			<Sbscr>
+				<SbscrNiss>NISS</SbscrNiss>
+				<SbscrNm>NOM</SbscrNm>
+				<SbscrFrst>PRENOM</SbscrFrst>
+			</Sbscr>
+		</Ctrct>
+	</NewCtrct>
+</ViaxisNewContrat>

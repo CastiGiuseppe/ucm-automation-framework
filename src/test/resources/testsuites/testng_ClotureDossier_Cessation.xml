@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Cessation">
+
+	<test name="CessationTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.cloturedossier.cessation.CessationTest"/>
+		</classes>
+	</test>
+
+</suite>

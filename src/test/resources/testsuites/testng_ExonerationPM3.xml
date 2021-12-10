@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Exonération PM3">
+
+    <test name="ExonerationPM3Test">
+        <classes>
+            <class name="be.ucm.cas.nasca.web.test.exonerationpm.ExonerationPM3Test"/>
+        </classes>
+    </test>
+
+</suite>

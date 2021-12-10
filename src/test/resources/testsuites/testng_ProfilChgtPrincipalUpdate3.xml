@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test profil principal update3">
+
+	<test name="Profil-Principal Update nature3">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.profil.update.ProfilUpdatePrincipal3Test"/>
+		</classes>
+	</test>
+	
+</suite>

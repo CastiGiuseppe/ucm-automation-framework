@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns="http://www.rsvz-inasti.fgov.be/schemas/Common/Exchanges/20061206/Mailbox" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header Version="2.0">
+        <Origin>2000</Origin>
+        <Destination>019X</Destination>
+    </Header>
+    <Body>
+        <Mailbox>
+            <MailboxNbr>000000000002794</MailboxNbr>
+            <MessageCount>000000000000001</MessageCount>
+            <CreationDate>2017-06-05</CreationDate>
+            <CreationTime>22:52:20</CreationTime>
+            <Message>
+                <MessageHeader Version="0.1">
+                    <DocumentID>A020</DocumentID>
+                </MessageHeader>
+                <MessageBody>
+                    <NISSE xmlns="http://www.rsvz-inasti.fgov.be/schemas/B2B/Exchanges" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rsvz-inasti.fgov.be/schemas/B2B/Exchanges http://www.rsvz-inasti.fgov.be/schemas/B2B/Exchanges/A020_Disablement.xsd">
+                        <ApplHeader>
+                            <DocumentID>A020</DocumentID>
+                            <Origin>504</Origin>
+                            <Destination>019</Destination>
+                        </ApplHeader>
+                        <Attestation>
+                            <ReferencePeriod>
+                                <BeginDate>2017-05-01</BeginDate>
+                                <EndDate>2017-05-31</EndDate>
+                            </ReferencePeriod>
+                            <Disablement>
+                                <INSS>NISS</INSS>
+                                <DisablementBeginDate>2017-02-27</DisablementBeginDate>
+                                <DisablementEndDate>2017-05-01</DisablementEndDate>
+                                <ComplementaryData>5</ComplementaryData>
+                                <Allowance>
+                                    <AllowanceCode>1</AllowanceCode>
+                                    <FirstPaymentDate>2017-03-29</FirstPaymentDate>
+                                </Allowance>
+                            </Disablement>
+                            <Dossier>
+                                <DossierType>1</DossierType>
+                                <InsuranceInstitution>206</InsuranceInstitution>
+                            </Dossier>
+                        </Attestation>
+                    </NISSE>
+                </MessageBody>
+            </Message>
+        </Mailbox>
+    </Body>
+</Envelope>

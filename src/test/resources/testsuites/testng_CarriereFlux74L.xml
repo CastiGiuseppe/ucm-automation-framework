@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Flux74L">
+
+	<test name="Flux74LTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.carriere.flux74L.Flux74LTest"/>
+		</classes>
+	</test>
+	
+</suite>

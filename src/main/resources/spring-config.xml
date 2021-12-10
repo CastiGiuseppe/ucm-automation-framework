@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
+	<context:component-scan base-package="be.ucm.cas" />
+
+	<bean id="applicationProperties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreResourceNotFound" value="false" />
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="searchSystemEnvironment" value="false" />
+		<property name="locations">
+			<list>
+				<value>classpath:springproperties/NascaSeleniumTests - ${environ}.properties
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Initialization for data source -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${db.driver}" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+
+	<!-- Initialization for Spring JDBC Template -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="nascaDao" name="nascaDao"
+		class="be.ucm.cas.nasca.web.test.support.dao.NascaDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Test Data -->
+	<bean id="testData" name="testData"
+		class="be.ucm.cas.nasca.web.test.support.TestData">
+		<property name="propsRootUrl" value="${server.RootUrl}" />
+		<property name="propsRootUrlFuzion" value="${server.RootUrlFuzion}" />
+		<property name="propsRootPort" value="${server.RootPort}" />
+		<property name="serverUser" value="${server.user}" />
+		<property name="serverPass" value="${server.pass}" />
+		<property name="serverDirectory" value="${server.directory}" />
+	</bean>
+
+	<!-- Batch Runner -->
+	<bean id="sftpConnection" name="sftpConnection"
+		class="be.ucm.cas.nasca.web.test.support.SftpConnection">
+		<property name="sFtpHost" value="${server.RootUrl}" />
+		<property name="sFtpUser" value="${server.user}" />
+		<property name="sFtpPwd" value="${server.pass}" />
+		<property name="sFtpServerDir" value="${server.directory}" />
+	</bean>
+
+	<bean id="batchRunner" name="batchRunner"
+		class="be.ucm.cas.nasca.web.test.support.RunBatch">
+		<property name="sftp" ref="sftpConnection" />
+		<property name="hostUrl" value="${batch.url}" />
+		<property name="user" value="${batch.user}" />
+		<property name="pwd" value="${batch.pass}" />
+		<property name="machine" value="${batch.machine}" />
+		<property name="envi" value="${batch.envi}" />
+	</bean>
+
+	<bean id="openErp" name="OpenErpUtils"
+		class="be.ucm.cas.openerp.web.test.support.OpenErpUtils">
+		<property name="openerputils" ref="OpenErpUtils" />
+		<property name="webUrl" value="${erp.url}" />
+		<property name="user" value="${erp.user}" />
+		<property name="pwd" value="${erp.pass}" />
+		<property name="serverurl" value="${erp.serverurl}" />
+		<property name="serveruser" value="${erp.serveruser}" />
+		<property name="serverpass" value="${erp.serverpass}" />
+	</bean>
+</beans>

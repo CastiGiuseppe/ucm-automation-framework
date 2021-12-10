@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Print Mecanisme">
+
+	<test name="ImpressionTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.impression.ImpressionTest"/>
+		</classes>
+	</test>
+	
+</suite>

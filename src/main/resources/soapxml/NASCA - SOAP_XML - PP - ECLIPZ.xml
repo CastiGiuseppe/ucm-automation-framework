@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="NASCA - SOAP_XML - PP - ECLIPZ" id="05996560-27c1-41b0-9b7c-c8b493b52e53" activeEnvironment="Default" resourceRoot="" soapui-version="5.1.3" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="a226d25b-100a-442e-a1c6-86e30b741935" wsaVersion="NONE" name="SifLoopbaanServiceSoapBinding" type="wsdl" bindingName="{http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1}SifLoopbaanServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan?wsdl"><con:part><con:url>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SifLoopbaanService" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/WS/Helper/V2">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5">
+      <xs:complexType name="ApplHeaderStruct">
+        <xs:sequence>
+          <xs:element name="Origin" type="tns:PartyStruct"/>
+          <xs:element name="Destination" type="tns:PartyStruct"/>
+          <xs:element name="MessageID" type="xs:string"/>
+          <xs:element name="Timestamp" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="UserID" type="xs:string"/>
+          <xs:element minOccurs="0" name="RequestInitiatorID" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PartyStruct">
+        <xs:sequence>
+          <xs:element name="Organization" type="xs:string"/>
+          <xs:element name="Application" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="FluxDescriptorStruct">
+        <xs:sequence>
+          <xs:element name="Initiator" type="tns:PartyStruct"/>
+          <xs:element name="FluxID" type="xs:string"/>
+          <xs:element name="FluxDefinition">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="Version" type="xs:int"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AuthenticationFaultStruct">
+        <xs:complexContent>
+          <xs:extension base="tns:ErrorBaseStruct">
+            <xs:sequence>
+              <xs:element name="MessageID" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="ErrorBaseStruct">
+        <xs:sequence>
+          <xs:element name="Origin" type="tns:PartyStruct"/>
+          <xs:element name="Timestamp" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AuthorizationFaultStruct">
+        <xs:complexContent>
+          <xs:extension base="tns:ErrorBaseStruct">
+            <xs:sequence>
+              <xs:element name="MessageID" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ValidationFaultStruct">
+        <xs:complexContent>
+          <xs:extension base="tns:ErrorBaseStruct">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Detail" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="FluxSyncFaultStruct">
+        <xs:complexContent>
+          <xs:extension base="tns:ErrorBaseStruct">
+            <xs:sequence>
+              <xs:element name="MessageID" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="SystemFaultStruct">
+        <xs:complexContent>
+          <xs:extension base="tns:ErrorBaseStruct">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="MessageID" type="xs:string"/>
+              <xs:element name="Code" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="BlockStruct">
+        <xs:sequence>
+          <xs:element name="SequenceID" type="xs:string"/>
+          <xs:element name="SequenceNumber">
+            <xs:simpleType>
+              <xs:restriction base="xs:integer"/>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="IsLast" type="xs:boolean"/>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1">
+      <xs:complexType name="ReportDataStruct">
+        <xs:sequence>
+          <xs:element name="GenerationTime" type="xs:dateTime"/>
+          <xs:element name="ReturnCode" type="xs:string"/>
+          <xs:element name="ProcessedCareersNbr" type="xs:positiveInteger"/>
+          <xs:element minOccurs="0" name="Exceptions">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="Exception">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="ReasonCode" type="xs:string"/>
+                      <xs:element name="PersonIdentification" type="tns:PersonIdentificationStruct"/>
+                      <xs:element minOccurs="0" name="PersonNewIdentification" type="tns:PersonIdentificationStruct"/>
+                    </xs:sequence>
+                    <xs:attribute name="IsLoaded" type="xs:boolean" use="required"/>
+                    <xs:attribute name="Severity" type="tns:ExceptionSeverityType" use="required"/>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PersonIdentificationStruct">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LastName" type="xs:string"/>
+          <xs:element minOccurs="0" name="FirstName" type="xs:string"/>
+          <xs:element name="SSINType" type="xs:string"/>
+          <xs:element name="SSIN" type="xs:string"/>
+          <xs:element minOccurs="0" name="BirthDate" type="xs:date"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PeriodDefinitionStruct">
+        <xs:sequence>
+          <xs:element name="BeginYear" type="xs:positiveInteger"/>
+          <xs:element minOccurs="0" name="BeginQuarter" type="xs:string"/>
+          <xs:element name="EndYear" type="xs:positiveInteger"/>
+          <xs:element minOccurs="0" name="EndQuarter" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CareerDetailStruct">
+        <xs:complexContent>
+          <xs:extension base="tns:PeriodDefinitionStruct">
+            <xs:sequence>
+              <xs:element name="PeriodKind" type="xs:string"/>
+              <xs:element minOccurs="0" name="Income1" type="xs:decimal"/>
+              <xs:element minOccurs="0" name="Income2" type="xs:decimal"/>
+              <xs:element minOccurs="0" name="CumulatedIncome" type="xs:decimal"/>
+              <xs:element minOccurs="0" name="TemporaryInd" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ReferenceYear" type="xs:positiveInteger"/>
+              <xs:element minOccurs="0" name="LatePaymentDate" type="xs:date"/>
+              <xs:element minOccurs="0" name="FPSControlInd" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="IndividualRightsStruct">
+        <xs:sequence>
+          <xs:element name="CreationTime" type="xs:dateTime"/>
+          <xs:element name="BeginValidityDate" type="xs:date"/>
+          <xs:element name="PersonIdentification" type="tns:PersonIdentificationStruct"/>
+          <xs:element minOccurs="0" name="PersonNewIdentification" type="tns:PersonIdentificationStruct"/>
+          <xs:element maxOccurs="unbounded" name="CareerDetail" type="tns:CareerDetailStruct"/>
+          <xs:element minOccurs="0" name="UncondPen" type="tns:UncondPenStruct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UncondPenStruct">
+        <xs:sequence>
+          <xs:element name="Amount" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="PayBeginDate" type="xs:date"/>
+          <xs:element minOccurs="0" name="PayEndDate" type="xs:date"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PersonQuarterStruct">
+        <xs:sequence>
+          <xs:element name="PeriodKind" type="xs:string"/>
+          <xs:element minOccurs="0" name="Income1" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="Income2" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="CumulatedIncome" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="TemporaryInd" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="ReferenceYear" type="xs:positiveInteger"/>
+          <xs:element minOccurs="0" name="LatePaymentDate" type="xs:date"/>
+          <xs:element minOccurs="0" name="FPSControlInd" type="xs:boolean"/>
+        </xs:sequence>
+        <xs:attribute name="CreationTime" type="xs:dateTime" use="required"/>
+        <xs:attribute name="SSIN" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:simpleType name="BulkLoadReturnCodeType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="OK"/>
+          <xs:enumeration value="NotAllowed"/>
+          <xs:enumeration value="AlreadyProcessed"/>
+          <xs:enumeration value="TooManyErrors"/>
+          <xs:enumeration value="SomeErrors"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="NisseLoadExceptionReasonCodeType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SSINChanged"/>
+          <xs:enumeration value="OldData"/>
+          <xs:enumeration value="UnknownPerson"/>
+          <xs:enumeration value="InvalidBeginDate"/>
+          <xs:enumeration value="InvalidPeriod"/>
+          <xs:enumeration value="InvalidPayDate"/>
+          <xs:enumeration value="InvalidCreationTime"/>
+          <xs:enumeration value="InvalidBirthDate"/>
+          <xs:enumeration value="PeriodOverlap"/>
+          <xs:enumeration value="LatePeriod"/>
+          <xs:enumeration value="AffiliationMismatch"/>
+          <xs:enumeration value="NoAffiliation"/>
+          <xs:enumeration value="UnknownPeriod"/>
+          <xs:enumeration value="IncompleteCareer"/>
+          <xs:enumeration value="InvalidPeriodKind"/>
+          <xs:enumeration value="DuplicateRights"/>
+          <xs:enumeration value="IdentificationMismatch"/>
+          <xs:enumeration value="OverlapsAnotherSIF"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="PersonUniqueIDType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NN"/>
+          <xs:enumeration value="BIS"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ExceptionSeverityType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Error"/>
+          <xs:enumeration value="Warning"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="QuarterType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Q1"/>
+          <xs:enumeration value="Q2"/>
+          <xs:enumeration value="Q3"/>
+          <xs:enumeration value="Q4"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="PeriodKindType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DeleteExistingPeriod"/>
+          <xs:enumeration value="PaidPeriod"/>
+          <xs:enumeration value="AdditionalPeriod"/>
+          <xs:enumeration value="PursuedPeriodType"/>
+          <xs:enumeration value="SpecPursuedPeriodType"/>
+          <xs:enumeration value="LifeInsuranceAllotment"/>
+          <xs:enumeration value="BuildingAllotment"/>
+          <xs:enumeration value="SickPeriodType"/>
+          <xs:enumeration value="MilitaryServicePeriodType"/>
+          <xs:enumeration value="PreventiveCustody"/>
+          <xs:enumeration value="StudyPeriodType"/>
+          <xs:enumeration value="LateSettlement"/>
+          <xs:enumeration value="ContinuedContribution-1"/>
+          <xs:enumeration value="ContinuedContribution-2"/>
+          <xs:enumeration value="MaxiHelperContribution"/>
+          <xs:enumeration value="PartiallyPaidMain"/>
+          <xs:enumeration value="PartiallyPaidComplementary"/>
+          <xs:enumeration value="FamilyPlan"/>
+          <xs:enumeration value="PartiallyPaidMaxiHelper"/>
+          <xs:enumeration value="PrincipalActivityAfterPenAge"/>
+          <xs:enumeration value="UnpaidContribution"/>
+          <xs:enumeration value="BelowMinLevelContribution"/>
+          <xs:enumeration value="ExpiredContribution"/>
+          <xs:enumeration value="UnrecoverableContribution"/>
+          <xs:enumeration value="ContributionExemption-1"/>
+          <xs:enumeration value="ContributionExemption-2"/>
+          <xs:enumeration value="NotRefundableContribution"/>
+          <xs:enumeration value="LowAdditionalPeriodType"/>
+          <xs:enumeration value="NoContinuedContributionBefore1984"/>
+          <xs:enumeration value="BankruptcyInsurance"/>
+          <xs:enumeration value="MiniHelperContribution"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1"/>
+      <xs:complexType name="BulkUploadAcknowledgmentStruct">
+        <xs:sequence>
+          <xs:element name="GenerationTime" type="xs:dateTime"/>
+          <xs:element name="BlockSequenceId" type="xs:string"/>
+          <xs:element name="ReceivedChunksNbr" type="xs:positiveInteger"/>
+          <xs:element name="ReceivedCareersNbr" type="xs:positiveInteger"/>
+          <xs:element name="ReturnCode" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Rejected">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BlockSequenceNr" type="xs:positiveInteger"/>
+                <xs:element name="ErrorCode" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ChangeDataStruct">
+        <xs:sequence>
+          <xs:element name="SignalKind" type="xs:string"/>
+          <xs:element name="BeneficiaryPerson" type="ns1:PersonIdentificationStruct"/>
+          <xs:element minOccurs="0" name="CareerDBInfo" type="tns:CareerDBInfoStruct"/>
+          <xs:element minOccurs="0" name="PensionRequest" type="tns:PensionRequestSignalStruct"/>
+          <xs:element minOccurs="0" name="Request74L" type="tns:Request74LSignalStruct"/>
+          <xs:element minOccurs="0" name="Response74L" type="tns:Response74LSignalStruct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CareerDBInfoStruct">
+        <xs:sequence>
+          <xs:element name="CreationDate" type="xs:date"/>
+          <xs:element minOccurs="0" name="LastUpdateDate" type="xs:date"/>
+          <xs:element minOccurs="0" name="LastUpdateUser" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PensionRequestSignalStruct">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="PensionInfo" type="tns:PensionInfoStruct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PensionInfoStruct">
+        <xs:sequence>
+          <xs:element name="PensionKind" type="xs:string"/>
+          <xs:element minOccurs="0" name="HeadSSINKind" type="xs:string"/>
+          <xs:element minOccurs="0" name="HeadSSIN" type="xs:string"/>
+          <xs:element name="PensionBeginDate" type="xs:date"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Request74LSignalStruct">
+        <xs:sequence>
+          <xs:element name="RequestID" type="xs:string"/>
+          <xs:element name="PensionKind" type="xs:string"/>
+          <xs:element name="PensionBeginDate" type="xs:date"/>
+          <xs:element minOccurs="0" name="IsFamilyRateApplied" type="xs:boolean"/>
+          <xs:element name="Activities">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="Activity">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="BeginDate" type="xs:date"/>
+                      <xs:element name="ActivityKind" type="xs:string"/>
+                    </xs:sequence>
+                    <xs:attribute name="IsForSpouse" type="xs:boolean"/>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="SpouseIdentification" type="ns1:PersonIdentificationStruct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Response74LSignalStruct">
+        <xs:sequence>
+          <xs:element name="RequestID" type="xs:string"/>
+          <xs:element name="Activities">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="Activity">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="BeginDate" type="xs:date"/>
+                      <xs:element minOccurs="0" name="EndDate" type="xs:date"/>
+                      <xs:element name="ActivityKind" type="xs:string"/>
+                      <xs:element minOccurs="0" name="EndAgreementReason" type="xs:string"/>
+                    </xs:sequence>
+                    <xs:attribute name="IsForSpouse" type="xs:boolean"/>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CareerRefreshRequestDataStruct">
+        <xs:sequence>
+          <xs:element name="ReasonCode" type="xs:string"/>
+          <xs:element name="SSINType" type="xs:string"/>
+          <xs:element name="SSIN" type="xs:string"/>
+          <xs:element name="DeadlineDate" type="xs:date"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RequestCareerDataStruct">
+        <xs:sequence>
+          <xs:element name="ReadCriteria">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="HistoryInd" type="xs:boolean"/>
+                <xs:element name="PersonIdentification" type="ns1:PersonIdentificationStruct"/>
+                <xs:element minOccurs="0" name="Period" type="ns1:PeriodDefinitionStruct"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CareerDataStruct">
+        <xs:sequence>
+          <xs:element name="ReturnCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="CurrentCareer" type="ns1:IndividualRightsStruct"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="CareerHistory">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ChangeReason" type="xs:string"/>
+                <xs:element name="TimeReceived" type="xs:dateTime"/>
+                <xs:element minOccurs="0" name="TimeReplaced" type="xs:dateTime"/>
+                <xs:element minOccurs="0" name="ChangeExceptionReason" type="xs:string"/>
+                <xs:element minOccurs="0" name="IndividualRights" type="ns1:IndividualRightsStruct"/>
+              </xs:sequence>
+              <xs:attribute name="IsLoaded" type="xs:boolean"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QuarterDataStruct">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="PersonQuarter" type="ns1:PersonQuarterStruct"/>
+        </xs:sequence>
+        <xs:attribute name="Year" type="xs:int" use="required"/>
+        <xs:attribute name="Quarter" type="ns1:QuarterType" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="UploadCareersDataStruct">
+        <xs:sequence>
+          <xs:element name="ChangeReason" type="xs:string"/>
+          <xs:element name="Careers">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="IndividualRights" type="ns1:IndividualRightsStruct"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UploadCareerDataStruct">
+        <xs:sequence>
+          <xs:element name="ChangeReason" type="xs:string"/>
+          <xs:element minOccurs="0" name="IndividualRights" type="ns1:IndividualRightsStruct"/>
+          <xs:element minOccurs="0" name="RefreshRejectReason" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AcknowledgeQuarterlyUploadStruct">
+        <xs:sequence>
+          <xs:element name="AcknowledgeQuarterlyUploadData" type="ns1:ReportDataStruct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ReportQuarterlyUpload">
+        <xs:sequence>
+          <xs:element name="ReportData" type="ns1:ReportDataStruct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="BulkUploadErrorCodeType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="InvalidSequence"/>
+          <xs:enumeration value="DuplicateData"/>
+          <xs:enumeration value="DuplicateIdentification"/>
+          <xs:enumeration value="QuarterMismatch"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="SignalKindType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="S74L"/>
+          <xs:enumeration value="Estimation"/>
+          <xs:enumeration value="Computation"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="PensionKindType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="AllForWithdrawal"/>
+          <xs:enumeration value="AllForSurvival"/>
+          <xs:enumeration value="DivorcedSpouse"/>
+          <xs:enumeration value="UnconditionalWithdrawal"/>
+          <xs:enumeration value="UnconditionalSurvival"/>
+          <xs:enumeration value="InfoWithdrawal"/>
+          <xs:enumeration value="InfoSurvival"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ActivityKindType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NoActivity"/>
+          <xs:enumeration value="AuthorisedActivity"/>
+          <xs:enumeration value="Restricted2xActivity"/>
+          <xs:enumeration value="SurvivalAuthActivity"/>
+          <xs:enumeration value="AuthActivityWithChild"/>
+          <xs:enumeration value="Child2xAuthActivity"/>
+          <xs:enumeration value="SurvivalAuthActivityWithChild"/>
+          <xs:enumeration value="NoAuthActivity"/>
+          <xs:enumeration value="UnpaidMandate"/>
+          <xs:enumeration value="UnlimitedAuthActivity"/>
+          <xs:enumeration value="UnlimitedAuthActMin65"/>
+          <xs:enumeration value="UnlimitedAuthActvity65"/>
+          <xs:enumeration value="AtiOvu12"/>
+          <xs:enumeration value="AtiOvu24"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CareerRefreshReasonType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="InitialLoadError"/>
+          <xs:enumeration value="ReloadError"/>
+          <xs:enumeration value="PensionRequest"/>
+          <xs:enumeration value="EstimationRequest"/>
+          <xs:enumeration value="Other"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CareerRequestReturnCodeType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="OK"/>
+          <xs:enumeration value="SSINChanged"/>
+          <xs:enumeration value="UnknownPerson"/>
+          <xs:enumeration value="InvalidPeriod"/>
+          <xs:enumeration value="NoData"/>
+          <xs:enumeration value="NoAffiliation"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CareerChangeReasonType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Requested"/>
+          <xs:enumeration value="ErrorCorrection"/>
+          <xs:enumeration value="Regularisation"/>
+          <xs:enumeration value="InitialLoad"/>
+          <xs:enumeration value="QuarterlyUpload"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CareerRefreshRejectCodeType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="InvalidReason"/>
+          <xs:enumeration value="UnknownPerson"/>
+          <xs:enumeration value="InvalidRequest"/>
+          <xs:enumeration value="NoAffiliation"/>
+          <xs:enumeration value="ProcessingDelayed"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns3="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1" xmlns:ns2="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" xmlns="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5"/>
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1"/>
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1"/>
+      <xs:element name="AcknowledgeCareersUpload">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="UploadAcknowledgementData" type="ns3:BulkUploadAcknowledgmentStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AcknowledgeCareersUploadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AcknowledgeQuarterlyUpload">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="UploadAcknowledgementData" type="ns3:BulkUploadAcknowledgmentStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AcknowledgeQuarterlyUploadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReportCareerUpload">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="ReportData" type="ns2:ReportDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReportCareerUploadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReportCareersUpload">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="ReportData" type="ns2:ReportDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReportCareersUploadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReportQuarterlyUpload">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="ReportData" type="ns2:ReportDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReportQuarterlyUploadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RequestCareerInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="RequestCareerData" type="ns3:RequestCareerDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RequestCareerInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="CareerData" type="ns3:CareerDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RequestRefreshCareer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="CareerRefreshRequestData" type="ns3:CareerRefreshRequestDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RequestRefreshCareerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SignalChange">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="ChangeData" type="ns3:ChangeDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SignalChangeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SignalFluxSyncFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="FluxSyncFault" type="ns1:FluxSyncFaultStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SignalFluxSyncFaultResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadCareersQuarter">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="Block" type="ns1:BlockStruct"/>
+            <xs:element name="UploadQuarterData" type="ns3:QuarterDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadCareersQuarterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadFullCareer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="UploadCareerData" type="ns3:UploadCareerDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadFullCareerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadFullCareers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+            <xs:element name="FluxDescriptor" type="ns1:FluxDescriptorStruct"/>
+            <xs:element name="Block" type="ns1:BlockStruct"/>
+            <xs:element name="UploadCareersData" type="ns3:UploadCareersDataStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadFullCareersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ApplHeader" type="ns1:ApplHeaderStruct"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/WS/Helper/V2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" xmlns="http://www.rsvz-inasti.fgov.be/schemas/WS/Helper/V2">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5"/>
+      <xs:element name="AuthenticationFault" type="ns1:AuthenticationFaultStruct"/>
+      <xs:element name="AuthorizationFault" type="ns1:AuthorizationFaultStruct"/>
+      <xs:element name="FluxSyncFault" type="ns1:FluxSyncFaultStruct"/>
+      <xs:element name="SystemFault" type="ns1:SystemFaultStruct"/>
+      <xs:element name="ValidationFault" type="ns1:ValidationFaultStruct"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="AcknowledgeCareersUploadResponse">
+    <wsdl:part element="tns:AcknowledgeCareersUploadResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SignalFluxSyncFaultResponse">
+    <wsdl:part element="tns:SignalFluxSyncFaultResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReportCareersUploadResponse">
+    <wsdl:part element="tns:ReportCareersUploadResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SystemFault">
+    <wsdl:part element="ns1:SystemFault" name="SystemFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidationFault">
+    <wsdl:part element="ns1:ValidationFault" name="ValidationFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AcknowledgeCareersUpload">
+    <wsdl:part element="tns:AcknowledgeCareersUpload" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SignalChange">
+    <wsdl:part element="tns:SignalChange" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RequestRefreshCareerResponse">
+    <wsdl:part element="tns:RequestRefreshCareerResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AcknowledgeQuarterlyUpload">
+    <wsdl:part element="tns:AcknowledgeQuarterlyUpload" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SignalFluxSyncFault">
+    <wsdl:part element="tns:SignalFluxSyncFault" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AuthenticationFault">
+    <wsdl:part element="ns1:AuthenticationFault" name="AuthenticationFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReportQuarterlyUpload">
+    <wsdl:part element="tns:ReportQuarterlyUpload" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReportCareerUpload">
+    <wsdl:part element="tns:ReportCareerUpload" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReportCareerUploadResponse">
+    <wsdl:part element="tns:ReportCareerUploadResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AcknowledgeQuarterlyUploadResponse">
+    <wsdl:part element="tns:AcknowledgeQuarterlyUploadResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AuthorizationFault">
+    <wsdl:part element="ns1:AuthorizationFault" name="AuthorizationFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SignalChangeResponse">
+    <wsdl:part element="tns:SignalChangeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReportQuarterlyUploadResponse">
+    <wsdl:part element="tns:ReportQuarterlyUploadResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReportCareersUpload">
+    <wsdl:part element="tns:ReportCareersUpload" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RequestRefreshCareer">
+    <wsdl:part element="tns:RequestRefreshCareer" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SifLoopbaan">
+    <wsdl:operation name="ReportCareerUpload">
+      <wsdl:input message="tns:ReportCareerUpload" name="ReportCareerUpload"></wsdl:input>
+      <wsdl:output message="tns:ReportCareerUploadResponse" name="ReportCareerUploadResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthorizationFault" name="AuthorizationFault"></wsdl:fault>
+      <wsdl:fault message="tns:ValidationFault" name="ValidationFault"></wsdl:fault>
+      <wsdl:fault message="tns:SystemFault" name="SystemFault"></wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationFault" name="AuthenticationFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeCareersUpload">
+      <wsdl:input message="tns:AcknowledgeCareersUpload" name="AcknowledgeCareersUpload"></wsdl:input>
+      <wsdl:output message="tns:AcknowledgeCareersUploadResponse" name="AcknowledgeCareersUploadResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthorizationFault" name="AuthorizationFault"></wsdl:fault>
+      <wsdl:fault message="tns:ValidationFault" name="ValidationFault"></wsdl:fault>
+      <wsdl:fault message="tns:SystemFault" name="SystemFault"></wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationFault" name="AuthenticationFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SignalChange">
+      <wsdl:input message="tns:SignalChange" name="SignalChange"></wsdl:input>
+      <wsdl:output message="tns:SignalChangeResponse" name="SignalChangeResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthorizationFault" name="AuthorizationFault"></wsdl:fault>
+      <wsdl:fault message="tns:ValidationFault" name="ValidationFault"></wsdl:fault>
+      <wsdl:fault message="tns:SystemFault" name="SystemFault"></wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationFault" name="AuthenticationFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeQuarterlyUpload">
+      <wsdl:input message="tns:AcknowledgeQuarterlyUpload" name="AcknowledgeQuarterlyUpload"></wsdl:input>
+      <wsdl:output message="tns:AcknowledgeQuarterlyUploadResponse" name="AcknowledgeQuarterlyUploadResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthorizationFault" name="AuthorizationFault"></wsdl:fault>
+      <wsdl:fault message="tns:ValidationFault" name="ValidationFault"></wsdl:fault>
+      <wsdl:fault message="tns:SystemFault" name="SystemFault"></wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationFault" name="AuthenticationFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportCareersUpload">
+      <wsdl:input message="tns:ReportCareersUpload" name="ReportCareersUpload"></wsdl:input>
+      <wsdl:output message="tns:ReportCareersUploadResponse" name="ReportCareersUploadResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthorizationFault" name="AuthorizationFault"></wsdl:fault>
+      <wsdl:fault message="tns:ValidationFault" name="ValidationFault"></wsdl:fault>
+      <wsdl:fault message="tns:SystemFault" name="SystemFault"></wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationFault" name="AuthenticationFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RequestRefreshCareer">
+      <wsdl:input message="tns:RequestRefreshCareer" name="RequestRefreshCareer"></wsdl:input>
+      <wsdl:output message="tns:RequestRefreshCareerResponse" name="RequestRefreshCareerResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthorizationFault" name="AuthorizationFault"></wsdl:fault>
+      <wsdl:fault message="tns:ValidationFault" name="ValidationFault"></wsdl:fault>
+      <wsdl:fault message="tns:SystemFault" name="SystemFault"></wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationFault" name="AuthenticationFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SignalFluxSyncFault">
+      <wsdl:input message="tns:SignalFluxSyncFault" name="SignalFluxSyncFault"></wsdl:input>
+      <wsdl:output message="tns:SignalFluxSyncFaultResponse" name="SignalFluxSyncFaultResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthorizationFault" name="AuthorizationFault"></wsdl:fault>
+      <wsdl:fault message="tns:ValidationFault" name="ValidationFault"></wsdl:fault>
+      <wsdl:fault message="tns:SystemFault" name="SystemFault"></wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationFault" name="AuthenticationFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportQuarterlyUpload">
+      <wsdl:input message="tns:ReportQuarterlyUpload" name="ReportQuarterlyUpload"></wsdl:input>
+      <wsdl:output message="tns:ReportQuarterlyUploadResponse" name="ReportQuarterlyUploadResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthorizationFault" name="AuthorizationFault"></wsdl:fault>
+      <wsdl:fault message="tns:ValidationFault" name="ValidationFault"></wsdl:fault>
+      <wsdl:fault message="tns:SystemFault" name="SystemFault"></wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationFault" name="AuthenticationFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SifLoopbaanServiceSoapBinding" type="tns:SifLoopbaan">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReportCareerUpload">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/ReportCareerUpload" style="document"/>
+      <wsdl:input name="ReportCareerUpload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ReportCareerUploadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorizationFault">
+        <soap:fault name="AuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFault">
+        <soap:fault name="ValidationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SystemFault">
+        <soap:fault name="SystemFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFault">
+        <soap:fault name="AuthenticationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeCareersUpload">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/AcknowledgeCareersUpload" style="document"/>
+      <wsdl:input name="AcknowledgeCareersUpload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="AcknowledgeCareersUploadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorizationFault">
+        <soap:fault name="AuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFault">
+        <soap:fault name="ValidationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SystemFault">
+        <soap:fault name="SystemFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFault">
+        <soap:fault name="AuthenticationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SignalChange">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/SignalChange" style="document"/>
+      <wsdl:input name="SignalChange">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SignalChangeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorizationFault">
+        <soap:fault name="AuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFault">
+        <soap:fault name="ValidationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SystemFault">
+        <soap:fault name="SystemFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFault">
+        <soap:fault name="AuthenticationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeQuarterlyUpload">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/AcknowledgeQuarterlyUpload" style="document"/>
+      <wsdl:input name="AcknowledgeQuarterlyUpload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="AcknowledgeQuarterlyUploadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorizationFault">
+        <soap:fault name="AuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFault">
+        <soap:fault name="ValidationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SystemFault">
+        <soap:fault name="SystemFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFault">
+        <soap:fault name="AuthenticationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportCareersUpload">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/ReportCareersUpload" style="document"/>
+      <wsdl:input name="ReportCareersUpload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ReportCareersUploadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorizationFault">
+        <soap:fault name="AuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFault">
+        <soap:fault name="ValidationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SystemFault">
+        <soap:fault name="SystemFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFault">
+        <soap:fault name="AuthenticationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RequestRefreshCareer">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/RequestRefreshCareer" style="document"/>
+      <wsdl:input name="RequestRefreshCareer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RequestRefreshCareerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorizationFault">
+        <soap:fault name="AuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFault">
+        <soap:fault name="ValidationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SystemFault">
+        <soap:fault name="SystemFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFault">
+        <soap:fault name="AuthenticationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SignalFluxSyncFault">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/SignalFluxSyncFault" style="document"/>
+      <wsdl:input name="SignalFluxSyncFault">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SignalFluxSyncFaultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorizationFault">
+        <soap:fault name="AuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFault">
+        <soap:fault name="ValidationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SystemFault">
+        <soap:fault name="SystemFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFault">
+        <soap:fault name="AuthenticationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportQuarterlyUpload">
+      <soap:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/ReportQuarterlyUpload" style="document"/>
+      <wsdl:input name="ReportQuarterlyUpload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ReportQuarterlyUploadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorizationFault">
+        <soap:fault name="AuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFault">
+        <soap:fault name="ValidationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SystemFault">
+        <soap:fault name="SystemFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationFault">
+        <soap:fault name="AuthenticationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SifLoopbaanService">
+    <wsdl:port binding="tns:SifLoopbaanServiceSoapBinding" name="SifLoopbaanPort">
+      <soap:address location="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan</con:endpoint></con:endpoints><con:operation id="37927c0b-0406-47b7-9119-f70d28449583" isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/AcknowledgeCareersUpload" name="AcknowledgeCareersUpload" bindingOperationName="AcknowledgeCareersUpload" type="Request-Response" outputName="AcknowledgeCareersUploadResponse" inputName="AcknowledgeCareersUpload" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="e3ea4b76-fe04-4199-8b0d-b6686bdc7886" isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/AcknowledgeQuarterlyUpload" name="AcknowledgeQuarterlyUpload" bindingOperationName="AcknowledgeQuarterlyUpload" type="Request-Response" outputName="AcknowledgeQuarterlyUploadResponse" inputName="AcknowledgeQuarterlyUpload" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="71a3c540-32da-492c-8dda-1ca7f2e1c97b" isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/ReportCareersUpload" name="ReportCareersUpload" bindingOperationName="ReportCareersUpload" type="Request-Response" outputName="ReportCareersUploadResponse" inputName="ReportCareersUpload" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="fa95193f-324e-44b4-a962-f2d0ab75794e" isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/ReportCareerUpload" name="ReportCareerUpload" bindingOperationName="ReportCareerUpload" type="Request-Response" outputName="ReportCareerUploadResponse" inputName="ReportCareerUpload" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="d81d172a-48b7-4773-a307-a2bec800c9bd" isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/ReportQuarterlyUpload" name="ReportQuarterlyUpload" bindingOperationName="ReportQuarterlyUpload" type="Request-Response" outputName="ReportQuarterlyUploadResponse" inputName="ReportQuarterlyUpload" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="bca0498c-9c3a-4def-b334-35b8ffd97a86" isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/RequestRefreshCareer" name="RequestRefreshCareer" bindingOperationName="RequestRefreshCareer" type="Request-Response" outputName="RequestRefreshCareerResponse" inputName="RequestRefreshCareer" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="33d6b9be-042a-473a-bc37-24e3db600806" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:v5="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" xmlns:v11="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+       <v1:RequestRefreshCareer>
+         <v1:ApplHeader>
+            <v5:Origin>
+               <v5:Organization>500</v5:Organization>
+               <v5:Application>nasca</v5:Application>
+            </v5:Origin>
+            <v5:Destination>
+               <v5:Organization>019</v5:Organization>
+               <v5:Application>nasca</v5:Application>
+            </v5:Destination>
+            <v5:MessageID>312667</v5:MessageID>
+            <v5:Timestamp>2017-04-26T13:35:38.79</v5:Timestamp>
+            <!--Optional:-->
+            <v5:UserID>505436</v5:UserID>
+            <!--Optional:-->
+            <v5:RequestInitiatorID>10001500249</v5:RequestInitiatorID>
+         </v1:ApplHeader>
+         <v1:FluxDescriptor>
+            <v5:Initiator>
+               <v5:Organization>019</v5:Organization>
+               <v5:Application>nasca</v5:Application>
+            </v5:Initiator>
+            <v5:FluxID>XXX1</v5:FluxID>
+            <v5:FluxDefinition>
+               <v5:Name>NAME</v5:Name>
+               <v5:Version>1</v5:Version>
+            </v5:FluxDefinition>
+         </v1:FluxDescriptor>
+         <v1:CareerRefreshRequestData>
+            <v11:ReasonCode>REASON</v11:ReasonCode>
+            <v11:SSINType>TYPE_NISS</v11:SSINType>
+            <v11:SSIN>NISS</v11:SSIN>
+            <v11:DeadlineDate>DEADLINE</v11:DeadlineDate>
+         </v1:CareerRefreshRequestData>
+      </v1:RequestRefreshCareer>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/RequestRefreshCareer"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="be8b274e-7103-48a4-8619-45c06d2a2719" isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/SignalChange" name="SignalChange" bindingOperationName="SignalChange" type="Request-Response" outputName="SignalChangeResponse" inputName="SignalChange" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b5475732-a352-4216-bd2e-6da823eb2edc" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:v5="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" xmlns:v11="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1" xmlns:v12="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:SignalChange>
+         <v1:ApplHeader>
+            <v5:Origin>
+               <v5:Organization>000</v5:Organization>
+               <v5:Application>1202</v5:Application>
+            </v5:Origin>
+            <v5:Destination>
+               <v5:Organization>019</v5:Organization>
+               <v5:Application>EXCIS</v5:Application>
+            </v5:Destination>
+            <v5:MessageID>312666</v5:MessageID>
+            <v5:Timestamp>2017-04-26T13:35:38.79</v5:Timestamp>
+            <!--Optional:-->
+            <v5:UserID>505436</v5:UserID>
+            <!--Optional:-->
+            <v5:RequestInitiatorID>10001500249</v5:RequestInitiatorID>
+         </v1:ApplHeader>
+         <v1:ChangeData>
+            <v11:SignalKind>S74L</v11:SignalKind>
+            <v11:BeneficiaryPerson>
+               <v12:SSINType>typeNiss</v12:SSINType>
+               <v12:SSIN>Niss</v12:SSIN>
+            </v11:BeneficiaryPerson>
+            <v11:Request74L>
+               <v11:RequestID>requestId</v11:RequestID>
+               <v11:PensionKind>pensionKind</v11:PensionKind>
+               <v11:PensionBeginDate>pensionDebut</v11:PensionBeginDate>
+               <!--Optional:-->
+               <v11:IsFamilyRateApplied>family</v11:IsFamilyRateApplied>
+               <v11:Activities>
+                  <!--1 or more repetitions:-->
+                  <v11:Activity IsForSpouse=spouse>
+                     <v11:BeginDate>dateDebut</v11:BeginDate>
+                     <v11:ActivityKind>activity</v11:ActivityKind>
+                  </v11:Activity>
+                  <!--1 or more repetitions:-->
+                  <v11:Activity IsForSpouse=spouse2>
+                     <v11:BeginDate>dateDebut2</v11:BeginDate>
+                     <v11:ActivityKind>activity2</v11:ActivityKind>
+                  </v11:Activity>
+               </v11:Activities>
+            </v11:Response74L>
+         </v1:ChangeData>
+      </v1:SignalChange>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/SignalChange"/><con:wsrmConfig version="1.2"/></con:call><con:call id="3c2a678d-653f-46d8-82df-893ba7a5c08e" name="Request 2"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:v5="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" xmlns:v11="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1" xmlns:v12="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:SignalChange>\r
+         <v1:ApplHeader>\r
+            <v5:Origin>\r
+               <v5:Organization>?</v5:Organization>\r
+               <v5:Application>?</v5:Application>\r
+            </v5:Origin>\r
+            <v5:Destination>\r
+               <v5:Organization>?</v5:Organization>\r
+               <v5:Application>?</v5:Application>\r
+            </v5:Destination>\r
+            <v5:MessageID>?</v5:MessageID>\r
+            <v5:Timestamp>?</v5:Timestamp>\r
+            <!--Optional:-->\r
+            <v5:UserID>?</v5:UserID>\r
+            <!--Optional:-->\r
+            <v5:RequestInitiatorID>?</v5:RequestInitiatorID>\r
+         </v1:ApplHeader>\r
+         <v1:ChangeData>\r
+            <v11:SignalKind>?</v11:SignalKind>\r
+            <v11:BeneficiaryPerson>\r
+               <!--Optional:-->\r
+               <v12:LastName>?</v12:LastName>\r
+               <!--Optional:-->\r
+               <v12:FirstName>?</v12:FirstName>\r
+               <v12:SSINType>?</v12:SSINType>\r
+               <v12:SSIN>?</v12:SSIN>\r
+               <!--Optional:-->\r
+               <v12:BirthDate>?</v12:BirthDate>\r
+            </v11:BeneficiaryPerson>\r
+            <!--Optional:-->\r
+            <v11:CareerDBInfo>\r
+               <v11:CreationDate>?</v11:CreationDate>\r
+               <!--Optional:-->\r
+               <v11:LastUpdateDate>?</v11:LastUpdateDate>\r
+               <!--Optional:-->\r
+               <v11:LastUpdateUser>?</v11:LastUpdateUser>\r
+            </v11:CareerDBInfo>\r
+            <!--Optional:-->\r
+            <v11:PensionRequest>\r
+               <!--1 or more repetitions:-->\r
+               <v11:PensionInfo>\r
+                  <v11:PensionKind>?</v11:PensionKind>\r
+                  <!--Optional:-->\r
+                  <v11:HeadSSINKind>?</v11:HeadSSINKind>\r
+                  <!--Optional:-->\r
+                  <v11:HeadSSIN>?</v11:HeadSSIN>\r
+                  <v11:PensionBeginDate>?</v11:PensionBeginDate>\r
+               </v11:PensionInfo>\r
+            </v11:PensionRequest>\r
+            <!--Optional:-->\r
+            <v11:Request74L>\r
+               <v11:RequestID>?</v11:RequestID>\r
+               <v11:PensionKind>?</v11:PensionKind>\r
+               <v11:PensionBeginDate>?</v11:PensionBeginDate>\r
+               <!--Optional:-->\r
+               <v11:IsFamilyRateApplied>?</v11:IsFamilyRateApplied>\r
+               <v11:Activities>\r
+                  <!--1 or more repetitions:-->\r
+                  <v11:Activity IsForSpouse="?">\r
+                     <v11:BeginDate>?</v11:BeginDate>\r
+                     <v11:ActivityKind>?</v11:ActivityKind>\r
+                  </v11:Activity>\r
+               </v11:Activities>\r
+               <!--Optional:-->\r
+               <v11:SpouseIdentification>\r
+                  <!--Optional:-->\r
+                  <v12:LastName>?</v12:LastName>\r
+                  <!--Optional:-->\r
+                  <v12:FirstName>?</v12:FirstName>\r
+                  <v12:SSINType>?</v12:SSINType>\r
+                  <v12:SSIN>?</v12:SSIN>\r
+                  <!--Optional:-->\r
+                  <v12:BirthDate>?</v12:BirthDate>\r
+               </v11:SpouseIdentification>\r
+            </v11:Request74L>\r
+            <!--Optional:-->\r
+            <v11:Response74L>\r
+               <v11:RequestID>?</v11:RequestID>\r
+               <v11:Activities>\r
+                  <!--1 or more repetitions:-->\r
+                  <v11:Activity IsForSpouse="?">\r
+                     <v11:BeginDate>?</v11:BeginDate>\r
+                     <!--Optional:-->\r
+                     <v11:EndDate>?</v11:EndDate>\r
+                     <v11:ActivityKind>?</v11:ActivityKind>\r
+                     <!--Optional:-->\r
+                     <v11:EndAgreementReason>?</v11:EndAgreementReason>\r
+                  </v11:Activity>\r
+               </v11:Activities>\r
+            </v11:Response74L>\r
+         </v1:ChangeData>\r
+      </v1:SignalChange>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/SignalChange"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2ca5f228-0add-4c5d-b110-a84aab7aaf9a" isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/SignalFluxSyncFault" name="SignalFluxSyncFault" bindingOperationName="SignalFluxSyncFault" type="Request-Response" outputName="SignalFluxSyncFaultResponse" inputName="SignalFluxSyncFault" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation></con:interface><con:testSuite id="ec0b5729-1b53-44dd-abe1-d614a292d2a4" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="69e2d8aa-8899-4c8c-95d3-cd1a457c7411" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - SignalChange 74L - 1" searchProperties="true"><con:settings/><con:testStep type="request" id="33818d4b-f7ff-4e1b-b96e-a658e845d3f9" name="SignalChange"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifLoopbaanServiceSoapBinding</con:interface><con:operation>SignalChange</con:operation><con:request name="SignalChange" id="ec544569-4e52-4fde-aea6-3e7dbdbd3f78"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:v5="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" xmlns:v11="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1" xmlns:v12="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+    <v1:SignalChange>
+         <v1:ApplHeader>
+            <v5:Origin>
+               <v5:Organization>000</v5:Organization>
+               <v5:Application>1202</v5:Application>
+            </v5:Origin>
+            <v5:Destination>
+               <v5:Organization>019</v5:Organization>
+               <v5:Application>EXCIS</v5:Application>
+            </v5:Destination>
+            <v5:MessageID>312667</v5:MessageID>
+            <v5:Timestamp>2017-04-26T13:35:38.79</v5:Timestamp>
+            <!--Optional:-->
+            <v5:UserID>505436</v5:UserID>
+            <!--Optional:-->
+            <v5:RequestInitiatorID>10001500249</v5:RequestInitiatorID>
+         </v1:ApplHeader>
+         <v1:ChangeData>
+            <v11:SignalKind>S74L</v11:SignalKind>
+            <v11:BeneficiaryPerson>
+               <v12:SSINType>TYPE_NISS</v12:SSINType>
+               <v12:SSIN>NISS</v12:SSIN>
+            </v11:BeneficiaryPerson>
+            <v11:Request74L>
+               <v11:RequestID>REQUEST_ID</v11:RequestID>
+               <v11:PensionKind>PENSION_KIND</v11:PensionKind>
+               <v11:PensionBeginDate>DEBUT_PENSION</v11:PensionBeginDate>
+               <!--Optional:-->
+               <v11:IsFamilyRateApplied>FAMILY</v11:IsFamilyRateApplied>
+               <v11:Activities>
+                  <!--1 or more repetitions:-->
+                  <v11:Activity IsForSpouse="SPOUSE">
+                     <v11:BeginDate>DATE_DEBUT</v11:BeginDate>
+                     <v11:ActivityKind>ACTIVITY</v11:ActivityKind>
+                  </v11:Activity>
+               </v11:Activities>
+            </v11:Request74L>
+         </v1:ChangeData>
+      </v1:SignalChange>
+
+
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/SignalChange" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2b2aff74-c54b-4b34-be6f-ededd4271675" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - SignalChange 74L - 2" searchProperties="true"><con:settings/><con:testStep type="request" id="9f7124c2-be82-456c-a91c-c4ddb93b4d84" name="SignalChange"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifLoopbaanServiceSoapBinding</con:interface><con:operation>SignalChange</con:operation><con:request name="SignalChange" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="0895391c-7f47-46f3-a2ed-d43a16533635"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:v5="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" xmlns:v11="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1" xmlns:v12="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/CommonTypes/V1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:SignalChange>
+         <v1:ApplHeader>
+            <v5:Origin>
+               <v5:Organization>000</v5:Organization>
+               <v5:Application>1202</v5:Application>
+            </v5:Origin>
+            <v5:Destination>
+               <v5:Organization>019</v5:Organization>
+               <v5:Application>EXCIS</v5:Application>
+            </v5:Destination>
+            <v5:MessageID>312666</v5:MessageID>
+            <v5:Timestamp>2017-04-26T13:35:38.79</v5:Timestamp>
+            <!--Optional:-->
+            <v5:UserID>505436</v5:UserID>
+            <!--Optional:-->
+            <v5:RequestInitiatorID>10001500249</v5:RequestInitiatorID>
+         </v1:ApplHeader>
+         <v1:ChangeData>
+            <v11:SignalKind>S74L</v11:SignalKind>
+            <v11:BeneficiaryPerson>
+               <v12:SSINType>TYPE_NISS</v12:SSINType>
+               <v12:SSIN>NISS</v12:SSIN>
+            </v11:BeneficiaryPerson>
+            <v11:Request74L>
+               <v11:RequestID>REQUEST_ID</v11:RequestID>
+               <v11:PensionKind>PENSION_KIND</v11:PensionKind>
+               <v11:PensionBeginDate>DEBUT_PENSION</v11:PensionBeginDate>
+               <!--Optional:-->
+               <v11:IsFamilyRateApplied>FAMILY</v11:IsFamilyRateApplied>
+               <v11:Activities>
+                  <!--1 or more repetitions:-->
+                  <v11:Activity IsForSpouse="SPOUSE">
+                     <v11:BeginDate>DATE_DEBUT</v11:BeginDate>
+                     <v11:ActivityKind>ACTIVITY</v11:ActivityKind>
+                  </v11:Activity>
+                  <!--1 or more repetitions:-->
+                  <v11:Activity IsForSpouse="EPOUSE">
+                     <v11:BeginDate>DEBUT</v11:BeginDate>
+                     <v11:ActivityKind>ACTIVITE</v11:ActivityKind>
+                  </v11:Activity>
+               </v11:Activities>
+            </v11:Request74L>
+         </v1:ChangeData>
+      </v1:SignalChange>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8e6a1069-947f-4dc4-a924-b83be85d7b03" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/SignalChange"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="112afb80-c031-4e97-8b4f-c7860dc39e88" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - DemandeRefresh" searchProperties="true"><con:settings/><con:testStep type="request" id="a0019927-689a-4284-9ffd-ee683538eb07" name="RequestRefreshCareer"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifLoopbaanServiceSoapBinding</con:interface><con:operation>RequestRefreshCareer</con:operation><con:request name="RequestRefreshCareer" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ac3baf3c-5f78-42bb-9649-c42128312d74"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifLoopbaan</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:v5="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5" xmlns:v11="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/Loopbaan/B2BExchanges/V1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+       <v1:RequestRefreshCareer>
+         <v1:ApplHeader>
+            <v5:Origin>
+               <v5:Organization>500</v5:Organization>
+               <v5:Application>nasca</v5:Application>
+            </v5:Origin>
+            <v5:Destination>
+               <v5:Organization>019</v5:Organization>
+               <v5:Application>nasca</v5:Application>
+            </v5:Destination>
+            <v5:MessageID>312667</v5:MessageID>
+            <v5:Timestamp>2017-04-26T13:35:38.79</v5:Timestamp>
+            <!--Optional:-->
+            <v5:UserID>505436</v5:UserID>
+            <!--Optional:-->
+            <v5:RequestInitiatorID>10001500249</v5:RequestInitiatorID>
+         </v1:ApplHeader>
+         <v1:FluxDescriptor>
+            <v5:Initiator>
+               <v5:Organization>019</v5:Organization>
+               <v5:Application>nasca</v5:Application>
+            </v5:Initiator>
+            <v5:FluxID>XXX1</v5:FluxID>
+            <v5:FluxDefinition>
+               <v5:Name>NAME</v5:Name>
+               <v5:Version>1</v5:Version>
+            </v5:FluxDefinition>
+         </v1:FluxDescriptor>
+         <v1:CareerRefreshRequestData>
+            <v11:ReasonCode>REASON</v11:ReasonCode>
+            <v11:SSINType>TYPE_NISS</v11:SSINType>
+            <v11:SSIN>NISS</v11:SSIN>
+            <v11:DeadlineDate>DEADLINE</v11:DeadlineDate>
+         </v1:CareerRefreshRequestData>
+      </v1:RequestRefreshCareer>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="52b619e9-2098-4ed1-aec5-ca43db08ee91" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1/SifLoopbaan/RequestRefreshCareer"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

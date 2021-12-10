@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Transfert In PP Decision Acceptee">
+
+	<test name="AffiliationPPTransfertInTestExcel">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.transfertin.pp.AffiliationPPTransfertInTest"/>
+		</classes>
+	</test>		
+	
+</suite>

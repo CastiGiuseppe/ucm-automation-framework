@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test profil complementaire update">
+
+	<test name="Profil-Complementaire Update nature">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.profil.update.ProfilUpdateComplementaireTest"/>
+		</classes>
+	</test>
+	
+</suite>

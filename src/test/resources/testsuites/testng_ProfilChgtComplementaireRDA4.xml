@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test profil complementaire RDA4">
+
+	<test name="Profil-Complementaire Changement de nature RDA4">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.profil.change.ProfilChangeComplementaireRDA4Test"/>
+		</classes>
+	</test>
+		
+</suite>

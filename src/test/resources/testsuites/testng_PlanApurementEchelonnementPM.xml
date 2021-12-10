@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test PlanApurementEchelonnementPMTest">
+
+	<test name="PlanApurementEchelonnementPMTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.planapurement.PlanApurementEchelonnementPMTest"/>
+		</classes>
+	</test>
+	
+</suite>

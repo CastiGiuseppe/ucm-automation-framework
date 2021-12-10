@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Comptabilite">
+
+	<test name="ComptabiliteTest">
+		<classes>
+			<class name="be.ucm.cas.nasca.web.test.comptabilite.ComptabiliteTest" />
+		</classes>
+	</test>
+
+</suite>

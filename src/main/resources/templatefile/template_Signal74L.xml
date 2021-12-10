@@ -1,0 +1,15 @@
+<v1:SignalChangeResponse xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/WS/Loopbaan/V1" xmlns:v5="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V5">
+   <v1:ApplHeader>
+      <v5:Origin>
+         <v5:Organization>019</v5:Organization>
+         <v5:Application>EXCIS</v5:Application>
+      </v5:Origin>
+      <v5:Destination>
+         <v5:Organization>019</v5:Organization>
+         <v5:Application>EXCIS</v5:Application>
+      </v5:Destination>
+      <v5:MessageID>1c106733-0e31-4eeb-a69f-4252f2d16aeb</v5:MessageID>
+      <v5:Timestamp>2014-05-05T14:45:13.291+02:0</v5:Timestamp>
+      <v5:UserID>0</v5:UserID>
+   </v1:ApplHeader>
+</v1:SignalChangeResponse>

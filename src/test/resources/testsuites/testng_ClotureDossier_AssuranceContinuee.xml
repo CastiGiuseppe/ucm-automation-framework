@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Assurance Continuee">
+
+	<test name="AssuranceContinueeTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.cloturedossier.asscontinuee.AssuranceContinueeTest"/>
+		</classes>
+	</test>
+
+</suite>

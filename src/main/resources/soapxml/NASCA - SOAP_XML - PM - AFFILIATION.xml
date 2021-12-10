@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="NASCA - SOAP_XML - PM - AFFILIATION" resourceRoot="" soapui-version="5.2.1" id="2714aebc-1afb-4bf1-a5c8-456fb72a719b" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SifCompanyAffiliationServiceServiceSoapBinding" type="wsdl" bindingName="{http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1}SifCompanyAffiliationServiceServiceSoapBinding" soapVersion="1_2" anonymous="optional" definition="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation?wsdl" id="55ea4dc0-69aa-44a4-bf1b-ebff5f8587b2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation?wsdl">
+            <con:part>
+                <con:url>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation?wsdl</con:url>
+                <con:content><![CDATA[<wsdl:definitions name="SifCompanyAffiliationServiceService" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Faults/V1/schema">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.w3.org/2005/05/xmlmime" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.w3.org/2005/05/xmlmime">
+      <xs:complexType name="base64Binary">
+        <xs:simpleContent>
+          <xs:extension base="xs:base64Binary">
+            <xs:attribute ref="tns:contentType"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:complexType name="hexBinary">
+        <xs:simpleContent>
+          <xs:extension base="xs:string">
+            <xs:attribute ref="tns:contentType"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:attribute name="contentType" type="xs:string"/>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema"/>
+      <xs:element name="AcceptAffiliationIn" type="tns:AcceptAffiliationIn"/>
+      <xs:element name="AcceptAffiliationOut" type="tns:AcceptAffiliationOut"/>
+      <xs:element name="HandleTransferRequestIn" type="tns:HandleTransferRequestIn"/>
+      <xs:element name="HandleTransferRequestOut" type="tns:HandleTransferRequestOut"/>
+      <xs:element name="RefuseAffiliationIn" type="tns:RefuseAffiliationIn"/>
+      <xs:element name="RefuseAffiliationOut" type="tns:RefuseAffiliationOut"/>
+      <xs:element name="UpdateAffiliationIn" type="tns:UpdateAffiliationIn"/>
+      <xs:element name="UpdateAffiliationOut" type="tns:UpdateAffiliationOut"/>
+      <xs:complexType name="RefuseAffiliationIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element name="DecisionDate" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="MotivationDocuments" nillable="true" type="ns1:ArrayOfDocument"/>
+              <xs:element name="Reasons" nillable="true" type="ns1:ArrayOfSystemValue"/>
+              <xs:element name="StartYearOfAffiliation" type="xs:int"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RefuseAffiliationOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="UpdateAffiliationIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="UpdateAffiliationOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcceptAffiliationIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element name="DecisionDate" type="xs:dateTime"/>
+              <xs:element name="StartYearOfAffiliation" type="xs:int"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AcceptAffiliationOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="HandleTransferRequestIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element name="NewSif" nillable="true" type="ns1:SystemValue"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="HandleTransferRequestOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema"/>
+      <xs:element name="AcceptAffiliation" type="tns:AcceptAffiliationType"/>
+      <xs:element name="AcceptAffiliationResponse" type="tns:AcceptAffiliationResponseType"/>
+      <xs:element name="HandleTransferRequest" type="tns:HandleTransferRequestType"/>
+      <xs:element name="HandleTransferRequestResponse" type="tns:HandleTransferRequestResponseType"/>
+      <xs:element name="IsAlive">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IsAliveResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="IsAliveResult" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RefuseAffiliation" type="tns:RefuseAffiliationType"/>
+      <xs:element name="RefuseAffiliationResponse" type="tns:RefuseAffiliationResponseType"/>
+      <xs:element name="UpdateAffiliation" type="tns:UpdateAffiliationType"/>
+      <xs:element name="UpdateAffiliationResponse" type="tns:UpdateAffiliationResponseType"/>
+      <xs:complexType name="RefuseAffiliationType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" nillable="true" type="ns1:RefuseAffiliationIn"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RefuseAffiliationResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RefuseAffiliationResult" nillable="true" type="ns1:RefuseAffiliationOut"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UpdateAffiliationType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" nillable="true" type="ns1:UpdateAffiliationIn"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UpdateAffiliationResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UpdateAffiliationResult" nillable="true" type="ns1:UpdateAffiliationOut"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AcceptAffiliationType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" nillable="true" type="ns1:AcceptAffiliationIn"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AcceptAffiliationResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcceptAffiliationResult" nillable="true" type="ns1:AcceptAffiliationOut"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HandleTransferRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" nillable="true" type="ns1:HandleTransferRequestIn"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HandleTransferRequestResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HandleTransferRequestResult" nillable="true" type="ns1:HandleTransferRequestOut"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Nisse/Acquittal/V1/NisseCompanyAcquittalService/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Nisse/Acquittal/V1/NisseCompanyAcquittalService/schema" xmlns:ns2="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema" xmlns:ns1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema">
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema"/>
+      <xs:import namespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema"/>
+      <xs:element name="AcquittalYear" type="tns:AcquittalYear"/>
+      <xs:element name="AddMotivationIn" type="tns:AddMotivationIn"/>
+      <xs:element name="AddMotivationOut" type="tns:AddMotivationOut"/>
+      <xs:element name="ArrayOfAcquittalYear" type="tns:ArrayOfAcquittalYear"/>
+      <xs:element name="RequestAcquittalIn" type="tns:RequestAcquittalIn"/>
+      <xs:element name="RequestAcquittalOut" type="tns:RequestAcquittalOut"/>
+      <xs:complexType name="AddMotivationIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="AcquittalYears" nillable="true" type="ns1:ArrayOfInteger"/>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element name="MotivationDocuments" nillable="true" type="ns1:ArrayOfDocument"/>
+              <xs:element name="RequestType" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RequestAcquittalIn">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseIn">
+            <xs:sequence>
+              <xs:element name="AcquittalYears" nillable="true" type="tns:ArrayOfAcquittalYear"/>
+              <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string"/>
+              <xs:element name="CompanyID" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="MotivationDocuments" nillable="true" type="ns1:ArrayOfDocument"/>
+              <xs:element name="RequestType" type="xs:string"/>
+              <xs:element name="RequesterLanguage" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfAcquittalYear">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="AcquittalYear" nillable="true" type="tns:AcquittalYear"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AcquittalYear">
+        <xs:sequence>
+          <xs:element name="AcquittalAmount" type="xs:decimal"/>
+          <xs:element name="ContributionAmountPaid" type="xs:decimal"/>
+          <xs:element name="ContributionPaymentDate" type="xs:dateTime"/>
+          <xs:element name="Year" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AddMotivationOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="RequestAcquittalOut">
+        <xs:complexContent>
+          <xs:extension base="ns1:BaseOut">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema">
+      <xs:element name="ArrayOfContactDataOut" type="tns:ArrayOfContactDataOut"/>
+      <xs:element name="ArrayOfDecimal" type="tns:ArrayOfDecimal"/>
+      <xs:element name="ArrayOfDocument" type="tns:ArrayOfDocument"/>
+      <xs:element name="ArrayOfInteger" type="tns:ArrayOfInteger"/>
+      <xs:element name="ArrayOfString" type="tns:ArrayOfString"/>
+      <xs:element name="ArrayOfSystemValue" type="tns:ArrayOfSystemValue"/>
+      <xs:element name="ArrayOfTranslatedLocation" type="tns:ArrayOfTranslatedLocation"/>
+      <xs:element name="BaseIn" type="tns:BaseIn"/>
+      <xs:element name="BaseOut" type="tns:BaseOut"/>
+      <xs:element name="ContactDataOut" type="tns:ContactDataOut"/>
+      <xs:element name="Language" type="tns:Language"/>
+      <xs:element name="SystemValue" type="tns:SystemValue"/>
+      <xs:element name="TranslatedLocation" type="tns:TranslatedLocation"/>
+      <xs:complexType name="BaseIn">
+        <xs:sequence>
+          <xs:element name="DestinationID" nillable="true" type="xs:string"/>
+          <xs:element name="FluxID" type="xs:string"/>
+          <xs:element name="MessageID" type="xs:string"/>
+          <xs:element name="OriginID" nillable="true" type="xs:string"/>
+          <xs:element name="Timestamp" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfDocument">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="base64Binary" nillable="true" ns1:expectedContentTypes="application/pdf" type="xs:base64Binary" xmlns:ns1="http://www.w3.org/2005/05/xmlmime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfSystemValue">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="SystemValue" nillable="true" type="tns:SystemValue"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SystemValue">
+        <xs:sequence>
+          <xs:element name="Key" nillable="true" type="xs:string"/>
+          <xs:element name="ValueFR" nillable="true" type="xs:string"/>
+          <xs:element name="ValueNL" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfInteger">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="int" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="BaseOut">
+        <xs:sequence>
+          <xs:element name="FluxID" type="xs:string"/>
+          <xs:element name="MessageID" type="xs:string"/>
+          <xs:element name="Timestamp" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfContactDataOut">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="ContactDataOut" nillable="true" type="tns:ContactDataOut"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ContactDataOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Box" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CityNis" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CityTranslations" nillable="true" type="tns:ArrayOfTranslatedLocation"/>
+          <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="HouseNr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="StreetCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="StreetTranslations" nillable="true" type="tns:ArrayOfTranslatedLocation"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTranslatedLocation">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="TranslatedLocation" nillable="true" type="tns:TranslatedLocation"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TranslatedLocation">
+        <xs:sequence>
+          <xs:element name="Language" nillable="true" type="tns:SystemValue"/>
+          <xs:element name="Name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfDecimal">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="decimal" nillable="true" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfString">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="Language">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Fr"/>
+          <xs:enumeration value="Nl"/>
+          <xs:enumeration value="De"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Faults/V1/schema" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Faults/V1/schema">
+      <xs:element name="ArrayOfReason" type="tns:ArrayOfReason"/>
+      <xs:element name="AuthorizationFault" type="tns:AuthorizationFault"/>
+      <xs:element name="Reason" type="tns:Reason"/>
+      <xs:element name="ServiceFault" type="tns:ServiceFault"/>
+      <xs:complexType name="AuthorizationFault">
+        <xs:sequence>
+          <xs:element name="MessageID" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ServiceFault">
+        <xs:sequence>
+          <xs:element name="FluxID" type="xs:string"/>
+          <xs:element name="MessageID" type="xs:string"/>
+          <xs:element name="Reasons" nillable="true" type="tns:ArrayOfReason"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfReason">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Reason" nillable="true" type="tns:Reason"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Reason">
+        <xs:sequence>
+          <xs:element name="FaultCode" nillable="true" type="xs:string"/>
+          <xs:element name="MessageFR" nillable="true" type="xs:string"/>
+          <xs:element name="MessageNL" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema targetNamespace="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/Company/V1/schema">
+      <xs:element name="AcquittalType" type="tns:AcquittalType"/>
+      <xs:element name="ActivityType" type="tns:ActivityType"/>
+      <xs:element name="AffiliationHistoryType" type="tns:AffiliationHistoryType"/>
+      <xs:element name="AffiliationStatus" type="tns:AffiliationStatus"/>
+      <xs:element name="CompanyStatus" type="tns:CompanyStatus"/>
+      <xs:element name="EstablishmentType" type="tns:EstablishmentType"/>
+      <xs:element name="EventType" type="tns:EventType"/>
+      <xs:simpleType name="AcquittalType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Summons"/>
+          <xs:enumeration value="Assignment"/>
+          <xs:enumeration value="Normal"/>
+          <xs:enumeration value="Judgement"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="AffiliationHistoryType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="FirstAffiliation"/>
+          <xs:enumeration value="InExamination"/>
+          <xs:enumeration value="Refused"/>
+          <xs:enumeration value="OfficiallyAffiliated"/>
+          <xs:enumeration value="TransferRequested"/>
+          <xs:enumeration value="TransferAccepted"/>
+          <xs:enumeration value="TransferRefused"/>
+          <xs:enumeration value="OfficialAffiliationStrikedOut"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="AffiliationStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Unaffiliated"/>
+          <xs:enumeration value="AffiliatedAtOtherSif"/>
+          <xs:enumeration value="NormalAffiliation"/>
+          <xs:enumeration value="OfficiallyAffiliation"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="EstablishmentType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="RegisteredOffice"/>
+          <xs:enumeration value="CountryOffice"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ActivityType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SideActivity"/>
+          <xs:enumeration value="MainActivity"/>
+          <xs:enumeration value="SupportActivity"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="CompanyStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Active"/>
+          <xs:enumeration value="Closed"/>
+          <xs:enumeration value="Cancelled"/>
+          <xs:enumeration value="Announced"/>
+          <xs:enumeration value="JuridicalCreated"/>
+          <xs:enumeration value="Stopped"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="EventType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NotApplicable"/>
+          <xs:enumeration value="WithdrawalBankruptcy"/>
+          <xs:enumeration value="Rehabilitation"/>
+          <xs:enumeration value="Dischargement"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="QName" type="xs:QName"/>
+      <xs:element name="anyType" type="xs:anyType"/>
+      <xs:element name="anyURI" type="xs:string"/>
+      <xs:element name="base64Binary" type="xs:base64Binary"/>
+      <xs:element name="boolean" type="xs:boolean"/>
+      <xs:element name="byte" type="xs:byte"/>
+      <xs:element name="char" type="xs:int"/>
+      <xs:element name="dateTime" type="xs:anySimpleType"/>
+      <xs:element name="decimal" type="xs:decimal"/>
+      <xs:element name="double" type="xs:double"/>
+      <xs:element name="duration" type="xs:duration"/>
+      <xs:element name="float" type="xs:float"/>
+      <xs:element name="guid" type="xs:string"/>
+      <xs:element name="int" type="xs:int"/>
+      <xs:element name="long" type="xs:long"/>
+      <xs:element name="short" type="xs:short"/>
+      <xs:element name="string" type="xs:string"/>
+      <xs:element name="unsignedByte" type="xs:short"/>
+      <xs:element name="unsignedInt" type="xs:long"/>
+      <xs:element name="unsignedLong" type="xs:integer"/>
+      <xs:element name="unsignedShort" type="xs:int"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="SifCompanyAffiliationServiceAcceptAffiliationServiceFaultFaultFaultMessage">
+    <wsdl:part element="ns1:ServiceFault" name="SifCompanyAffiliationServiceAcceptAffiliationServiceFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RefuseAffiliationResponse">
+    <wsdl:part element="tns:RefuseAffiliationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IsAliveResponse">
+    <wsdl:part element="tns:IsAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAffiliationServiceHandleTransferRequestServiceFaultFaultFaultMessage">
+    <wsdl:part element="ns1:ServiceFault" name="SifCompanyAffiliationServiceHandleTransferRequestServiceFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAffiliationServiceRefuseAffiliationAuthorizationFaultFaultFaultMessage">
+    <wsdl:part element="ns1:AuthorizationFault" name="SifCompanyAffiliationServiceRefuseAffiliationAuthorizationFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IsAlive">
+    <wsdl:part element="tns:IsAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AcceptAffiliationResponse">
+    <wsdl:part element="tns:AcceptAffiliationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="HandleTransferRequestResponse">
+    <wsdl:part element="tns:HandleTransferRequestResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AcceptAffiliation">
+    <wsdl:part element="tns:AcceptAffiliation" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAffiliationServiceRefuseAffiliationServiceFaultFaultFaultMessage">
+    <wsdl:part element="ns1:ServiceFault" name="SifCompanyAffiliationServiceRefuseAffiliationServiceFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateAffiliationResponse">
+    <wsdl:part element="tns:UpdateAffiliationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="HandleTransferRequest">
+    <wsdl:part element="tns:HandleTransferRequest" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAffiliationServiceUpdateAffiliationServiceFaultFaultFaultMessage">
+    <wsdl:part element="ns1:ServiceFault" name="SifCompanyAffiliationServiceUpdateAffiliationServiceFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RefuseAffiliation">
+    <wsdl:part element="tns:RefuseAffiliation" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateAffiliation">
+    <wsdl:part element="tns:UpdateAffiliation" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAffiliationServiceAcceptAffiliationAuthorizationFaultFaultFaultMessage">
+    <wsdl:part element="ns1:AuthorizationFault" name="SifCompanyAffiliationServiceAcceptAffiliationAuthorizationFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAffiliationServiceUpdateAffiliationAuthorizationFaultFaultFaultMessage">
+    <wsdl:part element="ns1:AuthorizationFault" name="SifCompanyAffiliationServiceUpdateAffiliationAuthorizationFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SifCompanyAffiliationServiceHandleTransferRequestAuthorizationFaultFaultFaultMessage">
+    <wsdl:part element="ns1:AuthorizationFault" name="SifCompanyAffiliationServiceHandleTransferRequestAuthorizationFaultFaultFaultMessage"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SifCompanyAffiliationService">
+    <wsdl:operation name="IsAlive">
+      <wsdl:input message="tns:IsAlive" name="IsAlive" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/IsAlive" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/IsAlive"></wsdl:input>
+      <wsdl:output message="tns:IsAliveResponse" name="IsAliveResponse" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/IsAliveResponse" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/IsAliveResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefuseAffiliation">
+      <wsdl:input message="tns:RefuseAffiliation" name="RefuseAffiliation" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"></wsdl:input>
+      <wsdl:output message="tns:RefuseAffiliationResponse" name="RefuseAffiliationResponse" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliationResponse" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliationResponse"></wsdl:output>
+      <wsdl:fault message="tns:SifCompanyAffiliationServiceRefuseAffiliationAuthorizationFaultFaultFaultMessage" name="SifCompanyAffiliationServiceRefuseAffiliationAuthorizationFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliationAuthorizationFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliationAuthorizationFaultFault"></wsdl:fault>
+      <wsdl:fault message="tns:SifCompanyAffiliationServiceRefuseAffiliationServiceFaultFaultFaultMessage" name="SifCompanyAffiliationServiceRefuseAffiliationServiceFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliationServiceFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliationServiceFaultFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAffiliation">
+      <wsdl:input message="tns:UpdateAffiliation" name="UpdateAffiliation" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliation" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliation"></wsdl:input>
+      <wsdl:output message="tns:UpdateAffiliationResponse" name="UpdateAffiliationResponse" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliationResponse" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliationResponse"></wsdl:output>
+      <wsdl:fault message="tns:SifCompanyAffiliationServiceUpdateAffiliationServiceFaultFaultFaultMessage" name="SifCompanyAffiliationServiceUpdateAffiliationServiceFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliationServiceFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliationServiceFaultFault"></wsdl:fault>
+      <wsdl:fault message="tns:SifCompanyAffiliationServiceUpdateAffiliationAuthorizationFaultFaultFaultMessage" name="SifCompanyAffiliationServiceUpdateAffiliationAuthorizationFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliationAuthorizationFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliationAuthorizationFaultFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptAffiliation">
+      <wsdl:input message="tns:AcceptAffiliation" name="AcceptAffiliation" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliation" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliation"></wsdl:input>
+      <wsdl:output message="tns:AcceptAffiliationResponse" name="AcceptAffiliationResponse" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliationResponse" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliationResponse"></wsdl:output>
+      <wsdl:fault message="tns:SifCompanyAffiliationServiceAcceptAffiliationServiceFaultFaultFaultMessage" name="SifCompanyAffiliationServiceAcceptAffiliationServiceFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliationServiceFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliationServiceFaultFault"></wsdl:fault>
+      <wsdl:fault message="tns:SifCompanyAffiliationServiceAcceptAffiliationAuthorizationFaultFaultFaultMessage" name="SifCompanyAffiliationServiceAcceptAffiliationAuthorizationFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliationAuthorizationFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliationAuthorizationFaultFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HandleTransferRequest">
+      <wsdl:input message="tns:HandleTransferRequest" name="HandleTransferRequest" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequest" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequest"></wsdl:input>
+      <wsdl:output message="tns:HandleTransferRequestResponse" name="HandleTransferRequestResponse" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequestResponse" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequestResponse"></wsdl:output>
+      <wsdl:fault message="tns:SifCompanyAffiliationServiceHandleTransferRequestServiceFaultFaultFaultMessage" name="SifCompanyAffiliationServiceHandleTransferRequestServiceFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequestServiceFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequestServiceFaultFault"></wsdl:fault>
+      <wsdl:fault message="tns:SifCompanyAffiliationServiceHandleTransferRequestAuthorizationFaultFaultFaultMessage" name="SifCompanyAffiliationServiceHandleTransferRequestAuthorizationFaultFaultFaultMessage" wsam:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequestAuthorizationFaultFault" wsaw:Action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequestAuthorizationFaultFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SifCompanyAffiliationServiceServiceSoapBinding" type="tns:SifCompanyAffiliationService">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="IsAlive">
+      <soap12:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/IsAlive" style="document"/>
+      <wsdl:input name="IsAlive">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="IsAliveResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefuseAffiliation">
+      <soap12:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation" style="document"/>
+      <wsdl:input name="RefuseAffiliation">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RefuseAffiliationResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SifCompanyAffiliationServiceRefuseAffiliationAuthorizationFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAffiliationServiceRefuseAffiliationAuthorizationFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SifCompanyAffiliationServiceRefuseAffiliationServiceFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAffiliationServiceRefuseAffiliationServiceFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAffiliation">
+      <soap12:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliation" style="document"/>
+      <wsdl:input name="UpdateAffiliation">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UpdateAffiliationResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SifCompanyAffiliationServiceUpdateAffiliationServiceFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAffiliationServiceUpdateAffiliationServiceFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SifCompanyAffiliationServiceUpdateAffiliationAuthorizationFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAffiliationServiceUpdateAffiliationAuthorizationFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptAffiliation">
+      <soap12:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliation" style="document"/>
+      <wsdl:input name="AcceptAffiliation">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="AcceptAffiliationResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SifCompanyAffiliationServiceAcceptAffiliationServiceFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAffiliationServiceAcceptAffiliationServiceFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SifCompanyAffiliationServiceAcceptAffiliationAuthorizationFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAffiliationServiceAcceptAffiliationAuthorizationFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HandleTransferRequest">
+      <soap12:operation soapAction="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequest" style="document"/>
+      <wsdl:input name="HandleTransferRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="HandleTransferRequestResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SifCompanyAffiliationServiceHandleTransferRequestServiceFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAffiliationServiceHandleTransferRequestServiceFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SifCompanyAffiliationServiceHandleTransferRequestAuthorizationFaultFaultFaultMessage">
+        <soap12:fault name="SifCompanyAffiliationServiceHandleTransferRequestAuthorizationFaultFaultFaultMessage" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SifCompanyAffiliationServiceService">
+    <wsdl:port binding="tns:SifCompanyAffiliationServiceServiceSoapBinding" name="SifCompanyAffiliationServicePort">
+      <soap12:address location="http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+                <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+            </con:part>
+        </con:definitionCache>
+        <con:endpoints>
+            <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+            <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+            <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+            <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+            <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+        </con:endpoints>
+        <con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliation" name="Accept" bindingOperationName="AcceptAffiliation" type="Request-Response" outputName="AcceptAffiliationResponse" inputName="AcceptAffiliation" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="2db5df01-475d-4c73-a59b-55469d62c115">
+            <con:settings/>
+
+
+
+
+        </con:operation>
+        <con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/HandleTransferRequest" name="HandleTransferRequest" bindingOperationName="HandleTransferRequest" type="Request-Response" outputName="HandleTransferRequestResponse" inputName="HandleTransferRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="e2730c9c-e431-4ff6-ad31-3eda0dda094f">
+            <con:settings/>
+
+        </con:operation>
+        <con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/IsAlive" name="IsAlive" bindingOperationName="IsAlive" type="Request-Response" outputName="IsAliveResponse" inputName="IsAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="7ea6e1c7-2844-4e57-bc2f-edd74c29c6df">
+            <con:settings/>
+
+        </con:operation>
+        <con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation" name="Refuse" bindingOperationName="RefuseAffiliation" type="Request-Response" outputName="RefuseAffiliationResponse" inputName="RefuseAffiliation" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="486256ba-5847-46c8-84c2-e33e5c1520b8">
+            <con:settings/>
+
+        </con:operation>
+        <con:operation isOneWay="false" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/UpdateAffiliation" name="UpdateAffiliation" bindingOperationName="UpdateAffiliation" type="Request-Response" outputName="UpdateAffiliationResponse" inputName="UpdateAffiliation" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="6c06df72-358c-446d-be4e-dc9063859418">
+            <con:settings/>
+
+        </con:operation>
+    </con:interface>
+    <con:testSuite id="6ca1d74c-ac63-4dd6-b1ba-504252f13f6e" name="TestSuite">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="ada63ad9-67a8-49ca-a24f-08aeb7a808a0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0420290013" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" id="f248afa2-17cd-425b-946d-3fe86a0d5dad" name="Accept - 0420290013">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface>
+                    <con:operation>Accept</con:operation>
+                    <con:request name="Accept - 0420290013" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+                        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>126492</sch:DestinationID>
+            <sch:FluxID>1120</sch:FluxID>
+            <sch:MessageID>test</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0420290013</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+   </soap:Envelope>
+    ]]></con:request>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="8c08212a-d32a-4a78-8985-4456cf682940" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0827018139" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" id="872e9cf7-107a-4d00-a3cf-9863c1816e6a" name="Accept - 0827018139">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface>
+                    <con:operation>Accept</con:operation>
+                    <con:request name="Accept - 0827018139" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+                        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>123</sch:DestinationID>
+            <sch:FluxID>1120</sch:FluxID>
+            <sch:MessageID>test</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0827018139</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+   </soap:Envelope>
+]]></con:request>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="8c08212a-d32a-4a78-8985-4456cf682940" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0420329407" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" id="872e9cf7-107a-4d00-a3cf-9863c1816e6a" name="Accept - 0420329407">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface>
+                    <con:operation>Accept</con:operation>
+                    <con:request name="Accept - 0420329407" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+                        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>123</sch:DestinationID>
+            <sch:FluxID>1120</sch:FluxID>
+            <sch:MessageID>test</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0420329407</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+   </soap:Envelope>]]></con:request>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="8c08212a-d32a-4a78-8985-4456cf682940" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0550479651" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" id="872e9cf7-107a-4d00-a3cf-9863c1816e6a" name="Accept - 0420329407">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface>
+                    <con:operation>Accept</con:operation>
+                    <con:request name="Accept - 0420329407" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+                        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>123</sch:DestinationID>
+            <sch:FluxID>1c106733-0e31-4eeb-a69f-4252f2d16ae20</sch:FluxID>
+            <sch:MessageID>1c106733-0e31-4eeb-a69f-4252f2d16ae20</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0550479651</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+   </soap:Envelope>
+]]></con:request>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="8c08212a-d32a-4a78-8985-4456cf682940" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0420429375" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" id="872e9cf7-107a-4d00-a3cf-9863c1816e6a" name="Accept - 0420429375">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface>
+                    <con:operation>Accept</con:operation>
+                    <con:request name="Accept - 0420429375" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+                        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>12849523</sch:DestinationID>
+            <sch:FluxID>1c106733-0e31-4eeb-a69f-4252f2d16ae18</sch:FluxID>
+            <sch:MessageID>1c106733-0e31-4eeb-a69f-4252f2d16ae18</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0420429375</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+</soap:Envelope>
+]]></con:request>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="8c08212a-d32a-4a78-8985-4456cf682940" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0467070143" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" id="872e9cf7-107a-4d00-a3cf-9863c1816e6a" name="Accept - 0467070143">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface>
+                    <con:operation>Accept</con:operation>
+                    <con:request name="Accept - 0467070143" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+                        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>123</sch:DestinationID>
+            <sch:FluxID>1120</sch:FluxID>
+            <sch:MessageID>test</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0467070143</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+   </soap:Envelope>
+]]></con:request>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="8c08212a-d32a-4a78-8985-4456cf682940" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0420090667" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" id="872e9cf7-107a-4d00-a3cf-9863c1816e6a" name="Accept - 0420090667">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface>
+                    <con:operation>Accept</con:operation>
+                    <con:request name="Accept - 0420090667" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint>
+                        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>544943</sch:DestinationID>
+            <sch:FluxID>1c106733-0e31-4eeb-a69f-4252f2d16ae12</sch:FluxID>
+            <sch:MessageID>1c106733-0e31-4eeb-a69f-4252f2d16ae12</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0420090667</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+   </soap:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8c08212a-d32a-4a78-8985-4456cf682940" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0402538122" searchProperties="true"><con:settings/><con:testStep type="request" id="872e9cf7-107a-4d00-a3cf-9863c1816e6a" name="Accept - 0402538122"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 0402538122" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>544923</sch:DestinationID>
+            <sch:FluxID>1c106733-0e31-4eeb-a69f-4252f2d16ae10</sch:FluxID>
+            <sch:MessageID>1c106733-0e31-4eeb-a69f-4252f2d16aeb2</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0402538122</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c1831968-4674-4d5a-b5ad-22e07a3bc3ca" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliation"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2e2fd6a3-8447-444c-b00f-c769b3292be1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Refuse - 0420290013" searchProperties="true"><con:settings/><con:testStep type="request" id="9f71be80-8acc-4931-a9b4-69026bc9138f" name="RefuseAffiliation - 0420290013"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface><con:operation>Refuse</con:operation><con:request name="RefuseAffiliation - 0420290013" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="27bd4139-7571-48af-bdd1-3962abb89bea"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+	xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1"
+	xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema"
+	xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+	<soap:Header />
+	<soap:Body>
+		<v1:RefuseAffiliation>
+			<!--Optional: -->
+			<v1:request>
+				<sch:DestinationID>123</sch:DestinationID>
+				<sch:FluxID>1120</sch:FluxID>
+				<sch:MessageID>test</sch:MessageID>
+				<sch:OriginID>test</sch:OriginID>
+				<sch:Timestamp>2015-06-25T00:00:00.000+01:00</sch:Timestamp>
+				<sch1:CompanyID>0420290013</sch1:CompanyID>
+				<sch1:DecisionDate>2016-01-25T00:00:00.000+01:00</sch1:DecisionDate>
+				<sch1:Reasons>
+                 		<sch:SystemValue>
+                  			<sch:Key>01001</sch:Key>
+                  			<sch:ValueFR>tt</sch:ValueFR>
+                  			<sch:ValueNL>tt</sch:ValueNL>
+               			</sch:SystemValue>
+				</sch1:Reasons>
+			<sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+			</v1:request>
+		</v1:RefuseAffiliation>
+	</soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c1831968-4674-4d5a-b5ad-22e07a3bc3ca" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliation"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2e2fd6a3-8447-444c-b00f-c769b3292be1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Refuse - 0827018139" searchProperties="true"><con:settings/><con:testStep type="request" id="9f71be80-8acc-4931-a9b4-69026bc9138f" name="RefuseAffiliation - 0827018139"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface><con:operation>Refuse</con:operation><con:request name="RefuseAffiliation - 0827018139" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="27bd4139-7571-48af-bdd1-3962abb89bea"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+	xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1"
+	xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema"
+	xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+	<soap:Header />
+	<soap:Body>
+		<v1:RefuseAffiliation>
+			<!--Optional: -->
+			<v1:request>
+				<sch:DestinationID>123</sch:DestinationID>
+				<sch:FluxID>1120</sch:FluxID>
+				<sch:MessageID>test</sch:MessageID>
+				<sch:OriginID>test</sch:OriginID>
+				<sch:Timestamp>2015-06-25T00:00:00.000+01:00</sch:Timestamp>
+				<sch1:CompanyID>0827018139</sch1:CompanyID>
+				<sch1:DecisionDate>2016-01-25T00:00:00.000+01:00</sch1:DecisionDate>
+				<sch1:Reasons>
+                 		<sch:SystemValue>
+                  			<sch:Key>01001</sch:Key>
+                  			<sch:ValueFR>tt</sch:ValueFR>
+                  			<sch:ValueNL>tt</sch:ValueNL>
+               			</sch:SystemValue>
+				</sch1:Reasons>
+			<sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+			</v1:request>
+		</v1:RefuseAffiliation>
+	</soap:Body>
+</soap:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8c08212a-d32a-4a78-8985-4456cf682940" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Accept - 0890011622" searchProperties="true"><con:settings/><con:testStep type="request" id="872e9cf7-107a-4d00-a3cf-9863c1816e6a" name="Accept - 0890011622"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface><con:operation>Accept</con:operation><con:request name="Accept - 0890011622" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="297d43b1-1ed0-47c4-a4db-714b4bfdfc28"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1" xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema" xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+   <soap:Header/>
+   <soap:Body>
+      <v1:AcceptAffiliation>
+         <!--Optional:-->
+         <v1:request>
+            <sch:DestinationID>123</sch:DestinationID>
+            <sch:FluxID>1120</sch:FluxID>
+            <sch:MessageID>test</sch:MessageID>
+            <sch:OriginID>test</sch:OriginID>
+            <sch:Timestamp>2015-06-29T10:36:00Z</sch:Timestamp>
+            <sch1:CompanyID>0890011622</sch1:CompanyID>
+            <sch1:DecisionDate>2016-01-29T10:36:00Z</sch1:DecisionDate>
+            <sch1:StartYearOfAffiliation>2014</sch1:StartYearOfAffiliation>
+         </v1:request>
+      </v1:AcceptAffiliation>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c1831968-4674-4d5a-b5ad-22e07a3bc3ca" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/AcceptAffiliation"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4f4554c1-8cad-4697-bf21-88e1ec6ea526" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase - Refuse - 0890011622" searchProperties="true"><con:settings/><con:testStep type="request" id="5856da40-7ed3-4683-bc7c-af95494e708f" name="RefuseAffiliation - 0420290013"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SifCompanyAffiliationServiceServiceSoapBinding</con:interface><con:operation>Refuse</con:operation><con:request name="RefuseAffiliation - 0420290013" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="27bd4139-7571-48af-bdd1-3962abb89bea"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ENVIRONNEMENT/Nasca-Fuzion/services/SifCompanyAffiliation</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+	xmlns:v1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1"
+	xmlns:sch="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Common/V1/schema"
+	xmlns:sch1="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/schema">
+	<soap:Header />
+	<soap:Body>
+		<v1:RefuseAffiliation>
+			<!--Optional: -->
+			<v1:request>
+				<sch:DestinationID>123</sch:DestinationID>
+				<sch:FluxID>1120</sch:FluxID>
+				<sch:MessageID>test</sch:MessageID>
+				<sch:OriginID>test</sch:OriginID>
+				<sch:Timestamp>2015-06-25T00:00:00.000+01:00</sch:Timestamp>
+				<sch1:CompanyID>0890011622</sch1:CompanyID>
+				<sch1:DecisionDate>2016-01-25T00:00:00.000+01:00</sch1:DecisionDate>
+				<sch1:Reasons>
+                 		<sch:SystemValue>
+                  			<sch:Key>01001</sch:Key>
+                  			<sch:ValueFR>tt</sch:ValueFR>
+                  			<sch:ValueNL>tt</sch:ValueNL>
+               			</sch:SystemValue>
+				</sch1:Reasons>
+			<sch1:StartYearOfAffiliation>2016</sch1:StartYearOfAffiliation>
+			</v1:request>
+		</v1:RefuseAffiliation>
+	</soap:Body>
+</soap:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.rsvz-inasti.fgov.be/schemas/Sequoia/WS/Company/Sif/Affiliation/V1/SifCompanyAffiliationService/RefuseAffiliation"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

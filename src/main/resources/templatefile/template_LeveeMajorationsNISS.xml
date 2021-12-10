@@ -1,0 +1,10 @@
+<v3:RequestAcquittalResponse 
+	xmlns:v3="http://www.rsvz-inasti.fgov.be/schemas/WS/NisseAcquittal/V3" 
+	xmlns:v6="http://www.rsvz-inasti.fgov.be/schemas/WS/schema/MetaInfo/V6">
+	 <v3:ApplHeader>
+		<v6:MessageID>1</v6:MessageID>
+		<v6:Timestamp>2016-04-07+02:00</v6:Timestamp>
+		<!--Optional:-->
+		<v6:UserID>23</v6:UserID>
+	 </v3:ApplHeader>
+</v3:RequestAcquittalResponse> 

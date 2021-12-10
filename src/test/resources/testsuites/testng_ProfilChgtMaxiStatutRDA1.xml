@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test profil maxi-statut RDA1">
+
+	<test name="Profil-Maxi Statut Changement de nature RDA1">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.profil.change.ProfilChangeMaxiStatutRDA1Test"/>
+		</classes>
+	</test>
+	
+</suite>

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Enrolement PP2">
+
+	<test name="EnrolementPP2Test">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.enrolement.pp.EnrolementPP2Test"/>
+		</classes>
+	</test>
+	
+</suite>

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Taches">
+
+	<test name="TachesTest">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.taches.TachesTest"/>
+		</classes>
+	</test>
+	
+</suite>

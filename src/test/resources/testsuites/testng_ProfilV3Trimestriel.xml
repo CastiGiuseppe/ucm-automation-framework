@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test profil V3 trimestriel">
+
+	<test name="ProfilV3 trimestriel">
+		<classes>
+            <class name="be.ucm.cas.nasca.web.test.profilv3.ProfilV3TrimestrielTest"/>
+		</classes>
+	</test>
+	
+</suite>
